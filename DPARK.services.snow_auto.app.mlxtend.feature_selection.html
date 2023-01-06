@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.app.mlxtend.feature_selection package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.app.mlxtend.file_io package" href="DPARK.services.snow_auto.app.mlxtend.file_io.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.app.mlxtend.feature_extraction package" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector"><code class="docutils literal notranslate"><span class="pre">ColumnSelector</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector"><code class="docutils literal notranslate"><span class="pre">ExhaustiveFeatureSelector</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector"><code class="docutils literal notranslate"><span class="pre">SequentialFeatureSelector</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector"><code class="docutils literal notranslate"><span class="pre">ColumnSelector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector"><code class="docutils literal notranslate"><span class="pre">ExhaustiveFeatureSelector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector"><code class="docutils literal notranslate"><span class="pre">SequentialFeatureSelector</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.app.mlxtend.feature_selection package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.app.mlxtend.feature_selection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-app-mlxtend-feature-selection-package">
+<h1>DPARK.services.snow_auto.app.mlxtend.feature_selection package<a class="headerlink" href="#dpark-services-snow-auto-app-mlxtend-feature-selection-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-selection-column-selector-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.</span></span><span class="sig-name descname"><span class="pre">ColumnSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code></p>
+<p>Object for selecting specific columns from a data set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cols</strong> (<em>array-like</em><em> (</em><em>default: None</em><em>)</em>) – A list specifying the feature indices to be selected. For example,
+[1, 4, 5] to select the 2nd, 5th, and 6th feature columns, and
+[‘A’,’C’,’D’] to select the name of feature columns A, C and D.
+If None, returns all columns in the array.</p></li>
+<li><p><strong>drop_axis</strong> (<em>bool</em><em> (</em><em>default=False</em><em>)</em>) – Drops last axis if True and the only one column is selected. This
+is useful, e.g., when the ColumnSelector is used for selecting
+only one column and the resulting array should be fed to e.g.,
+a scikit-learn column selector. E.g., instead of returning an
+array with shape (n_samples, 1), drop_axis=True will return an
+aray with shape (n_samples,).</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/ColumnSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/ColumnSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Mock method. Does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return a slice of the input array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_slice</strong> – Subset of the feature space where k_features &lt;= n_features</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shape = [n_samples, k_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector.ColumnSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return a slice of the input array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_slice</strong> – Subset of the feature space where k_features &lt;= n_features</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shape = [n_samples, k_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-selection-exhaustive-feature-selector-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.</span></span><span class="sig-name descname"><span class="pre">ExhaustiveFeatureSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'accuracy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clone_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MetaEstimatorMixin</span></code></p>
+<dl class="simple">
+<dt>Exhaustive Feature Selection for Classification and Regression.</dt><dd><p>(new in v0.4.3)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>min_features</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – Minumum number of features to select</p></li>
+<li><p><strong>max_features</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – Maximum number of features to select</p></li>
+<li><p><strong>print_progress</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prints progress as the number of epochs
+to stderr.</p></li>
+<li><p><strong>scoring</strong> (<em>str</em><em>, </em><em>(</em><em>default='accuracy'</em><em>)</em>) – Scoring metric in {accuracy, f1, precision, recall, roc_auc}
+for classifiers,
+{‘mean_absolute_error’, ‘mean_squared_error’,
+‘median_absolute_error’, ‘r2’} for regressors,
+or a callable object or function with
+signature <code class="docutils literal notranslate"><span class="pre">scorer(estimator,</span> <span class="pre">X,</span> <span class="pre">y)</span></code>.</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em> (</em><em>default: 5</em><em>)</em>) – Scikit-learn cross-validation generator or <cite>int</cite>.
+If estimator is a classifier (or y consists of integer class labels),
+stratified k-fold is performed, and regular k-fold cross-validation
+otherwise.
+No cross-validation if cv is None, False, or 0.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – The number of CPUs to use for evaluating different feature subsets
+in parallel. -1 means ‘all CPUs’.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em> (</em><em>default: '2*n_jobs'</em><em>)</em>) – <p>Controls the number of jobs that get dispatched
+during parallel execution if <cite>n_jobs &gt; 1</cite> or <cite>n_jobs=-1</cite>.
+Reducing this number can be useful to avoid an explosion of
+memory consumption when more jobs get dispatched than CPUs can process.
+This parameter can be:
+None, in which case all the jobs are immediately created and spawned.</p>
+<blockquote>
+<div><p>Use this for lightweight and fast-running jobs,
+to avoid delays due to on-demand spawning of the jobs</p>
+</div></blockquote>
+<p>An int, giving the exact number of total jobs that are spawned
+A string, giving an expression as a function</p>
+<blockquote>
+<div><p>of n_jobs, as in <cite>2*n_jobs</cite></p>
+</div></blockquote>
+</p></li>
+<li><p><strong>clone_estimator</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones estimator if True; works with the original estimator instance
+if False. Set to False if the estimator doesn’t
+implement scikit-learn’s set_params and get_params methods.
+In addition, it is required to set cv=0, and n_jobs=1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_idx_">
+<span class="sig-name descname"><span class="pre">best_idx_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_idx_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature Indices of the selected feature subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_feature_names_">
+<span class="sig-name descname"><span class="pre">best_feature_names_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_feature_names_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature names of the selected feature subsets. If pandas
+DataFrames are used in the <cite>fit</cite> method, the feature
+names correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. New in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_score_">
+<span class="sig-name descname"><span class="pre">best_score_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.best_score_" title="Permalink to this definition"></a></dt>
+<dd><p>Cross validation average score of the selected subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.subsets_">
+<span class="sig-name descname"><span class="pre">subsets_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.subsets_" title="Permalink to this definition"></a></dt>
+<dd><p>A dictionary of selected feature subsets during the
+exhaustive selection, where the dictionary keys are
+the lengths k of these feature subsets. The dictionary
+values are dictionaries themselves with the following
+keys: ‘feature_idx’ (tuple of indices of the feature subset)</p>
+<blockquote>
+<div><p>‘feature_names’ (tuple of feature names of the feat. subset)
+‘cv_scores’ (list individual cross-validation scores)
+‘avg_score’ (average cross-validation score)</p>
+</div></blockquote>
+<p>Note that if pandas
+DataFrames are used in the <cite>fit</cite> method, the ‘feature_names’
+correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. The ‘feature_names’ is new in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/ExhaustiveFeatureSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/ExhaustiveFeatureSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_feature_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Perform feature selection and learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>custom_feature_names</strong> (<em>None</em><em> or </em><em>tuple</em><em> (</em><em>default: tuple</em><em>)</em>) – Custom feature names for <cite>self.k_feature_names</cite> and
+<cite>self.subsets_[i][‘feature_names’]</cite>.
+(new in v 0.13.0)</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>dict</em><em> of </em><em>string -&gt; object</em><em>, </em><em>optional</em>) – Parameters to pass to to the fit method of classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Fit to training data and return the best selected features from X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>dict</em><em> of </em><em>string -&gt; object</em><em>, </em><em>optional</em>) – Parameters to pass to to the fit method of classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.get_metric_dict">
+<span class="sig-name descname"><span class="pre">get_metric_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.get_metric_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.get_metric_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Return metric dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>confidence_interval</strong> (<em>float</em><em> (</em><em>default: 0.95</em><em>)</em>) – A positive float between 0.0 and 1.0 to compute the confidence
+interval bounds of the CV score averages.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Dictionary with items where each dictionary value is a list</em></p></li>
+<li><p><em>with the number of iterations (number of feature subsets) as</em></p></li>
+<li><p><em>its length. The dictionary keys corresponding to these lists</em></p></li>
+<li><p><em>are as follows</em> – ‘feature_idx’: tuple of the indices of the feature subset
+‘cv_scores’: list with individual CV scores
+‘avg_score’: of CV average scores
+‘std_dev’: standard deviation of the CV score average
+‘std_err’: standard error of the CV score average
+‘ci_bound’: confidence interval bound of the CV score average</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector.ExhaustiveFeatureSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return the best selected features from X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-selection-sequential-feature-selector-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.</span></span><span class="sig-name descname"><span class="pre">SequentialFeatureSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">floating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clone_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixed_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MetaEstimatorMixin</span></code></p>
+<p>Sequential Feature Selection for Classification and Regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>k_features</strong> (<em>int</em><em> or </em><em>tuple</em><em> or </em><em>str</em><em> (</em><em>default: 1</em><em>)</em>) – <p>Number of features to select,
+where k_features &lt; the full feature set.
+New in 0.4.2: A tuple containing a min and max value can be provided,</p>
+<blockquote>
+<div><p>and the SFS will consider return any feature combination between
+min and max that scored highest in cross-validation. For example,
+the tuple (1, 4) will return any combination from
+1 up to 4 features instead of a fixed number of features k.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>New in 0.8.0: A string argument “best” or “parsimonious”.</dt><dd><p>If “best” is provided, the feature selector will return the
+feature subset with the best cross-validation performance.
+If “parsimonious” is provided as an argument, the smallest
+feature subset that is within one standard error of the
+cross-validation performance will be selected.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>forward</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Forward selection if True,
+backward selection otherwise</p></li>
+<li><p><strong>floating</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – Adds a conditional exclusion/inclusion if True.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em><em>, </em><em>level</em><em> of </em><em>verbosity to use in logging.</em>) – If 0, no output,
+if 1 number of features in current set, if 2 detailed logging i
+ncluding timestamp and cv scores at step.</p></li>
+<li><p><strong>scoring</strong> (<em>str</em><em>, </em><em>callable</em><em>, or </em><em>None</em><em> (</em><em>default: None</em><em>)</em>) – If None (default), uses ‘accuracy’ for sklearn classifiers
+and ‘r2’ for sklearn regressors.
+If str, uses a sklearn scoring metric string identifier, for example
+{accuracy, f1, precision, recall, roc_auc} for classifiers,
+{‘mean_absolute_error’, ‘mean_squared_error’/’neg_mean_squared_error’,
+‘median_absolute_error’, ‘r2’} for regressors.
+If a callable object or function is provided, it has to be conform with
+sklearn’s signature <code class="docutils literal notranslate"><span class="pre">scorer(estimator,</span> <span class="pre">X,</span> <span class="pre">y)</span></code>; see
+<a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html">http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html</a>
+for more information.</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em> (</em><em>default: 5</em><em>)</em>) – Integer or iterable yielding train, test splits. If cv is an integer
+and <cite>estimator</cite> is a classifier (or y consists of integer class
+labels) stratified k-fold. Otherwise regular k-fold cross-validation
+is performed. No cross-validation if cv is None, False, or 0.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – The number of CPUs to use for evaluating different feature subsets
+in parallel. -1 means ‘all CPUs’.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em> (</em><em>default: '2*n_jobs'</em><em>)</em>) – <p>Controls the number of jobs that get dispatched
+during parallel execution if <cite>n_jobs &gt; 1</cite> or <cite>n_jobs=-1</cite>.
+Reducing this number can be useful to avoid an explosion of
+memory consumption when more jobs get dispatched than CPUs can process.
+This parameter can be:
+None, in which case all the jobs are immediately created and spawned.</p>
+<blockquote>
+<div><p>Use this for lightweight and fast-running jobs,
+to avoid delays due to on-demand spawning of the jobs</p>
+</div></blockquote>
+<p>An int, giving the exact number of total jobs that are spawned
+A string, giving an expression as a function</p>
+<blockquote>
+<div><p>of n_jobs, as in <cite>2*n_jobs</cite></p>
+</div></blockquote>
+</p></li>
+<li><p><strong>clone_estimator</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones estimator if True; works with the original estimator instance
+if False. Set to False if the estimator doesn’t
+implement scikit-learn’s set_params and get_params methods.
+In addition, it is required to set cv=0, and n_jobs=1.</p></li>
+<li><p><strong>fixed_features</strong> (<em>tuple</em><em> (</em><em>default: None</em><em>)</em>) – If not <cite>None</cite>, the feature indices provided as a tuple will be
+regarded as fixed by the feature selector. For example, if
+<cite>fixed_features=(1, 3, 7)</cite>, the 2nd, 4th, and 8th feature are
+guaranteed to be present in the solution. Note that if
+<cite>fixed_features</cite> is not <cite>None</cite>, make sure that the number of
+features to be selected is greater than <cite>len(fixed_features)</cite>.
+In other words, ensure that <cite>k_features &gt; len(fixed_features)</cite>.
+New in mlxtend v. 0.18.0.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_feature_idx_">
+<span class="sig-name descname"><span class="pre">k_feature_idx_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_feature_idx_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature Indices of the selected feature subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_feature_names_">
+<span class="sig-name descname"><span class="pre">k_feature_names_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_feature_names_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature names of the selected feature subsets. If pandas
+DataFrames are used in the <cite>fit</cite> method, the feature
+names correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. New in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_score_">
+<span class="sig-name descname"><span class="pre">k_score_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.k_score_" title="Permalink to this definition"></a></dt>
+<dd><p>Cross validation average score of the selected subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.subsets_">
+<span class="sig-name descname"><span class="pre">subsets_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.subsets_" title="Permalink to this definition"></a></dt>
+<dd><p>A dictionary of selected feature subsets during the
+sequential selection, where the dictionary keys are
+the lengths k of these feature subsets. The dictionary
+values are dictionaries themselves with the following
+keys: ‘feature_idx’ (tuple of indices of the feature subset)</p>
+<blockquote>
+<div><p>‘feature_names’ (tuple of feature names of the feat. subset)
+‘cv_scores’ (list individual cross-validation scores)
+‘avg_score’ (average cross-validation score)</p>
+</div></blockquote>
+<p>Note that if pandas
+DataFrames are used in the <cite>fit</cite> method, the ‘feature_names’
+correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. The ‘feature_names’ is new in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_feature_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Perform feature selection and learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for y.</p></li>
+<li><p><strong>custom_feature_names</strong> (<em>None</em><em> or </em><em>tuple</em><em> (</em><em>default: tuple</em><em>)</em>) – Custom feature names for <cite>self.k_feature_names</cite> and
+<cite>self.subsets_[i][‘feature_names’]</cite>.
+(new in v 0.13.0)</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>various</em><em>, </em><em>optional</em>) – Additional parameters that are being passed to the estimator.
+For example, <cite>sample_weights=weights</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Fit to training data then reduce X to its most important features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.
+New in v 0.13.0: a pandas Series are now also accepted as
+argument for y.</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>various</em><em>, </em><em>optional</em>) – Additional parameters that are being passed to the estimator.
+For example, <cite>sample_weights=weights</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Reduced feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.get_metric_dict">
+<span class="sig-name descname"><span class="pre">get_metric_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.get_metric_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.get_metric_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Return metric dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>confidence_interval</strong> (<em>float</em><em> (</em><em>default: 0.95</em><em>)</em>) – A positive float between 0.0 and 1.0 to compute the confidence
+interval bounds of the CV score averages.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Dictionary with items where each dictionary value is a list</em></p></li>
+<li><p><em>with the number of iterations (number of feature subsets) as</em></p></li>
+<li><p><em>its length. The dictionary keys corresponding to these lists</em></p></li>
+<li><p><em>are as follows</em> – ‘feature_idx’: tuple of the indices of the feature subset
+‘cv_scores’: list with individual CV scores
+‘avg_score’: of CV average scores
+‘std_dev’: standard deviation of the CV score average
+‘std_err’: standard error of the CV score average
+‘ci_bound’: confidence interval bound of the CV score average</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.named_estimators">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_estimators</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.named_estimators" title="Permalink to this definition"></a></dt>
+<dd><p>rtype: List of named estimator tuples, like [(‘svc’, SVC(…))]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.
+Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector.SequentialFeatureSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Reduce X to its most important features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Reduced feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_selection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_selection" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.</span></span><span class="sig-name descname"><span class="pre">ColumnSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code></p>
+<p>Object for selecting specific columns from a data set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cols</strong> (<em>array-like</em><em> (</em><em>default: None</em><em>)</em>) – A list specifying the feature indices to be selected. For example,
+[1, 4, 5] to select the 2nd, 5th, and 6th feature columns, and
+[‘A’,’C’,’D’] to select the name of feature columns A, C and D.
+If None, returns all columns in the array.</p></li>
+<li><p><strong>drop_axis</strong> (<em>bool</em><em> (</em><em>default=False</em><em>)</em>) – Drops last axis if True and the only one column is selected. This
+is useful, e.g., when the ColumnSelector is used for selecting
+only one column and the resulting array should be fed to e.g.,
+a scikit-learn column selector. E.g., instead of returning an
+array with shape (n_samples, 1), drop_axis=True will return an
+aray with shape (n_samples,).</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/ColumnSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/ColumnSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Mock method. Does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return a slice of the input array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_slice</strong> – Subset of the feature space where k_features &lt;= n_features</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shape = [n_samples, k_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/column_selector.html#ColumnSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ColumnSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return a slice of the input array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] </em><em>(</em><em>default: None</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_slice</strong> – Subset of the feature space where k_features &lt;= n_features</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shape = [n_samples, k_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.</span></span><span class="sig-name descname"><span class="pre">ExhaustiveFeatureSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'accuracy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clone_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MetaEstimatorMixin</span></code></p>
+<dl class="simple">
+<dt>Exhaustive Feature Selection for Classification and Regression.</dt><dd><p>(new in v0.4.3)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>min_features</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – Minumum number of features to select</p></li>
+<li><p><strong>max_features</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – Maximum number of features to select</p></li>
+<li><p><strong>print_progress</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prints progress as the number of epochs
+to stderr.</p></li>
+<li><p><strong>scoring</strong> (<em>str</em><em>, </em><em>(</em><em>default='accuracy'</em><em>)</em>) – Scoring metric in {accuracy, f1, precision, recall, roc_auc}
+for classifiers,
+{‘mean_absolute_error’, ‘mean_squared_error’,
+‘median_absolute_error’, ‘r2’} for regressors,
+or a callable object or function with
+signature <code class="docutils literal notranslate"><span class="pre">scorer(estimator,</span> <span class="pre">X,</span> <span class="pre">y)</span></code>.</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em> (</em><em>default: 5</em><em>)</em>) – Scikit-learn cross-validation generator or <cite>int</cite>.
+If estimator is a classifier (or y consists of integer class labels),
+stratified k-fold is performed, and regular k-fold cross-validation
+otherwise.
+No cross-validation if cv is None, False, or 0.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – The number of CPUs to use for evaluating different feature subsets
+in parallel. -1 means ‘all CPUs’.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em> (</em><em>default: '2*n_jobs'</em><em>)</em>) – <p>Controls the number of jobs that get dispatched
+during parallel execution if <cite>n_jobs &gt; 1</cite> or <cite>n_jobs=-1</cite>.
+Reducing this number can be useful to avoid an explosion of
+memory consumption when more jobs get dispatched than CPUs can process.
+This parameter can be:
+None, in which case all the jobs are immediately created and spawned.</p>
+<blockquote>
+<div><p>Use this for lightweight and fast-running jobs,
+to avoid delays due to on-demand spawning of the jobs</p>
+</div></blockquote>
+<p>An int, giving the exact number of total jobs that are spawned
+A string, giving an expression as a function</p>
+<blockquote>
+<div><p>of n_jobs, as in <cite>2*n_jobs</cite></p>
+</div></blockquote>
+</p></li>
+<li><p><strong>clone_estimator</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones estimator if True; works with the original estimator instance
+if False. Set to False if the estimator doesn’t
+implement scikit-learn’s set_params and get_params methods.
+In addition, it is required to set cv=0, and n_jobs=1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_idx_">
+<span class="sig-name descname"><span class="pre">best_idx_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_idx_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature Indices of the selected feature subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_feature_names_">
+<span class="sig-name descname"><span class="pre">best_feature_names_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_feature_names_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature names of the selected feature subsets. If pandas
+DataFrames are used in the <cite>fit</cite> method, the feature
+names correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. New in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_score_">
+<span class="sig-name descname"><span class="pre">best_score_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.best_score_" title="Permalink to this definition"></a></dt>
+<dd><p>Cross validation average score of the selected subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.subsets_">
+<span class="sig-name descname"><span class="pre">subsets_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.subsets_" title="Permalink to this definition"></a></dt>
+<dd><p>A dictionary of selected feature subsets during the
+exhaustive selection, where the dictionary keys are
+the lengths k of these feature subsets. The dictionary
+values are dictionaries themselves with the following
+keys: ‘feature_idx’ (tuple of indices of the feature subset)</p>
+<blockquote>
+<div><p>‘feature_names’ (tuple of feature names of the feat. subset)
+‘cv_scores’ (list individual cross-validation scores)
+‘avg_score’ (average cross-validation score)</p>
+</div></blockquote>
+<p>Note that if pandas
+DataFrames are used in the <cite>fit</cite> method, the ‘feature_names’
+correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. The ‘feature_names’ is new in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/ExhaustiveFeatureSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/ExhaustiveFeatureSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_feature_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Perform feature selection and learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>custom_feature_names</strong> (<em>None</em><em> or </em><em>tuple</em><em> (</em><em>default: tuple</em><em>)</em>) – Custom feature names for <cite>self.k_feature_names</cite> and
+<cite>self.subsets_[i][‘feature_names’]</cite>.
+(new in v 0.13.0)</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>dict</em><em> of </em><em>string -&gt; object</em><em>, </em><em>optional</em>) – Parameters to pass to to the fit method of classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Fit to training data and return the best selected features from X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>dict</em><em> of </em><em>string -&gt; object</em><em>, </em><em>optional</em>) – Parameters to pass to to the fit method of classifier.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.get_metric_dict">
+<span class="sig-name descname"><span class="pre">get_metric_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.get_metric_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.get_metric_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Return metric dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>confidence_interval</strong> (<em>float</em><em> (</em><em>default: 0.95</em><em>)</em>) – A positive float between 0.0 and 1.0 to compute the confidence
+interval bounds of the CV score averages.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Dictionary with items where each dictionary value is a list</em></p></li>
+<li><p><em>with the number of iterations (number of feature subsets) as</em></p></li>
+<li><p><em>its length. The dictionary keys corresponding to these lists</em></p></li>
+<li><p><em>are as follows</em> – ‘feature_idx’: tuple of the indices of the feature subset
+‘cv_scores’: list with individual CV scores
+‘avg_score’: of CV average scores
+‘std_dev’: standard deviation of the CV score average
+‘std_err’: standard error of the CV score average
+‘ci_bound’: confidence interval bound of the CV score average</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/exhaustive_feature_selector.html#ExhaustiveFeatureSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.ExhaustiveFeatureSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Return the best selected features from X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_selection.</span></span><span class="sig-name descname"><span class="pre">SequentialFeatureSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">floating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clone_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixed_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MetaEstimatorMixin</span></code></p>
+<p>Sequential Feature Selection for Classification and Regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>k_features</strong> (<em>int</em><em> or </em><em>tuple</em><em> or </em><em>str</em><em> (</em><em>default: 1</em><em>)</em>) – <p>Number of features to select,
+where k_features &lt; the full feature set.
+New in 0.4.2: A tuple containing a min and max value can be provided,</p>
+<blockquote>
+<div><p>and the SFS will consider return any feature combination between
+min and max that scored highest in cross-validation. For example,
+the tuple (1, 4) will return any combination from
+1 up to 4 features instead of a fixed number of features k.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>New in 0.8.0: A string argument “best” or “parsimonious”.</dt><dd><p>If “best” is provided, the feature selector will return the
+feature subset with the best cross-validation performance.
+If “parsimonious” is provided as an argument, the smallest
+feature subset that is within one standard error of the
+cross-validation performance will be selected.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>forward</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Forward selection if True,
+backward selection otherwise</p></li>
+<li><p><strong>floating</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – Adds a conditional exclusion/inclusion if True.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em><em>, </em><em>level</em><em> of </em><em>verbosity to use in logging.</em>) – If 0, no output,
+if 1 number of features in current set, if 2 detailed logging i
+ncluding timestamp and cv scores at step.</p></li>
+<li><p><strong>scoring</strong> (<em>str</em><em>, </em><em>callable</em><em>, or </em><em>None</em><em> (</em><em>default: None</em><em>)</em>) – If None (default), uses ‘accuracy’ for sklearn classifiers
+and ‘r2’ for sklearn regressors.
+If str, uses a sklearn scoring metric string identifier, for example
+{accuracy, f1, precision, recall, roc_auc} for classifiers,
+{‘mean_absolute_error’, ‘mean_squared_error’/’neg_mean_squared_error’,
+‘median_absolute_error’, ‘r2’} for regressors.
+If a callable object or function is provided, it has to be conform with
+sklearn’s signature <code class="docutils literal notranslate"><span class="pre">scorer(estimator,</span> <span class="pre">X,</span> <span class="pre">y)</span></code>; see
+<a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html">http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html</a>
+for more information.</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em> (</em><em>default: 5</em><em>)</em>) – Integer or iterable yielding train, test splits. If cv is an integer
+and <cite>estimator</cite> is a classifier (or y consists of integer class
+labels) stratified k-fold. Otherwise regular k-fold cross-validation
+is performed. No cross-validation if cv is None, False, or 0.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – The number of CPUs to use for evaluating different feature subsets
+in parallel. -1 means ‘all CPUs’.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em> (</em><em>default: '2*n_jobs'</em><em>)</em>) – <p>Controls the number of jobs that get dispatched
+during parallel execution if <cite>n_jobs &gt; 1</cite> or <cite>n_jobs=-1</cite>.
+Reducing this number can be useful to avoid an explosion of
+memory consumption when more jobs get dispatched than CPUs can process.
+This parameter can be:
+None, in which case all the jobs are immediately created and spawned.</p>
+<blockquote>
+<div><p>Use this for lightweight and fast-running jobs,
+to avoid delays due to on-demand spawning of the jobs</p>
+</div></blockquote>
+<p>An int, giving the exact number of total jobs that are spawned
+A string, giving an expression as a function</p>
+<blockquote>
+<div><p>of n_jobs, as in <cite>2*n_jobs</cite></p>
+</div></blockquote>
+</p></li>
+<li><p><strong>clone_estimator</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones estimator if True; works with the original estimator instance
+if False. Set to False if the estimator doesn’t
+implement scikit-learn’s set_params and get_params methods.
+In addition, it is required to set cv=0, and n_jobs=1.</p></li>
+<li><p><strong>fixed_features</strong> (<em>tuple</em><em> (</em><em>default: None</em><em>)</em>) – If not <cite>None</cite>, the feature indices provided as a tuple will be
+regarded as fixed by the feature selector. For example, if
+<cite>fixed_features=(1, 3, 7)</cite>, the 2nd, 4th, and 8th feature are
+guaranteed to be present in the solution. Note that if
+<cite>fixed_features</cite> is not <cite>None</cite>, make sure that the number of
+features to be selected is greater than <cite>len(fixed_features)</cite>.
+In other words, ensure that <cite>k_features &gt; len(fixed_features)</cite>.
+New in mlxtend v. 0.18.0.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_feature_idx_">
+<span class="sig-name descname"><span class="pre">k_feature_idx_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_feature_idx_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature Indices of the selected feature subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_feature_names_">
+<span class="sig-name descname"><span class="pre">k_feature_names_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_feature_names_" title="Permalink to this definition"></a></dt>
+<dd><p>Feature names of the selected feature subsets. If pandas
+DataFrames are used in the <cite>fit</cite> method, the feature
+names correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. New in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_predictions]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_score_">
+<span class="sig-name descname"><span class="pre">k_score_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.k_score_" title="Permalink to this definition"></a></dt>
+<dd><p>Cross validation average score of the selected subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.subsets_">
+<span class="sig-name descname"><span class="pre">subsets_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.subsets_" title="Permalink to this definition"></a></dt>
+<dd><p>A dictionary of selected feature subsets during the
+sequential selection, where the dictionary keys are
+the lengths k of these feature subsets. The dictionary
+values are dictionaries themselves with the following
+keys: ‘feature_idx’ (tuple of indices of the feature subset)</p>
+<blockquote>
+<div><p>‘feature_names’ (tuple of feature names of the feat. subset)
+‘cv_scores’ (list individual cross-validation scores)
+‘avg_score’ (average cross-validation score)</p>
+</div></blockquote>
+<p>Note that if pandas
+DataFrames are used in the <cite>fit</cite> method, the ‘feature_names’
+correspond to the column names. Otherwise, the
+feature names are string representation of the feature
+array indices. The ‘feature_names’ is new in v 0.13.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/">http://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_feature_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Perform feature selection and learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for y.</p></li>
+<li><p><strong>custom_feature_names</strong> (<em>None</em><em> or </em><em>tuple</em><em> (</em><em>default: tuple</em><em>)</em>) – Custom feature names for <cite>self.k_feature_names</cite> and
+<cite>self.subsets_[i][‘feature_names’]</cite>.
+(new in v 0.13.0)</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>various</em><em>, </em><em>optional</em>) – Additional parameters that are being passed to the estimator.
+For example, <cite>sample_weights=weights</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.fit_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Fit to training data then reduce X to its most important features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.
+New in v 0.13.0: a pandas Series are now also accepted as
+argument for y.</p></li>
+<li><p><strong>groups</strong> (<em>array-like</em><em>, </em><em>with shape</em><em> (</em><em>n_samples</em><em>,</em><em>)</em><em>, </em><em>optional</em>) – Group labels for the samples used while splitting the dataset into
+train/test set. Passed to the fit method of the cross-validator.</p></li>
+<li><p><strong>fit_params</strong> (<em>various</em><em>, </em><em>optional</em>) – Additional parameters that are being passed to the estimator.
+For example, <cite>sample_weights=weights</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Reduced feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.get_metric_dict">
+<span class="sig-name descname"><span class="pre">get_metric_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">confidence_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.get_metric_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.get_metric_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Return metric dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>confidence_interval</strong> (<em>float</em><em> (</em><em>default: 0.95</em><em>)</em>) – A positive float between 0.0 and 1.0 to compute the confidence
+interval bounds of the CV score averages.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Dictionary with items where each dictionary value is a list</em></p></li>
+<li><p><em>with the number of iterations (number of feature subsets) as</em></p></li>
+<li><p><em>its length. The dictionary keys corresponding to these lists</em></p></li>
+<li><p><em>are as follows</em> – ‘feature_idx’: tuple of the indices of the feature subset
+‘cv_scores’: list with individual CV scores
+‘avg_score’: of CV average scores
+‘std_dev’: standard deviation of the CV score average
+‘std_err’: standard error of the CV score average
+‘ci_bound’: confidence interval bound of the CV score average</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.named_estimators">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_estimators</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.named_estimators" title="Permalink to this definition"></a></dt>
+<dd><p>rtype: List of named estimator tuples, like [(‘svc’, SVC(…))]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.
+Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_selection/sequential_feature_selector.html#SequentialFeatureSelector.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_selection.SequentialFeatureSelector.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Reduce X to its most important features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.
+New in v 0.13.0: pandas DataFrames are now also accepted as
+argument for X.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Reduced feature subset of X, shape={n_samples, k_features}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.app.mlxtend.feature_extraction package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.app.mlxtend.file_io.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.app.mlxtend.file_io package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

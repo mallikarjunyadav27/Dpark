@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.mlxtend.regressor package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend.text package" href="DPARK.services.snow_auto.mlxtend.text.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.mlxtend.preprocessing package" href="DPARK.services.snow_auto.mlxtend.preprocessing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.mlxtend.regressor package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.regressor.linear_regression">DPARK.services.snow_auto.mlxtend.regressor.linear_regression module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression"><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression">DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor"><code class="docutils literal notranslate"><span class="pre">StackingCVRegressor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.regressor.stacking_regression">DPARK.services.snow_auto.mlxtend.regressor.stacking_regression module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor"><code class="docutils literal notranslate"><span class="pre">StackingRegressor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.regressor">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.LinearRegression"><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor"><code class="docutils literal notranslate"><span class="pre">StackingCVRegressor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor"><code class="docutils literal notranslate"><span class="pre">StackingRegressor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.mlxtend.regressor package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.mlxtend.regressor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-mlxtend-regressor-package">
+<h1>DPARK.services.snow_auto.mlxtend.regressor package<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-regressor-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.regressor.linear_regression">
+<span id="dpark-services-snow-auto-mlxtend-regressor-linear-regression-module"></span><h2>DPARK.services.snow_auto.mlxtend.regressor.linear_regression module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.regressor.linear_regression" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.linear_regression.</span></span><span class="sig-name descname"><span class="pre">LinearRegression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'direct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minibatches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/linear_regression.html#LinearRegression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_IterativeModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_Regressor</span></code></p>
+<p>Ordinary least squares linear regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>string</em><em> (</em><em>default: 'direct'</em><em>)</em>) – For gradient descent-based optimization, use <cite>sgd</cite> (see <cite>minibatch</cite>
+parameter for further options). Otherwise, if <cite>direct</cite> (default),
+the analytical method is used. For alternative, numerically more
+stable solutions, use either <cite>qr</cite> (QR decomopisition) or <cite>svd</cite>
+(Singular Value Decomposition).</p></li>
+<li><p><strong>eta</strong> (<em>float</em><em> (</em><em>default: 0.01</em><em>)</em>) – solver learning rate (between 0.0 and 1.0). Used with <cite>method =</cite>
+<cite>‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>epochs</strong> (<em>int</em><em> (</em><em>default: 50</em><em>)</em>) – Passes over the training dataset.
+Prior to each epoch, the dataset is shuffled
+if <cite>minibatches &gt; 1</cite> to prevent cycles in stochastic gradient descent.
+Used with <cite>method = ‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>minibatches</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – <p>The number of minibatches for gradient-based optimization.
+If None: Direct method, QR, or SVD method (see <cite>method</cite> parameter</p>
+<blockquote>
+<div><p>for details)</p>
+</div></blockquote>
+<p>If 1: Gradient Descent learning
+If len(y): Stochastic Gradient Descent learning
+If 1 &lt; minibatches &lt; len(y): Minibatch learning</p>
+</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Set random state for shuffling and initializing the weights. Used in
+<cite>method = ‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>print_progress</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Prints progress in fitting to stderr if <cite>method = ‘sgd’</cite>.
+0: No output
+1: Epochs elapsed and cost
+2: 1 plus time elapsed
+3: 2 plus estimated time until completion</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Model weights after fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>2d-array, shape={n_features, 1}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.b_">
+<span class="sig-name descname"><span class="pre">b_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.b_" title="Permalink to this definition"></a></dt>
+<dd><p>Bias unit after fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>1d-array, shape={1,}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.cost_">
+<span class="sig-name descname"><span class="pre">cost_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.linear_regression.LinearRegression.cost_" title="Permalink to this definition"></a></dt>
+<dd><p>Sum of squared errors after each epoch;
+ignored if solver=’normal equation’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/">http://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression">
+<span id="dpark-services-snow-auto-mlxtend-regressor-stacking-cv-regression-module"></span><h2>DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.</span></span><span class="sig-name descname"><span class="pre">StackingCVRegressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_features_in_secondary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_train_meta_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TransformerMixin</span></code></p>
+<p>A ‘Stacking Cross-Validation’ regressor for scikit-learn estimators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regressors</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_regressors</em><em>]</em>) – A list of regressors.
+Invoking the <cite>fit</cite> method on the <cite>StackingCVRegressor</cite> will fit clones
+of these original regressors that will
+be stored in the class attribute <cite>self.regr_</cite>.</p></li>
+<li><p><strong>meta_regressor</strong> (<em>object</em>) – The meta-regressor to be fitted on the ensemble of
+regressor</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em>, </em><em>cross-validation generator</em><em> or </em><em>iterable</em><em>, </em><em>optional</em><em> (</em><em>default: 5</em><em>)</em>) – Determines the cross-validation splitting strategy.
+Possible inputs for cv are:
+- None, to use the default 5-fold cross validation,
+- integer, to specify the number of folds in a <cite>KFold</cite>,
+- An object to be used as a cross-validation generator.
+- An iterable yielding train, test splits.
+For integer/None inputs, it will use <cite>KFold</cite> cross-validation</p></li>
+<li><p><strong>shuffle</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – If True,  and the <cite>cv</cite> argument is integer, the training data will
+be shuffled at fitting stage prior to cross-validation. If the <cite>cv</cite>
+argument is a specific cross validation technique, this argument is
+omitted.</p></li>
+<li><p><strong>random_state</strong> (<em>int</em><em>, </em><em>RandomState instance</em><em> or </em><em>None</em><em>, </em><em>optional</em><em> (</em><em>default: None</em><em>)</em>) – Constrols the randomness of the cv splitter. Used when <cite>cv</cite> is
+integer and <cite>shuffle=True</cite>. New in v0.16.0.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – Controls the verbosity of the building process. New in v0.16.0</p></li>
+<li><p><strong>refit</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones the regressors for stacking regression if True (default)
+or else uses the original ones, which will be refitted on the dataset
+upon calling the <cite>fit</cite> method. Setting refit=False is
+recommended if you are working with estimators that are supporting
+the scikit-learn fit/predict API interface but are not compatible
+to scikit-learn’s <cite>clone</cite> function.</p></li>
+<li><p><strong>use_features_in_secondary</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-regressor will be trained both on
+the predictions of the original regressors and the
+original dataset.
+If False, the meta-regressor will be trained only on
+the predictions of the original regressors.</p></li>
+<li><p><strong>store_train_meta_features</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-features computed from the training data
+used for fitting the
+meta-regressor stored in the <cite>self.train_meta_features_</cite> array,
+which can be
+accessed after calling <cite>fit</cite>.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of CPUs to use to do the computation.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors. See <span class="xref std std-term">Glossary</span>
+for more details. New in v0.16.0.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em>, </em><em>optional</em>) – <p>Controls the number of jobs that get dispatched during parallel
+execution. Reducing this number can be useful to avoid an
+explosion of memory consumption when more jobs get dispatched
+than CPUs can process. This parameter can be:</p>
+<blockquote>
+<div><ul>
+<li><p>None, in which case all the jobs are immediately
+created and spawned. Use this for lightweight and
+fast-running jobs, to avoid delays due to on-demand
+spawning of the jobs</p></li>
+<li><p>An int, giving the exact number of total jobs that are
+spawned</p></li>
+<li><p>A string, giving an expression as a function of n_jobs,
+as in ‘2*n_jobs’</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+<li><p><strong>multi_output</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, allow multi-output targets, but forbid nan or inf values.
+If False, <cite>y</cite> will be checked to be a vector. (New in v0.19.0.)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.train_meta_features">
+<span class="sig-name descname"><span class="pre">train_meta_features</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.train_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>meta-features for training data, where n_samples is the
+number of samples
+in training data and len(self.regressors) is the number of regressors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, n_regressors]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/StackingCVRegressor/">http://rasbt.github.io/mlxtend/user_guide/regressor/StackingCVRegressor/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit ensemble regressors and the meta-regressor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] or </em><em>[</em><em>n_samples</em><em>, </em><em>n_targets</em><em>]</em>) – Target values. Multiple targets are supported only if
+self.multi_output is True.</p></li>
+<li><p><strong>groups</strong> (<em>numpy array/None</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – The group that each sample belongs to. This is used by specific
+folding strategies such as GroupKFold()</p></li>
+<li><p><strong>sample_weight</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em><em>, </em><em>optional</em>) – Sample weights passed as sample_weights to each regressor
+in the regressors list as well as the meta_regressor.
+Raises error if some regressor does not support
+sample_weight in the fit() method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.named_regressors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_regressors</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.named_regressors" title="Permalink to this definition"></a></dt>
+<dd><p>rtype: List of named estimator tuples, like [(‘svc’, SVC(…))]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict target values for X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y_target</strong> – Predicted target values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_samples] or [n_samples, n_targets]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.predict_meta_features">
+<span class="sig-name descname"><span class="pre">predict_meta_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.predict_meta_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.predict_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get meta-features of test-data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Test vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>meta-features</strong> – meta-features for test data, where n_samples is the number of
+samples in test data and len(self.regressors) is the number
+of regressors. If self.multi_output is True, then the number of
+columns is len(self.regressors) * n_targets.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, len(self.regressors)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_cv_regression.StackingCVRegressor.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.regressor.stacking_regression">
+<span id="dpark-services-snow-auto-mlxtend-regressor-stacking-regression-module"></span><h2>DPARK.services.snow_auto.mlxtend.regressor.stacking_regression module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.regressor.stacking_regression" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.</span></span><span class="sig-name descname"><span class="pre">StackingRegressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_features_in_secondary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_train_meta_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TransformerMixin</span></code></p>
+<p>A Stacking regressor for scikit-learn estimators for regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regressors</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_regressors</em><em>]</em>) – A list of regressors.
+Invoking the <cite>fit</cite> method on the <cite>StackingRegressor</cite> will fit clones
+of those original regressors that will
+be stored in the class attribute
+<cite>self.regr_</cite>.</p></li>
+<li><p><strong>meta_regressor</strong> (<em>object</em>) – The meta-regressor to be fitted on the ensemble of
+regressors</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – <p>Controls the verbosity of the building process.
+- <cite>verbose=0</cite> (default): Prints nothing
+- <cite>verbose=1</cite>: Prints the number &amp; name of the regressor being fitted
+- <cite>verbose=2</cite>: Prints info about the parameters of the</p>
+<blockquote>
+<div><p>regressor being fitted</p>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt><cite>verbose&gt;2</cite>: Changes <cite>verbose</cite> param of the underlying regressor to</dt><dd><p>self.verbose - 2</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>use_features_in_secondary</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-regressor will be trained both on
+the predictions of the original regressors and the
+original dataset.
+If False, the meta-regressor will be trained only on
+the predictions of the original regressors.</p></li>
+<li><p><strong>store_train_meta_features</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-features computed from the training data
+used for fitting the
+meta-regressor stored in the <cite>self.train_meta_features_</cite> array,
+which can be
+accessed after calling <cite>fit</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.regr_">
+<span class="sig-name descname"><span class="pre">regr_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.regr_" title="Permalink to this definition"></a></dt>
+<dd><p>Fitted regressors (clones of the original regressors)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list, shape=[n_regressors]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.meta_regr_">
+<span class="sig-name descname"><span class="pre">meta_regr_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.meta_regr_" title="Permalink to this definition"></a></dt>
+<dd><p>Fitted meta-regressor (clone of the original meta-estimator)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>estimator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.coef_">
+<span class="sig-name descname"><span class="pre">coef_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.coef_" title="Permalink to this definition"></a></dt>
+<dd><p>Model coefficients of the fitted meta-estimator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.intercept_">
+<span class="sig-name descname"><span class="pre">intercept_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.intercept_" title="Permalink to this definition"></a></dt>
+<dd><p>Intercept of the fitted meta-estimator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.train_meta_features">
+<span class="sig-name descname"><span class="pre">train_meta_features</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.train_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>shape = [n_samples, len(self.regressors)]
+meta-features for training data, where n_samples is the
+number of samples
+in training data and len(self.regressors) is the number of regressors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy array,</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.refit">
+<span class="sig-name descname"><span class="pre">refit</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.refit" title="Permalink to this definition"></a></dt>
+<dd><p>Clones the regressors for stacking regression if True (default)
+or else uses the original ones, which will be refitted on the dataset
+upon calling the <cite>fit</cite> method. Setting refit=False is
+recommended if you are working with estimators that are supporting
+the scikit-learn fit/predict API interface but are not compatible
+to scikit-learn’s <cite>clone</cite> function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool (default: True)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/StackingRegressor/">http://rasbt.github.io/mlxtend/user_guide/regressor/StackingRegressor/</a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coef_</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn weight coefficients from training data for each regressor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] or </em><em>[</em><em>n_samples</em><em>, </em><em>n_targets</em><em>]</em>) – Target values. Multiple targets are supported only if
+self.multi_output is True.</p></li>
+<li><p><strong>sample_weight</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em><em>, </em><em>optional</em>) – Sample weights passed as sample_weights to each regressor
+in the regressors list as well as the meta_regressor.
+Raises error if some regressor does not support
+sample_weight in the fit() method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Return estimator parameter names for GridSearch support.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intercept_</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.named_regressors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_regressors</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.named_regressors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict target values for X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y_target</strong> – Predicted target values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_samples] or [n_samples, n_targets]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.predict_meta_features">
+<span class="sig-name descname"><span class="pre">predict_meta_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.predict_meta_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.predict_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get meta-features of test-data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Test vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>meta-features</strong> – meta-features for test data, where n_samples is the number of
+samples in test data and len(self.regressors) is the number
+of regressors. If self.multi_output is True, then the number of
+columns is len(self.regressors) * n_targets</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, len(self.regressors)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.stacking_regression.StackingRegressor.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.regressor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.regressor" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.LinearRegression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.</span></span><span class="sig-name descname"><span class="pre">LinearRegression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'direct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minibatches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/linear_regression.html#LinearRegression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.LinearRegression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_IterativeModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_Regressor</span></code></p>
+<p>Ordinary least squares linear regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>string</em><em> (</em><em>default: 'direct'</em><em>)</em>) – For gradient descent-based optimization, use <cite>sgd</cite> (see <cite>minibatch</cite>
+parameter for further options). Otherwise, if <cite>direct</cite> (default),
+the analytical method is used. For alternative, numerically more
+stable solutions, use either <cite>qr</cite> (QR decomopisition) or <cite>svd</cite>
+(Singular Value Decomposition).</p></li>
+<li><p><strong>eta</strong> (<em>float</em><em> (</em><em>default: 0.01</em><em>)</em>) – solver learning rate (between 0.0 and 1.0). Used with <cite>method =</cite>
+<cite>‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>epochs</strong> (<em>int</em><em> (</em><em>default: 50</em><em>)</em>) – Passes over the training dataset.
+Prior to each epoch, the dataset is shuffled
+if <cite>minibatches &gt; 1</cite> to prevent cycles in stochastic gradient descent.
+Used with <cite>method = ‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>minibatches</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – <p>The number of minibatches for gradient-based optimization.
+If None: Direct method, QR, or SVD method (see <cite>method</cite> parameter</p>
+<blockquote>
+<div><p>for details)</p>
+</div></blockquote>
+<p>If 1: Gradient Descent learning
+If len(y): Stochastic Gradient Descent learning
+If 1 &lt; minibatches &lt; len(y): Minibatch learning</p>
+</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Set random state for shuffling and initializing the weights. Used in
+<cite>method = ‘sgd’</cite>. (See <cite>methods</cite> parameter for details)</p></li>
+<li><p><strong>print_progress</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Prints progress in fitting to stderr if <cite>method = ‘sgd’</cite>.
+0: No output
+1: Epochs elapsed and cost
+2: 1 plus time elapsed
+3: 2 plus estimated time until completion</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Model weights after fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>2d-array, shape={n_features, 1}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.b_">
+<span class="sig-name descname"><span class="pre">b_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.b_" title="Permalink to this definition"></a></dt>
+<dd><p>Bias unit after fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>1d-array, shape={1,}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.cost_">
+<span class="sig-name descname"><span class="pre">cost_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.LinearRegression.cost_" title="Permalink to this definition"></a></dt>
+<dd><p>Sum of squared errors after each epoch;
+ignored if solver=’normal equation’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/">http://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.</span></span><span class="sig-name descname"><span class="pre">StackingCVRegressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_features_in_secondary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_train_meta_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_dispatch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2*n_jobs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TransformerMixin</span></code></p>
+<p>A ‘Stacking Cross-Validation’ regressor for scikit-learn estimators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regressors</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_regressors</em><em>]</em>) – A list of regressors.
+Invoking the <cite>fit</cite> method on the <cite>StackingCVRegressor</cite> will fit clones
+of these original regressors that will
+be stored in the class attribute <cite>self.regr_</cite>.</p></li>
+<li><p><strong>meta_regressor</strong> (<em>object</em>) – The meta-regressor to be fitted on the ensemble of
+regressor</p></li>
+<li><p><strong>cv</strong> (<em>int</em><em>, </em><em>cross-validation generator</em><em> or </em><em>iterable</em><em>, </em><em>optional</em><em> (</em><em>default: 5</em><em>)</em>) – Determines the cross-validation splitting strategy.
+Possible inputs for cv are:
+- None, to use the default 5-fold cross validation,
+- integer, to specify the number of folds in a <cite>KFold</cite>,
+- An object to be used as a cross-validation generator.
+- An iterable yielding train, test splits.
+For integer/None inputs, it will use <cite>KFold</cite> cross-validation</p></li>
+<li><p><strong>shuffle</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – If True,  and the <cite>cv</cite> argument is integer, the training data will
+be shuffled at fitting stage prior to cross-validation. If the <cite>cv</cite>
+argument is a specific cross validation technique, this argument is
+omitted.</p></li>
+<li><p><strong>random_state</strong> (<em>int</em><em>, </em><em>RandomState instance</em><em> or </em><em>None</em><em>, </em><em>optional</em><em> (</em><em>default: None</em><em>)</em>) – Constrols the randomness of the cv splitter. Used when <cite>cv</cite> is
+integer and <cite>shuffle=True</cite>. New in v0.16.0.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – Controls the verbosity of the building process. New in v0.16.0</p></li>
+<li><p><strong>refit</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Clones the regressors for stacking regression if True (default)
+or else uses the original ones, which will be refitted on the dataset
+upon calling the <cite>fit</cite> method. Setting refit=False is
+recommended if you are working with estimators that are supporting
+the scikit-learn fit/predict API interface but are not compatible
+to scikit-learn’s <cite>clone</cite> function.</p></li>
+<li><p><strong>use_features_in_secondary</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-regressor will be trained both on
+the predictions of the original regressors and the
+original dataset.
+If False, the meta-regressor will be trained only on
+the predictions of the original regressors.</p></li>
+<li><p><strong>store_train_meta_features</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-features computed from the training data
+used for fitting the
+meta-regressor stored in the <cite>self.train_meta_features_</cite> array,
+which can be
+accessed after calling <cite>fit</cite>.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of CPUs to use to do the computation.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors. See <span class="xref std std-term">Glossary</span>
+for more details. New in v0.16.0.</p></li>
+<li><p><strong>pre_dispatch</strong> (<em>int</em><em>, or </em><em>string</em><em>, </em><em>optional</em>) – <p>Controls the number of jobs that get dispatched during parallel
+execution. Reducing this number can be useful to avoid an
+explosion of memory consumption when more jobs get dispatched
+than CPUs can process. This parameter can be:</p>
+<blockquote>
+<div><ul>
+<li><p>None, in which case all the jobs are immediately
+created and spawned. Use this for lightweight and
+fast-running jobs, to avoid delays due to on-demand
+spawning of the jobs</p></li>
+<li><p>An int, giving the exact number of total jobs that are
+spawned</p></li>
+<li><p>A string, giving an expression as a function of n_jobs,
+as in ‘2*n_jobs’</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+<li><p><strong>multi_output</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, allow multi-output targets, but forbid nan or inf values.
+If False, <cite>y</cite> will be checked to be a vector. (New in v0.19.0.)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.train_meta_features">
+<span class="sig-name descname"><span class="pre">train_meta_features</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.train_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>meta-features for training data, where n_samples is the
+number of samples
+in training data and len(self.regressors) is the number of regressors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, n_regressors]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/StackingCVRegressor/">http://rasbt.github.io/mlxtend/user_guide/regressor/StackingCVRegressor/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit ensemble regressors and the meta-regressor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] or </em><em>[</em><em>n_samples</em><em>, </em><em>n_targets</em><em>]</em>) – Target values. Multiple targets are supported only if
+self.multi_output is True.</p></li>
+<li><p><strong>groups</strong> (<em>numpy array/None</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – The group that each sample belongs to. This is used by specific
+folding strategies such as GroupKFold()</p></li>
+<li><p><strong>sample_weight</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em><em>, </em><em>optional</em>) – Sample weights passed as sample_weights to each regressor
+in the regressors list as well as the meta_regressor.
+Raises error if some regressor does not support
+sample_weight in the fit() method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>params</strong> – Parameter names mapped to their values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.named_regressors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_regressors</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.named_regressors" title="Permalink to this definition"></a></dt>
+<dd><p>rtype: List of named estimator tuples, like [(‘svc’, SVC(…))]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict target values for X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y_target</strong> – Predicted target values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_samples] or [n_samples, n_targets]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.predict_meta_features">
+<span class="sig-name descname"><span class="pre">predict_meta_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.predict_meta_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.predict_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get meta-features of test-data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Test vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>meta-features</strong> – meta-features for test data, where n_samples is the number of
+samples in test data and len(self.regressors) is the number
+of regressors. If self.multi_output is True, then the number of
+columns is len(self.regressors) * n_targets.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, len(self.regressors)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_cv_regression.html#StackingCVRegressor.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingCVRegressor.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.regressor.</span></span><span class="sig-name descname"><span class="pre">StackingRegressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_features_in_secondary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_train_meta_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseXComposition</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TransformerMixin</span></code></p>
+<p>A Stacking regressor for scikit-learn estimators for regression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regressors</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_regressors</em><em>]</em>) – A list of regressors.
+Invoking the <cite>fit</cite> method on the <cite>StackingRegressor</cite> will fit clones
+of those original regressors that will
+be stored in the class attribute
+<cite>self.regr_</cite>.</p></li>
+<li><p><strong>meta_regressor</strong> (<em>object</em>) – The meta-regressor to be fitted on the ensemble of
+regressors</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – <p>Controls the verbosity of the building process.
+- <cite>verbose=0</cite> (default): Prints nothing
+- <cite>verbose=1</cite>: Prints the number &amp; name of the regressor being fitted
+- <cite>verbose=2</cite>: Prints info about the parameters of the</p>
+<blockquote>
+<div><p>regressor being fitted</p>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt><cite>verbose&gt;2</cite>: Changes <cite>verbose</cite> param of the underlying regressor to</dt><dd><p>self.verbose - 2</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>use_features_in_secondary</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-regressor will be trained both on
+the predictions of the original regressors and the
+original dataset.
+If False, the meta-regressor will be trained only on
+the predictions of the original regressors.</p></li>
+<li><p><strong>store_train_meta_features</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, the meta-features computed from the training data
+used for fitting the
+meta-regressor stored in the <cite>self.train_meta_features_</cite> array,
+which can be
+accessed after calling <cite>fit</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.regr_">
+<span class="sig-name descname"><span class="pre">regr_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.regr_" title="Permalink to this definition"></a></dt>
+<dd><p>Fitted regressors (clones of the original regressors)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list, shape=[n_regressors]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.meta_regr_">
+<span class="sig-name descname"><span class="pre">meta_regr_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.meta_regr_" title="Permalink to this definition"></a></dt>
+<dd><p>Fitted meta-regressor (clone of the original meta-estimator)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>estimator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.coef_">
+<span class="sig-name descname"><span class="pre">coef_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.coef_" title="Permalink to this definition"></a></dt>
+<dd><p>Model coefficients of the fitted meta-estimator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.intercept_">
+<span class="sig-name descname"><span class="pre">intercept_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.intercept_" title="Permalink to this definition"></a></dt>
+<dd><p>Intercept of the fitted meta-estimator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.train_meta_features">
+<span class="sig-name descname"><span class="pre">train_meta_features</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.train_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>shape = [n_samples, len(self.regressors)]
+meta-features for training data, where n_samples is the
+number of samples
+in training data and len(self.regressors) is the number of regressors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numpy array,</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.refit">
+<span class="sig-name descname"><span class="pre">refit</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.refit" title="Permalink to this definition"></a></dt>
+<dd><p>Clones the regressors for stacking regression if True (default)
+or else uses the original ones, which will be refitted on the dataset
+upon calling the <cite>fit</cite> method. Setting refit=False is
+recommended if you are working with estimators that are supporting
+the scikit-learn fit/predict API interface but are not compatible
+to scikit-learn’s <cite>clone</cite> function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool (default: True)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/regressor/StackingRegressor/">http://rasbt.github.io/mlxtend/user_guide/regressor/StackingRegressor/</a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="id2">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coef_</span></span><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn weight coefficients from training data for each regressor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] or </em><em>[</em><em>n_samples</em><em>, </em><em>n_targets</em><em>]</em>) – Target values. Multiple targets are supported only if
+self.multi_output is True.</p></li>
+<li><p><strong>sample_weight</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em><em>, </em><em>optional</em>) – Sample weights passed as sample_weights to each regressor
+in the regressors list as well as the meta_regressor.
+Raises error if some regressor does not support
+sample_weight in the fit() method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Return estimator parameter names for GridSearch support.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id3">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intercept_</span></span><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.named_regressors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">named_regressors</span></span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.named_regressors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict target values for X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y_target</strong> – Predicted target values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape = [n_samples] or [n_samples, n_targets]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.predict_meta_features">
+<span class="sig-name descname"><span class="pre">predict_meta_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.predict_meta_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.predict_meta_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get meta-features of test-data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>numpy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Test vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>meta-features</strong> – meta-features for test data, where n_samples is the number of
+samples in test data and len(self.regressors) is the number
+of regressors. If self.multi_output is True, then the number of
+columns is len(self.regressors) * n_targets</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array, shape = [n_samples, len(self.regressors)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/regressor/stacking_regression.html#StackingRegressor.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>Valid parameter keys can be listed with <code class="docutils literal notranslate"><span class="pre">get_params()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.regressor.StackingRegressor.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.mlxtend.preprocessing.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.mlxtend.preprocessing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.text.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend.text package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

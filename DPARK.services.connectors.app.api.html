@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.connectors.app.api package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.connectors.app.connector_utils package" href="DPARK.services.connectors.app.connector_utils.html" />
+    <link rel="prev" title="DPARK.services.connectors.app package" href="DPARK.services.connectors.app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.connectors.app.api package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-connectors-app-api-blobconnector-module">DPARK.services.connectors.app.api.BlobConnector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-connectors-app-api-mariadb-conn-module">DPARK.services.connectors.app.api.mariadb_conn module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-connectors-app-api-mysql-conn-module">DPARK.services.connectors.app.api.mysql_conn module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.connectors.app.api.postgres_conn">DPARK.services.connectors.app.api.postgres_conn module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.Database"><code class="docutils literal notranslate"><span class="pre">Database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.DatabaseEngine"><code class="docutils literal notranslate"><span class="pre">DatabaseEngine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.RunSqlQuery"><code class="docutils literal notranslate"><span class="pre">RunSqlQuery</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.Schema"><code class="docutils literal notranslate"><span class="pre">Schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData"><code class="docutils literal notranslate"><span class="pre">UserInputData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_databases"><code class="docutils literal notranslate"><span class="pre">get_list_of_databases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_schemata"><code class="docutils literal notranslate"><span class="pre">get_list_of_schemata()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_tables"><code class="docutils literal notranslate"><span class="pre">get_list_of_tables()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.global_variables"><code class="docutils literal notranslate"><span class="pre">global_variables()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.list_of_columns"><code class="docutils literal notranslate"><span class="pre">list_of_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.run_sql_query"><code class="docutils literal notranslate"><span class="pre">run_sql_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.user_details"><code class="docutils literal notranslate"><span class="pre">user_details()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-connectors-app-api-snowflake-conn-module">DPARK.services.connectors.app.api.snowflake_conn module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.connectors.app.api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.connectors.app.api package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.connectors.app.api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-connectors-app-api-package">
+<h1>DPARK.services.connectors.app.api package<a class="headerlink" href="#dpark-services-connectors-app-api-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-connectors-app-api-blobconnector-module">
+<h2>DPARK.services.connectors.app.api.BlobConnector module<a class="headerlink" href="#dpark-services-connectors-app-api-blobconnector-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-connectors-app-api-mariadb-conn-module">
+<h2>DPARK.services.connectors.app.api.mariadb_conn module<a class="headerlink" href="#dpark-services-connectors-app-api-mariadb-conn-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-connectors-app-api-mysql-conn-module">
+<h2>DPARK.services.connectors.app.api.mysql_conn module<a class="headerlink" href="#dpark-services-connectors-app-api-mysql-conn-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.connectors.app.api.postgres_conn">
+<span id="dpark-services-connectors-app-api-postgres-conn-module"></span><h2>DPARK.services.connectors.app.api.postgres_conn module<a class="headerlink" href="#module-DPARK.services.connectors.app.api.postgres_conn" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Database">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">Database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Database" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Database.list_of_schemata">
+<span class="sig-name descname"><span class="pre">list_of_schemata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Database.list_of_schemata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Database.list_of_schemata" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a list of schemas present in the database with which the user wants to
+work.
+:return: A dictionary with the key ‘schemata’ and the value is a list of schemas present in the
+database</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.DatabaseEngine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">DatabaseEngine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#DatabaseEngine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.DatabaseEngine" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.DatabaseEngine.list_of_databases">
+<span class="sig-name descname"><span class="pre">list_of_databases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#DatabaseEngine.list_of_databases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.DatabaseEngine.list_of_databases" title="Permalink to this definition"></a></dt>
+<dd><p>It connects to the database engine and fetches the names of all the databases except ‘template1’
+and ‘template0’</p>
+<p># Python
+def list_of_tables(self,database_name):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>try:</dt><dd><p>conn =</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>pg2.connect(user=user_id,password=user_pass,host=user_host,database=database_name)</dt><dd><p>#Arg4 – database – name of the database to which user wants to connect</p>
+<p>cur = conn.cursor()
+cur.execute(“SELECT table_name FROM information_schema.tables WHERE table_schema =</p>
+</dd>
+<dt>‘public’ AND table_type = ‘BASE TABLE’;”)</dt><dd><p>#information_schema.tables – is a system table which contains the names of all the</p>
+</dd>
+<dt>tables in the database</dt><dd><p>#table_schema – is the name of the schema to</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary with key as “databases” and value as a list of all the databases in the</p>
+</dd>
+</dl>
+<p>PostgreSQL server</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.RunSqlQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">RunSqlQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#RunSqlQuery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.RunSqlQuery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.RunSqlQuery.run_query">
+<span class="sig-name descname"><span class="pre">run_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#RunSqlQuery.run_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.RunSqlQuery.run_query" title="Permalink to this definition"></a></dt>
+<dd><p>It takes a SQL query as an argument and returns the result of the query as a list of
+dictionaries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query_input</strong> – This is the SQL query that the user wants to run</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of dictionaries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Schema">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">Schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Schema" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Schema.list_of_tables">
+<span class="sig-name descname"><span class="pre">list_of_tables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Schema.list_of_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Schema.list_of_tables" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of tables present in the chosen database and schema
+:return: A dictionary with the key ‘tables’ and the value being a list of tables in the chosen
+schema.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Table">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Table" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.Table.list_of_columns">
+<span class="sig-name descname"><span class="pre">list_of_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#Table.list_of_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.Table.list_of_columns" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of columns present in the table of the given database and schema
+:return: A dictionary with the key ‘columns’ and the value is a list of columns present in the
+table</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.UserInputData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">UserInputData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#UserInputData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.UserInputData.host">
+<span class="sig-name descname"><span class="pre">host</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData.host" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.UserInputData.password">
+<span class="sig-name descname"><span class="pre">password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData.password" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.UserInputData.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData.username" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.get_list_of_databases">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">get_list_of_databases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#get_list_of_databases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_databases" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of databases in the PostgreSQL database engine
+:return: A list of databases</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.get_list_of_schemata">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">get_list_of_schemata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_of_database</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#get_list_of_schemata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_schemata" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of schemata in the database that the user chooses to work with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_of_database</strong> – (string) – It is the name of the database with which user chooses to work</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of schemata in the database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.get_list_of_tables">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">get_list_of_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_of_schema</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#get_list_of_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.get_list_of_tables" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of tables in the chosen schema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_of_schema</strong> – (string) – It is the schema with which user chooses to work</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of tables in the chosen schema</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.global_variables">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">global_variables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#global_variables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.global_variables" title="Permalink to this definition"></a></dt>
+<dd><p>It returns the global variables user_id, user_pass, and user_host.
+:return: user_id,user_pass,user_host</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.list_of_columns">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">list_of_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_of_table</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#list_of_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.list_of_columns" title="Permalink to this definition"></a></dt>
+<dd><p>It returns a list of columns of the chosen table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_of_table</strong> – (string) – It is the table with which user chooses to work</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of columns of the chosen table</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.run_sql_query">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">run_sql_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#run_sql_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.run_sql_query" title="Permalink to this definition"></a></dt>
+<dd><p>It takes a SQL query as an argument and returns the result of the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> – (string) – It is the SQL query that the user wants to run</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The query result is being returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.connectors.app.api.postgres_conn.user_details">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.connectors.app.api.postgres_conn.</span></span><span class="sig-name descname"><span class="pre">user_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData" title="DPARK.services.connectors.app.api.postgres_conn.UserInputData"><span class="pre">UserInputData</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/connectors/app/api/postgres_conn.html#user_details"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.connectors.app.api.postgres_conn.user_details" title="Permalink to this definition"></a></dt>
+<dd><p>It takes in a UserInputData object, and returns the same object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>details</strong> (<a class="reference internal" href="#DPARK.services.connectors.app.api.postgres_conn.UserInputData" title="DPARK.services.connectors.app.api.postgres_conn.UserInputData"><em>UserInputData</em></a>) – UserInputData = {</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the details of the user.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="dpark-services-connectors-app-api-snowflake-conn-module">
+<h2>DPARK.services.connectors.app.api.snowflake_conn module<a class="headerlink" href="#dpark-services-connectors-app-api-snowflake-conn-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.connectors.app.api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.connectors.app.api" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.connectors.app.html" class="btn btn-neutral float-left" title="DPARK.services.connectors.app package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.connectors.app.connector_utils.html" class="btn btn-neutral float-right" title="DPARK.services.connectors.app.connector_utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

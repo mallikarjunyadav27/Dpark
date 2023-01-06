@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.mlxtend.externals.pyprind package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend.feature_extraction package" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.mlxtend.externals package" href="DPARK.services.snow_auto.mlxtend.externals.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory">DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.generator_factory"><code class="docutils literal notranslate"><span class="pre">generator_factory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_bar"><code class="docutils literal notranslate"><span class="pre">prog_bar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_percent"><code class="docutils literal notranslate"><span class="pre">prog_percent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class">DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog"><code class="docutils literal notranslate"><span class="pre">Prog</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar">DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar.ProgBar"><code class="docutils literal notranslate"><span class="pre">ProgBar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent">DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent.ProgPercent"><code class="docutils literal notranslate"><span class="pre">ProgPercent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.mlxtend.externals.pyprind package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.mlxtend.externals.pyprind.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-mlxtend-externals-pyprind-package">
+<h1>DPARK.services.snow_auto.mlxtend.externals.pyprind package<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-externals-pyprind-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory">
+<span id="dpark-services-snow-auto-mlxtend-externals-pyprind-generator-factory-module"></span><h2>DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.generator_factory">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.</span></span><span class="sig-name descname"><span class="pre">generator_factory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mother_class</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/generator_factory.html#generator_factory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.generator_factory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_bar">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.</span></span><span class="sig-name descname"><span class="pre">prog_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iteritem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_bar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_percent">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.</span></span><span class="sig-name descname"><span class="pre">prog_percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iteritem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.generator_factory.prog_percent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class">
+<span id="dpark-services-snow-auto-mlxtend-externals-pyprind-prog-class-module"></span><h2>DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class" title="Permalink to this heading"></a></h2>
+<p>Sebastian Raschka 2014-2017
+Python Progress Indicator Utility</p>
+<p>Author: Sebastian Raschka &lt;sebastianraschka.com&gt;
+License: BSD 3 clause</p>
+<p>Contributors: <a class="reference external" href="https://github.com/rasbt/pyprind/graphs/contributors">https://github.com/rasbt/pyprind/graphs/contributors</a>
+Code Repository: <a class="reference external" href="https://github.com/rasbt/pyprind">https://github.com/rasbt/pyprind</a>
+PyPI: <a class="reference external" href="https://pypi.python.org/pypi/PyPrind">https://pypi.python.org/pypi/PyPrind</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.</span></span><span class="sig-name descname"><span class="pre">Prog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/prog_class.html#Prog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/prog_class.html#Prog.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog.stop" title="Permalink to this definition"></a></dt>
+<dd><p>Stops the progress bar / percentage indicator if necessary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_flush</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/prog_class.html#Prog.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog.update" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the progress bar / percentage indicator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterations</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – default argument can be changed to integer values
+&gt;=1 in order to update the progress indicators more than once
+per iteration.</p></li>
+<li><p><strong>item_id</strong> (<em>str</em><em> (</em><em>default: None</em><em>)</em>) – Print an item_id sring behind the progress bar</p></li>
+<li><p><strong>force_flush</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, flushes the progress indicator to the output screen
+in each iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar">
+<span id="dpark-services-snow-auto-mlxtend-externals-pyprind-progbar-module"></span><h2>DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar" title="Permalink to this heading"></a></h2>
+<p>Sebastian Raschka 2014-2017
+Python Progress Indicator Utility</p>
+<p>Author: Sebastian Raschka &lt;sebastianraschka.com&gt;
+License: BSD 3 clause</p>
+<p>Contributors: <a class="reference external" href="https://github.com/rasbt/pyprind/graphs/contributors">https://github.com/rasbt/pyprind/graphs/contributors</a>
+Code Repository: <a class="reference external" href="https://github.com/rasbt/pyprind">https://github.com/rasbt/pyprind</a>
+PyPI: <a class="reference external" href="https://pypi.python.org/pypi/PyPrind">https://pypi.python.org/pypi/PyPrind</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar.ProgBar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar.</span></span><span class="sig-name descname"><span class="pre">ProgBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/progbar.html#ProgBar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.progbar.ProgBar" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog" title="DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Prog</span></code></a></p>
+<p>Initializes a progress bar object that allows visuzalization
+of an iterational computation in the standard output screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterations</strong> (<cite>int</cite>) – Number of iterations for the iterative computation.</p></li>
+<li><p><strong>track_time</strong> (<cite>bool</cite> (default: <cite>True</cite>)) – Prints elapsed time when loop has finished.</p></li>
+<li><p><strong>width</strong> (<cite>int</cite> (default: 30)) – Sets the progress bar width in characters.</p></li>
+<li><p><strong>stream</strong> (<cite>int</cite> (default: 2).) – Setting the output stream.
+Takes <cite>1</cite> for stdout, <cite>2</cite> for stderr, or a custom stream object</p></li>
+<li><p><strong>title</strong> (<cite>str</cite> (default:  <cite>‘’</cite>)) – Setting a title for the progress bar.</p></li>
+<li><p><strong>monitor</strong> (<cite>bool</cite> (default: False)) – Monitors CPU and memory usage if <cite>True</cite> (requires <cite>psutil</cite> package).</p></li>
+<li><p><strong>update_interval</strong> (<em>float</em><em> or </em><em>int</em><em> (</em><em>default: None</em><em>)</em>) – The update_interval in seconds controls how often the progress
+is flushed to the screen.
+Automatic mode if update_interval=None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent">
+<span id="dpark-services-snow-auto-mlxtend-externals-pyprind-progpercent-module"></span><h2>DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent" title="Permalink to this heading"></a></h2>
+<p>Sebastian Raschka 2014-2017
+Python Progress Indicator Utility</p>
+<p>Author: Sebastian Raschka &lt;sebastianraschka.com&gt;
+License: BSD 3 clause</p>
+<p>Contributors: <a class="reference external" href="https://github.com/rasbt/pyprind/graphs/contributors">https://github.com/rasbt/pyprind/graphs/contributors</a>
+Code Repository: <a class="reference external" href="https://github.com/rasbt/pyprind">https://github.com/rasbt/pyprind</a>
+PyPI: <a class="reference external" href="https://pypi.python.org/pypi/PyPrind">https://pypi.python.org/pypi/PyPrind</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent.ProgPercent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent.</span></span><span class="sig-name descname"><span class="pre">ProgPercent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/externals/pyprind/progpercent.html#ProgPercent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.progpercent.ProgPercent" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog" title="DPARK.services.snow_auto.mlxtend.externals.pyprind.prog_class.Prog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Prog</span></code></a></p>
+<p>Initializes a progress bar object that allows visuzalization
+of an iterational computation in the standard output screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterations</strong> (<cite>int</cite>) – Number of iterations for the iterative computation.</p></li>
+<li><p><strong>track_time</strong> (<cite>bool</cite> (default: <cite>True</cite>)) – Prints elapsed time when loop has finished.</p></li>
+<li><p><strong>stream</strong> (<cite>int</cite> (default: 2).) – Setting the output stream.
+Takes <cite>1</cite> for stdout, <cite>2</cite> for stderr, or a custom stream object</p></li>
+<li><p><strong>title</strong> (<cite>str</cite> (default: <cite>‘’</cite>).) – Setting a title for the percentage indicator.</p></li>
+<li><p><strong>monitor</strong> (<cite>bool</cite> (default: <cite>False</cite>)) – Monitors CPU and memory usage if <cite>True</cite> (requires <cite>psutil</cite> package).</p></li>
+<li><p><strong>update_interval</strong> (float or int (default: <cite>None</cite>)) – The update_interval in seconds controls how often the progress
+is flushed to the screen.
+Automatic mode if <cite>update_interval=None</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.externals.pyprind">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.externals.pyprind" title="Permalink to this heading"></a></h2>
+<p>Sebastian Raschka 2014-2017
+Python Progress Indicator Utility</p>
+<p>Author: Sebastian Raschka &lt;sebastianraschka.com&gt;
+License: BSD 3 clause</p>
+<p>Contributors: <a class="reference external" href="https://github.com/rasbt/pyprind/graphs/contributors">https://github.com/rasbt/pyprind/graphs/contributors</a>
+Code Repository: <a class="reference external" href="https://github.com/rasbt/pyprind">https://github.com/rasbt/pyprind</a>
+PyPI: <a class="reference external" href="https://pypi.python.org/pypi/PyPrind">https://pypi.python.org/pypi/PyPrind</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.mlxtend.externals.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.mlxtend.externals package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.feature_extraction.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend.feature_extraction package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

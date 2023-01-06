@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.app.mlxtend.feature_extraction package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.app.mlxtend.feature_selection package" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.app.mlxtend.externals.pyprind package" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.base">DPARK.services.snow_auto.app.mlxtend.feature_extraction.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis">DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis"><code class="docutils literal notranslate"><span class="pre">LinearDiscriminantAnalysis</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis">DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis"><code class="docutils literal notranslate"><span class="pre">PrincipalComponentAnalysis</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca">DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA"><code class="docutils literal notranslate"><span class="pre">RBFKernelPCA</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis"><code class="docutils literal notranslate"><span class="pre">LinearDiscriminantAnalysis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis"><code class="docutils literal notranslate"><span class="pre">PrincipalComponentAnalysis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA"><code class="docutils literal notranslate"><span class="pre">RBFKernelPCA</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.app.mlxtend.feature_extraction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-app-mlxtend-feature-extraction-package">
+<h1>DPARK.services.snow_auto.app.mlxtend.feature_extraction package<a class="headerlink" href="#dpark-services-snow-auto-app-mlxtend-feature-extraction-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.base">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-extraction-base-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_extraction.base module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.base" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-extraction-linear-discriminant-analysis-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.</span></span><span class="sig-name descname"><span class="pre">LinearDiscriminantAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_discriminants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>Linear Discriminant Analysis Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_discriminants</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of discrimants for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Projection matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features, n_discriminants]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the LDA model with X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>n_classes</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – A positive integer to declare the number of class labels
+if not all class labels are present in a partial training set.
+Gets the number of class labels automatically if None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis.LinearDiscriminantAnalysis.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_discriminants]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-extraction-principal-component-analysis-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.</span></span><span class="sig-name descname"><span class="pre">PrincipalComponentAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whitening</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>Principal Component Analysis Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_components</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of principal components for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p></li>
+<li><p><strong>solver</strong> (<em>str</em><em> (</em><em>default: 'svd'</em><em>)</em>) – Method for performing the matrix decomposition.
+{‘eigen’, ‘svd’}</p></li>
+<li><p><strong>whitening</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – Performs whitening such that the covariance matrix of
+the transformed data will be the identity matrix.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Projection matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vals_normalized_">
+<span class="sig-name descname"><span class="pre">e_vals_normalized_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.e_vals_normalized_" title="Permalink to this definition"></a></dt>
+<dd><p>Normalized eigen values such that they sum up to 1.
+This is equal to what’s often referred to as
+“explained variance ratios.”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.loadings_">
+<span class="sig-name descname"><span class="pre">loadings_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.loadings_" title="Permalink to this definition"></a></dt>
+<dd><p>The factor loadings of the original variables onto
+the principal components. The columns are the principal
+components, and the rows are the features loadings.
+For instance, the first column contains the loadings onto
+the first principal component. Note that the signs may
+be flipped depending on whether you use the ‘eigen’ or
+‘svd’ solver; this does not affect the interpretation
+of the loadings though.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array_like, shape=[n_features, n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/PrincipalComponentAnalysis/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/PrincipalComponentAnalysis/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis.PrincipalComponentAnalysis.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca">
+<span id="dpark-services-snow-auto-app-mlxtend-feature-extraction-rbf-kernel-pca-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.</span></span><span class="sig-name descname"><span class="pre">RBFKernelPCA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>RBF Kernel Principal Component Analysis for dimensionality reduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gamma</strong> (<em>float</em><em> (</em><em>default: 15.0</em><em>)</em>) – Free parameter (coefficient) of the RBF kernel.</p></li>
+<li><p><strong>n_components</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of principal components for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p></li>
+<li><p><strong>copy_X</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Copies training data, which is required to compute the projection
+of new data via the transform method. Uses a reference to X if False.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.X_projected_">
+<span class="sig-name descname"><span class="pre">X_projected_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.X_projected_" title="Permalink to this definition"></a></dt>
+<dd><p>Training samples projected along the component axes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/RBFKernelPCA/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/RBFKernelPCA/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca.RBFKernelPCA.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the non-linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.feature_extraction">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">LinearDiscriminantAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_discriminants</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>Linear Discriminant Analysis Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_discriminants</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of discrimants for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Projection matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features, n_discriminants]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the LDA model with X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>n_classes</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – A positive integer to declare the number of class labels
+if not all class labels are present in a partial training set.
+Gets the number of class labels automatically if None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/linear_discriminant_analysis.html#LinearDiscriminantAnalysis.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.LinearDiscriminantAnalysis.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_discriminants]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">PrincipalComponentAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whitening</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>Principal Component Analysis Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_components</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of principal components for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p></li>
+<li><p><strong>solver</strong> (<em>str</em><em> (</em><em>default: 'svd'</em><em>)</em>) – Method for performing the matrix decomposition.
+{‘eigen’, ‘svd’}</p></li>
+<li><p><strong>whitening</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – Performs whitening such that the covariance matrix of
+the transformed data will be the identity matrix.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.w_">
+<span class="sig-name descname"><span class="pre">w_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.w_" title="Permalink to this definition"></a></dt>
+<dd><p>Projection matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vals_normalized_">
+<span class="sig-name descname"><span class="pre">e_vals_normalized_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.e_vals_normalized_" title="Permalink to this definition"></a></dt>
+<dd><p>Normalized eigen values such that they sum up to 1.
+This is equal to what’s often referred to as
+“explained variance ratios.”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.loadings_">
+<span class="sig-name descname"><span class="pre">loadings_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.loadings_" title="Permalink to this definition"></a></dt>
+<dd><p>The factor loadings of the original variables onto
+the principal components. The columns are the principal
+components, and the rows are the features loadings.
+For instance, the first column contains the loadings onto
+the first principal component. Note that the signs may
+be flipped depending on whether you use the ‘eigen’ or
+‘svd’ solver; this does not affect the interpretation
+of the loadings though.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array_like, shape=[n_features, n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/PrincipalComponentAnalysis/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/PrincipalComponentAnalysis/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/principal_component_analysis.html#PrincipalComponentAnalysis.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.PrincipalComponentAnalysis.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.feature_extraction.</span></span><span class="sig-name descname"><span class="pre">RBFKernelPCA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_BaseModel</span></code></p>
+<p>RBF Kernel Principal Component Analysis for dimensionality reduction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gamma</strong> (<em>float</em><em> (</em><em>default: 15.0</em><em>)</em>) – Free parameter (coefficient) of the RBF kernel.</p></li>
+<li><p><strong>n_components</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The number of principal components for transformation.
+Keeps the original dimensions of the dataset if <cite>None</cite>.</p></li>
+<li><p><strong>copy_X</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Copies training data, which is required to compute the projection
+of new data via the transform method. Uses a reference to X if False.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.e_vals_">
+<span class="sig-name descname"><span class="pre">e_vals_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.e_vals_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvalues in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.e_vecs_">
+<span class="sig-name descname"><span class="pre">e_vecs_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.e_vecs_" title="Permalink to this definition"></a></dt>
+<dd><p>Eigenvectors in sorted order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_features]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.X_projected_">
+<span class="sig-name descname"><span class="pre">X_projected_</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.X_projected_" title="Permalink to this definition"></a></dt>
+<dd><p>Training samples projected along the component axes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/feature_extraction/RBFKernelPCA/">http://rasbt.github.io/mlxtend/user_guide/feature_extraction/RBFKernelPCA/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Learn model from training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/feature_extraction/rbf_kernel_pca.html#RBFKernelPCA.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.feature_extraction.RBFKernelPCA.transform" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the non-linear transformation on X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X_projected</strong> – Projected training vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray, shape = [n_samples, n_components]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.app.mlxtend.externals.pyprind package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.app.mlxtend.feature_selection package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

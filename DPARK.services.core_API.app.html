@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.core_API.app package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.core_API.app.databases package" href="DPARK.services.core_API.app.databases.html" />
+    <link rel="prev" title="DPARK.services.core_API package" href="DPARK.services.core_API.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.core_API.app package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-core-api-app-main-module">DPARK.services.core_API.app.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-core-api-app-tempcoderunnerfile-module">DPARK.services.core_API.app.tempCodeRunnerFile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.core_API.app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.core_API.app package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.core_API.app.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-core-api-app-package">
+<h1>DPARK.services.core_API.app package<a class="headerlink" href="#dpark-services-core-api-app-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html#dpark-services-core-api-app-databases-database-module">DPARK.services.core_API.app.databases.database module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html#module-DPARK.services.core_API.app.databases">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html#dpark-services-core-api-app-models-table-model-module">DPARK.services.core_API.app.models.table_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html#module-DPARK.services.core_API.app.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#module-DPARK.services.core_API.app.postgres_utils.helper_functions">DPARK.services.core_API.app.postgres_utils.helper_functions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.helper_functions.on_error_response"><code class="docutils literal notranslate"><span class="pre">on_error_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.helper_functions.on_success_response"><code class="docutils literal notranslate"><span class="pre">on_success_response()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#module-DPARK.services.core_API.app.postgres_utils.logger_class">DPARK.services.core_API.app.postgres_utils.logger_class module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.logger_class.MyLogger"><code class="docutils literal notranslate"><span class="pre">MyLogger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.logger_class.MyLogger.add_logs"><code class="docutils literal notranslate"><span class="pre">MyLogger.add_logs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.logger_class.MyLogger.new_logger"><code class="docutils literal notranslate"><span class="pre">MyLogger.new_logger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#module-DPARK.services.core_API.app.postgres_utils.upload_to_database">DPARK.services.core_API.app.postgres_utils.upload_to_database module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.upload_to_database.upload_to_mysql"><code class="docutils literal notranslate"><span class="pre">upload_to_mysql()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.upload_to_database.upload_to_postgres"><code class="docutils literal notranslate"><span class="pre">upload_to_postgres()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#DPARK.services.core_API.app.postgres_utils.upload_to_database.upload_to_snowflake"><code class="docutils literal notranslate"><span class="pre">upload_to_snowflake()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html#module-DPARK.services.core_API.app.postgres_utils">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html#module-DPARK.services.core_API.app.schemas.dataverse.catalog">DPARK.services.core_API.app.schemas.dataverse.catalog module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html#module-DPARK.services.core_API.app.schemas.dataverse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#module-DPARK.services.core_API.app.schemas.schemas">DPARK.services.core_API.app.schemas.schemas module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ColumnDatatype"><code class="docutils literal notranslate"><span class="pre">ColumnDatatype</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ColumnDatatype.Config"><code class="docutils literal notranslate"><span class="pre">ColumnDatatype.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ColumnDatatype.Datamapping"><code class="docutils literal notranslate"><span class="pre">ColumnDatatype.Datamapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ColumnDatatype.dataset_name"><code class="docutils literal notranslate"><span class="pre">ColumnDatatype.dataset_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ColumnDatatype.project_name"><code class="docutils literal notranslate"><span class="pre">ColumnDatatype.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.DatasetSchema"><code class="docutils literal notranslate"><span class="pre">DatasetSchema</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.DatasetSchema.dataset_name"><code class="docutils literal notranslate"><span class="pre">DatasetSchema.dataset_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetAllDatasets"><code class="docutils literal notranslate"><span class="pre">GetAllDatasets</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetAllDatasets.project_name"><code class="docutils literal notranslate"><span class="pre">GetAllDatasets.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetDataset"><code class="docutils literal notranslate"><span class="pre">GetDataset</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetDataset.dataset_name"><code class="docutils literal notranslate"><span class="pre">GetDataset.dataset_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetDataset.project_name"><code class="docutils literal notranslate"><span class="pre">GetDataset.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetProjectDetails"><code class="docutils literal notranslate"><span class="pre">GetProjectDetails</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetProjectDetails.project_name"><code class="docutils literal notranslate"><span class="pre">GetProjectDetails.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetProjectDetails.task_name"><code class="docutils literal notranslate"><span class="pre">GetProjectDetails.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetTask"><code class="docutils literal notranslate"><span class="pre">GetTask</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.GetTask.project_name"><code class="docutils literal notranslate"><span class="pre">GetTask.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.InputstoTrain"><code class="docutils literal notranslate"><span class="pre">InputstoTrain</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.InputstoTrain.dataset_name"><code class="docutils literal notranslate"><span class="pre">InputstoTrain.dataset_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.InputstoTrain.project_name"><code class="docutils literal notranslate"><span class="pre">InputstoTrain.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.InputstoTrain.task_name"><code class="docutils literal notranslate"><span class="pre">InputstoTrain.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskCreate"><code class="docutils literal notranslate"><span class="pre">MLTaskCreate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskCreate.Config"><code class="docutils literal notranslate"><span class="pre">MLTaskCreate.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskCreate.project_name"><code class="docutils literal notranslate"><span class="pre">MLTaskCreate.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskCreate.task_name"><code class="docutils literal notranslate"><span class="pre">MLTaskCreate.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails.Config"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails.chart_metrics"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails.chart_metrics</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails.project_name"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails.results"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails.results</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskDetails.task_name"><code class="docutils literal notranslate"><span class="pre">MLTaskDetails.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateModeltype"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateModeltype</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateModeltype.Config"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateModeltype.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateModeltype.model_version"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateModeltype.model_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateModeltype.project_name"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateModeltype.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateModeltype.task_name"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateModeltype.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.Config"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.chart_metrics"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.chart_metrics</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.model_version"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.model_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.project_name"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.results"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.results</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.status"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MLTaskUpdateStatus.task_name"><code class="docutils literal notranslate"><span class="pre">MLTaskUpdateStatus.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols"><code class="docutils literal notranslate"><span class="pre">MappingCols</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.Config"><code class="docutils literal notranslate"><span class="pre">MappingCols.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.Features"><code class="docutils literal notranslate"><span class="pre">MappingCols.Features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.Prediction"><code class="docutils literal notranslate"><span class="pre">MappingCols.Prediction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.Target"><code class="docutils literal notranslate"><span class="pre">MappingCols.Target</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.TimeStamp"><code class="docutils literal notranslate"><span class="pre">MappingCols.TimeStamp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.UnquieId"><code class="docutils literal notranslate"><span class="pre">MappingCols.UnquieId</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.dataset_name"><code class="docutils literal notranslate"><span class="pre">MappingCols.dataset_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MappingCols.project_name"><code class="docutils literal notranslate"><span class="pre">MappingCols.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.Config"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.database"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.dbservice_name"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.host"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.include_tables"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.include_tables</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.include_views"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.include_views</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.password"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.project_name"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.role"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.schema_pattern"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.schema_pattern</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.service_type"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.table_pattern"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.table_pattern</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.task_name"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.username"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetaUserDetailsRow.warehouse"><code class="docutils literal notranslate"><span class="pre">MetaUserDetailsRow.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow.Config"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow.dbservice_fqn"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow.dbservice_fqn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow.ingestion_details"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow.ingestion_details</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow.project_name"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.MetadataIngestRow.task_name"><code class="docutils literal notranslate"><span class="pre">MetadataIngestRow.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning.Action"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning.Config"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning.Results"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning.Results</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning.project_name"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ModelRegistryVersioning.task_name"><code class="docutils literal notranslate"><span class="pre">ModelRegistryVersioning.task_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow.Config"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow.dbservice_fqn"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow.dbservice_fqn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow.profiler_output"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow.profiler_output</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow.service_type"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProfilingResultsRow.username"><code class="docutils literal notranslate"><span class="pre">ProfilingResultsRow.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow"><code class="docutils literal notranslate"><span class="pre">ProjectRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow.Config"><code class="docutils literal notranslate"><span class="pre">ProjectRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow.created_by"><code class="docutils literal notranslate"><span class="pre">ProjectRow.created_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow.description"><code class="docutils literal notranslate"><span class="pre">ProjectRow.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow.environment"><code class="docutils literal notranslate"><span class="pre">ProjectRow.environment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.ProjectRow.project_name"><code class="docutils literal notranslate"><span class="pre">ProjectRow.project_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.dbservice_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.file_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.file_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.include_tables"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.include_tables</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.include_views"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.include_views</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.schema_pattern"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.schema_pattern</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.service_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.table_pattern"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.table_pattern</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.task_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeIngestionYaml.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeIngestionYaml.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.column_test_max_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.column_test_max_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.column_test_min_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.column_test_min_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.column_test_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.column_test_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.dbservice_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.first_table_test_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.first_table_test_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.first_table_test_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.first_table_test_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.service_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.task_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.test_suite_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.test_suite_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.testing_column_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.testing_column_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.testing_table_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.testing_table_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.testing_table_schema"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.testing_table_schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfiler.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfiler.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.column_test_max_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.column_test_max_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.column_test_min_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.column_test_min_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.column_test_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.column_test_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.dbservice_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.file_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.file_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.first_table_test_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.first_table_test_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.first_table_test_value"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.first_table_test_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.service_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.task_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.test_suite_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.test_suite_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.testing_column_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.testing_column_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.testing_table_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.testing_table_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.testing_table_schema"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.testing_table_schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeProfilerYaml.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeProfilerYaml.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.dbservice_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.queryLogDuration"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.queryLogDuration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.resultLimit"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.resultLimit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.service_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.task_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageDetails.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageDetails.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.dbservice_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.dbservice_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.file_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.file_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.queryLogDuration"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.queryLogDuration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.resultLimit"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.resultLimit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.service_type"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.task_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUsageYaml.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeUsageYaml.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.Config"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.database"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.database</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.dataset"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.dataset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.description"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.host"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.host</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.password"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.project_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.role"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.schema_name"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.schema_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.username"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.SnowflakeUserDetails.warehouse"><code class="docutils literal notranslate"><span class="pre">SnowflakeUserDetails.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow"><code class="docutils literal notranslate"><span class="pre">TaskRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.Config"><code class="docutils literal notranslate"><span class="pre">TaskRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.dataset"><code class="docutils literal notranslate"><span class="pre">TaskRow.dataset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.project_name"><code class="docutils literal notranslate"><span class="pre">TaskRow.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.target_column"><code class="docutils literal notranslate"><span class="pre">TaskRow.target_column</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.task_name"><code class="docutils literal notranslate"><span class="pre">TaskRow.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.TaskRow.warehouse"><code class="docutils literal notranslate"><span class="pre">TaskRow.warehouse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow.Config"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow.dbservice_fqn"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow.dbservice_fqn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow.service_type"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow.service_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow.usage_output"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow.usage_output</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.UsageResultsRow.username"><code class="docutils literal notranslate"><span class="pre">UsageResultsRow.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation"><code class="docutils literal notranslate"><span class="pre">Validation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.Config"><code class="docutils literal notranslate"><span class="pre">Validation.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.dataset_name"><code class="docutils literal notranslate"><span class="pre">Validation.dataset_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.model_type"><code class="docutils literal notranslate"><span class="pre">Validation.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.project_name"><code class="docutils literal notranslate"><span class="pre">Validation.project_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.split"><code class="docutils literal notranslate"><span class="pre">Validation.split</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.task_name"><code class="docutils literal notranslate"><span class="pre">Validation.task_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#DPARK.services.core_API.app.schemas.schemas.Validation.validation_type"><code class="docutils literal notranslate"><span class="pre">Validation.validation_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html#module-DPARK.services.core_API.app.schemas">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-core-api-app-main-module">
+<h2>DPARK.services.core_API.app.main module<a class="headerlink" href="#dpark-services-core-api-app-main-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-core-api-app-tempcoderunnerfile-module">
+<h2>DPARK.services.core_API.app.tempCodeRunnerFile module<a class="headerlink" href="#dpark-services-core-api-app-tempcoderunnerfile-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.core_API.app">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.core_API.app" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.core_API.html" class="btn btn-neutral float-left" title="DPARK.services.core_API package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.core_API.app.databases.html" class="btn btn-neutral float-right" title="DPARK.services.core_API.app.databases package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

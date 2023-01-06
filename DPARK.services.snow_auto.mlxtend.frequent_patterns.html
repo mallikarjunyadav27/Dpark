@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.mlxtend.frequent_patterns package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend.image package" href="DPARK.services.snow_auto.mlxtend.image.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.mlxtend.file_io package" href="DPARK.services.snow_auto.mlxtend.file_io.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori">DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.apriori"><code class="docutils literal notranslate"><span class="pre">apriori()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations"><code class="docutils literal notranslate"><span class="pre">generate_new_combinations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations_low_memory"><code class="docutils literal notranslate"><span class="pre">generate_new_combinations_low_memory()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules">DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules.association_rules"><code class="docutils literal notranslate"><span class="pre">association_rules()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPNode"><code class="docutils literal notranslate"><span class="pre">FPNode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree"><code class="docutils literal notranslate"><span class="pre">FPTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.generate_itemsets"><code class="docutils literal notranslate"><span class="pre">generate_itemsets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.setup_fptree"><code class="docutils literal notranslate"><span class="pre">setup_fptree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.valid_input_check"><code class="docutils literal notranslate"><span class="pre">valid_input_check()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpg_step"><code class="docutils literal notranslate"><span class="pre">fpg_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpgrowth"><code class="docutils literal notranslate"><span class="pre">fpgrowth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree"><code class="docutils literal notranslate"><span class="pre">MFITree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax"><code class="docutils literal notranslate"><span class="pre">fpmax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax_step"><code class="docutils literal notranslate"><span class="pre">fpmax_step()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori"><code class="docutils literal notranslate"><span class="pre">apriori()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules"><code class="docutils literal notranslate"><span class="pre">association_rules()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth"><code class="docutils literal notranslate"><span class="pre">fpgrowth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax"><code class="docutils literal notranslate"><span class="pre">fpmax()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.mlxtend.frequent_patterns package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.mlxtend.frequent_patterns.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-mlxtend-frequent-patterns-package">
+<h1>DPARK.services.snow_auto.mlxtend.frequent_patterns package<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-frequent-patterns-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori">
+<span id="dpark-services-snow-auto-mlxtend-frequent-patterns-apriori-module"></span><h2>DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.apriori">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.</span></span><span class="sig-name descname"><span class="pre">apriori</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/apriori.html#apriori"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.apriori" title="Permalink to this definition"></a></dt>
+<dd><p>Get frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a></p>
+<blockquote>
+<div><p>user_guide/sparse.html#sparse-data-structures)</p>
+</div></blockquote>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0     True    False   True     True  False   True
+1     True    False   True    False  False   True
+2     True    False   True    False  False  False
+3     True     True  False    False  False  False
+4    False    False   True     True   True   True
+5    False    False   True    False   True   True
+6    False    False   True    False   True  False
+7     True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minumum support of the itemsets returned.
+The support is computed as the fraction
+<cite>transactions_where_item(s)_occur / total_transactions</cite>.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If <cite>True</cite>, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Maximum length of the itemsets generated. If <cite>None</cite> (default) all
+possible itemsets lengths (under the apriori condition) are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the number of iterations if &gt;= 1 and <cite>low_memory</cite> is <cite>True</cite>. If
+&gt;=1 and <cite>low_memory</cite> is <cite>False</cite>, shows the number of combinations.</p></li>
+<li><p><strong>low_memory</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If <cite>True</cite>, uses an iterator to search for combinations above
+<cite>min_support</cite>.
+Note that while <cite>low_memory=True</cite> should only be used for large dataset
+if memory resources are limited, because this implementation is approx.
+3-6x slower than the default.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all itemsets</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.</span></span><span class="sig-name descname"><span class="pre">generate_new_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_combinations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/apriori.html#generate_new_combinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations" title="Permalink to this definition"></a></dt>
+<dd><p>Generator of all combinations based on the last state of Apriori algorithm
+:param old_combinations: All combinations with enough support in the last step</p>
+<blockquote>
+<div><p>Combinations are represented by a matrix.
+Number of columns is equal to the combination size
+of the previous step.
+Each row represents one combination
+and contains item type ids in the ascending order
+<a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
+<blockquote>
+<div><p>0        1</p>
+</div></blockquote>
+<p>0      15       20
+1      15       22
+2      17       19
+<a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>Generator of all combinations from the last step x items</em></p></li>
+<li><p><em>from the previous step.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations_low_memory">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.</span></span><span class="sig-name descname"><span class="pre">generate_new_combinations_low_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_combinations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_sparse</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/apriori.html#generate_new_combinations_low_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori.generate_new_combinations_low_memory" title="Permalink to this definition"></a></dt>
+<dd><p>Generator of all combinations based on the last state of Apriori algorithm
+:param old_combinations: All combinations with enough support in the last step</p>
+<blockquote>
+<div><p>Combinations are represented by a matrix.
+Number of columns is equal to the combination size
+of the previous step.
+Each row represents one combination
+and contains item type ids in the ascending order
+<a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a></p>
+<blockquote>
+<div><p>0        1</p>
+</div></blockquote>
+<p>0      15       20
+1      15       22
+2      17       19
+<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>np.array</em><em> or </em><em>scipy sparse matrix</em>) – The allowed values are either 0/1 or True/False.
+For example,</p></li>
+<li><p><strong>```</strong> – <p>0     True False  True  True False  True
+1     True False  True False False  True
+2     True False  True False False False
+3     True  True False False False False
+4    False False  True  True  True  True
+5    False False  True False  True  True
+6    False False  True False  True False
+7     True  True False False False False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minumum support of the itemsets returned.
+The support is computed as the fraction
+<cite>transactions_where_item(s)_occur / total_transactions</cite>.</p></li>
+<li><p><strong>is_sparse</strong> (<em>bool True if X is sparse</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Generator of all combinations from the last step x items</em></p></li>
+<li><p><em>from the previous step. Every combination contains the</em></p></li>
+<li><p><em>number of transactions where this item occurs, followed</em></p></li>
+<li><p><em>by item type ids in the ascending order.</em></p></li>
+<li><p><em>No combination other than generated</em></p></li>
+<li><p><em>do not have a chance to get enough support</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/generate_new_combinations/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/generate_new_combinations/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules">
+<span id="dpark-services-snow-auto-mlxtend-frequent-patterns-association-rules-module"></span><h2>DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules.association_rules">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules.</span></span><span class="sig-name descname"><span class="pre">association_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'confidence'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">support_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/association_rules.html#association_rules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules.association_rules" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a DataFrame of association rules including the
+metrics ‘score’, ‘confidence’, and ‘lift’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – pandas DataFrame of frequent itemsets
+with columns [‘support’, ‘itemsets’]</p></li>
+<li><p><strong>metric</strong> (<em>string</em><em> (</em><em>default: 'confidence'</em><em>)</em>) – <p>Metric to evaluate if a rule is of interest.
+<strong>Automatically set to ‘support’ if `support_only=True`.</strong>
+Otherwise, supported metrics are ‘support’, ‘confidence’, ‘lift’,
+‘leverage’, and ‘conviction’
+These metrics are computed as follows:</p>
+<ul>
+<li><p>support(A-&gt;C) = support(A+C) [aka ‘support’], range: [0, 1]</p></li>
+<li><p>confidence(A-&gt;C) = support(A+C) / support(A), range: [0, 1]</p></li>
+<li><p>lift(A-&gt;C) = confidence(A-&gt;C) / support(C), range: [0, inf]</p></li>
+<li><p>leverage(A-&gt;C) = support(A-&gt;C) - support(A)*support(C),
+range: [-1, 1]</p></li>
+<li><p>conviction = [1 - support(C)] / [1 - confidence(A-&gt;C)],
+range: [0, inf]</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>min_threshold<span class="classifier">float (default: 0.8)</span></dt><dd><p>Minimal threshold for the evaluation metric,
+via the <cite>metric</cite> parameter,
+to decide whether a candidate rule is of interest.</p>
+</dd>
+<dt>support_only<span class="classifier">bool (default: False)</span></dt><dd><p>Only computes the rule support and fills the other
+metric columns with NaNs. This is useful if:</p>
+<p>a) the input DataFrame is incomplete, e.g., does
+not contain support values for all rule antecedents
+and consequents</p>
+<p>b) you simply want to speed up the computation because
+you don’t need the other metrics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>that store itemsets, plus the scoring metric columns:
+“antecedent support”, “consequent support”,
+“support”, “confidence”, “lift”,
+“leverage”, “conviction”
+of all rules for which
+metric(rule) &gt;= min_threshold.
+Each entry in the “antecedents” and “consequents” columns are
+of type <cite>frozenset</cite>, which is a Python built-in type that
+behaves similarly to sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>pandas DataFrame with columns “antecedents” and “consequents”</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon">
+<span id="dpark-services-snow-auto-mlxtend-frequent-patterns-fpcommon-module"></span><h2>DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.</span></span><span class="sig-name descname"><span class="pre">FPNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPNode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPNode.itempath_from_root">
+<span class="sig-name descname"><span class="pre">itempath_from_root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPNode.itempath_from_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPNode.itempath_from_root" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the top-down sequence of items from self to
+(but not including) the root node.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.</span></span><span class="sig-name descname"><span class="pre">FPTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.conditional_tree">
+<span class="sig-name descname"><span class="pre">conditional_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPTree.conditional_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.conditional_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and returns the subtree of self conditioned on cond_item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cond_item</strong> (<em>int</em><em> | </em><em>str</em>) – Item that the tree (self) will be conditioned on.</p></li>
+<li><p><strong>minsup</strong> (<em>int</em>) – Minimum support threshold.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cond_tree</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>FPtree</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.insert_itemset">
+<span class="sig-name descname"><span class="pre">insert_itemset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">itemset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPTree.insert_itemset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.insert_itemset" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts a list of items into the tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>itemset</strong> (<em>list</em>) – Items that will be inserted into the tree.</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – The number of occurrences of the itemset.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.is_path">
+<span class="sig-name descname"><span class="pre">is_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPTree.is_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.is_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.print_status">
+<span class="sig-name descname"><span class="pre">print_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#FPTree.print_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.FPTree.print_status" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.generate_itemsets">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.</span></span><span class="sig-name descname"><span class="pre">generate_itemsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_itemsets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colname_map</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#generate_itemsets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.generate_itemsets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.setup_fptree">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.</span></span><span class="sig-name descname"><span class="pre">setup_fptree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#setup_fptree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.setup_fptree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.valid_input_check">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.</span></span><span class="sig-name descname"><span class="pre">valid_input_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpcommon.html#valid_input_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpcommon.valid_input_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth">
+<span id="dpark-services-snow-auto-mlxtend-frequent-patterns-fpgrowth-module"></span><h2>DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpg_step">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.</span></span><span class="sig-name descname"><span class="pre">fpg_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpgrowth.html#fpg_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpg_step" title="Permalink to this definition"></a></dt>
+<dd><p>Performs a recursive step of the fpgrowth algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tree</strong> (<a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpcommon.FPTree" title="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpcommon.FPTree"><em>FPTree</em></a>) – </p></li>
+<li><p><strong>minsup</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>lists of strings</em> – Set of items that has occurred in minsup itemsets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpgrowth">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.</span></span><span class="sig-name descname"><span class="pre">fpgrowth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpgrowth.html#fpgrowth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth.fpgrowth" title="Permalink to this definition"></a></dt>
+<dd><p>Get frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/sparse.html#sparse-data-structures">https://pandas.pydata.org/pandas-docs/stable/user_guide/sparse.html#sparse-data-structures</a>.</p>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0   True    False   True     True  False   True
+1   True    False   True    False  False   True
+2   True    False   True    False  False  False
+3   True     True  False    False  False  False
+4  False    False   True     True   True   True
+5  False    False   True    False   True   True
+6  False    False   True    False   True  False
+7   True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minimum support of the itemsets returned.
+The support is computed as the fraction
+transactions_where_item(s)_occur / total_transactions.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If true, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Maximum length of the itemsets generated. If <cite>None</cite> (default) all
+possible itemsets lengths are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the stages of conditional tree generation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all itemsets</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax">
+<span id="dpark-services-snow-auto-mlxtend-frequent-patterns-fpmax-module"></span><h2>DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.</span></span><span class="sig-name descname"><span class="pre">MFITree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rank</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#MFITree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#MFITree.Node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.Node" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">itemset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#MFITree.contains"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.contains" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if this tree contains itemset in one of its branches.
+The algorithm assumes that  itemset is sorted according to self.rank.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.insert_itemset">
+<span class="sig-name descname"><span class="pre">insert_itemset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">itemset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#MFITree.insert_itemset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.MFITree.insert_itemset" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts a list of items into the tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>itemset</strong> (<em>list</em>) – Items that will be inserted into the tree.</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – The number of occurrences of the itemset.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.</span></span><span class="sig-name descname"><span class="pre">fpmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#fpmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax" title="Permalink to this definition"></a></dt>
+<dd><p>Get maximal frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a></p>
+<blockquote>
+<div><p>user_guide/sparse.html#sparse-data-structures)</p>
+</div></blockquote>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0   True    False   True     True  False   True
+1   True    False   True    False  False   True
+2   True    False   True    False  False  False
+3   True     True  False    False  False  False
+4  False    False   True     True   True   True
+5  False    False   True    False   True   True
+6  False    False   True    False   True  False
+7   True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minimum support of the itemsets returned.
+The support is computed as the fraction
+transactions_where_item(s)_occur / total_transactions.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If true, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Given the set of all maximal itemsets,
+return those that are less than <cite>max_len</cite>. If <cite>None</cite> (default) all
+possible itemsets lengths are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the stages of conditional tree generation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>itemsets that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all maximal</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpmax/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpmax/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax_step">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.</span></span><span class="sig-name descname"><span class="pre">fpmax_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mfit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#fpmax_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax.fpmax_step" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.frequent_patterns">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.frequent_patterns" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.</span></span><span class="sig-name descname"><span class="pre">apriori</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/apriori.html#apriori"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.apriori" title="Permalink to this definition"></a></dt>
+<dd><p>Get frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a></p>
+<blockquote>
+<div><p>user_guide/sparse.html#sparse-data-structures)</p>
+</div></blockquote>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0     True    False   True     True  False   True
+1     True    False   True    False  False   True
+2     True    False   True    False  False  False
+3     True     True  False    False  False  False
+4    False    False   True     True   True   True
+5    False    False   True    False   True   True
+6    False    False   True    False   True  False
+7     True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minumum support of the itemsets returned.
+The support is computed as the fraction
+<cite>transactions_where_item(s)_occur / total_transactions</cite>.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If <cite>True</cite>, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Maximum length of the itemsets generated. If <cite>None</cite> (default) all
+possible itemsets lengths (under the apriori condition) are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the number of iterations if &gt;= 1 and <cite>low_memory</cite> is <cite>True</cite>. If
+&gt;=1 and <cite>low_memory</cite> is <cite>False</cite>, shows the number of combinations.</p></li>
+<li><p><strong>low_memory</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If <cite>True</cite>, uses an iterator to search for combinations above
+<cite>min_support</cite>.
+Note that while <cite>low_memory=True</cite> should only be used for large dataset
+if memory resources are limited, because this implementation is approx.
+3-6x slower than the default.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all itemsets</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.</span></span><span class="sig-name descname"><span class="pre">association_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'confidence'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">support_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/association_rules.html#association_rules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.association_rules" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a DataFrame of association rules including the
+metrics ‘score’, ‘confidence’, and ‘lift’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – pandas DataFrame of frequent itemsets
+with columns [‘support’, ‘itemsets’]</p></li>
+<li><p><strong>metric</strong> (<em>string</em><em> (</em><em>default: 'confidence'</em><em>)</em>) – <p>Metric to evaluate if a rule is of interest.
+<strong>Automatically set to ‘support’ if `support_only=True`.</strong>
+Otherwise, supported metrics are ‘support’, ‘confidence’, ‘lift’,
+‘leverage’, and ‘conviction’
+These metrics are computed as follows:</p>
+<ul>
+<li><p>support(A-&gt;C) = support(A+C) [aka ‘support’], range: [0, 1]</p></li>
+<li><p>confidence(A-&gt;C) = support(A+C) / support(A), range: [0, 1]</p></li>
+<li><p>lift(A-&gt;C) = confidence(A-&gt;C) / support(C), range: [0, inf]</p></li>
+<li><p>leverage(A-&gt;C) = support(A-&gt;C) - support(A)*support(C),
+range: [-1, 1]</p></li>
+<li><p>conviction = [1 - support(C)] / [1 - confidence(A-&gt;C)],
+range: [0, inf]</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>min_threshold<span class="classifier">float (default: 0.8)</span></dt><dd><p>Minimal threshold for the evaluation metric,
+via the <cite>metric</cite> parameter,
+to decide whether a candidate rule is of interest.</p>
+</dd>
+<dt>support_only<span class="classifier">bool (default: False)</span></dt><dd><p>Only computes the rule support and fills the other
+metric columns with NaNs. This is useful if:</p>
+<p>a) the input DataFrame is incomplete, e.g., does
+not contain support values for all rule antecedents
+and consequents</p>
+<p>b) you simply want to speed up the computation because
+you don’t need the other metrics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>that store itemsets, plus the scoring metric columns:
+“antecedent support”, “consequent support”,
+“support”, “confidence”, “lift”,
+“leverage”, “conviction”
+of all rules for which
+metric(rule) &gt;= min_threshold.
+Each entry in the “antecedents” and “consequents” columns are
+of type <cite>frozenset</cite>, which is a Python built-in type that
+behaves similarly to sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>pandas DataFrame with columns “antecedents” and “consequents”</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.</span></span><span class="sig-name descname"><span class="pre">fpgrowth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpgrowth.html#fpgrowth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpgrowth" title="Permalink to this definition"></a></dt>
+<dd><p>Get frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/sparse.html#sparse-data-structures">https://pandas.pydata.org/pandas-docs/stable/user_guide/sparse.html#sparse-data-structures</a>.</p>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0   True    False   True     True  False   True
+1   True    False   True    False  False   True
+2   True    False   True    False  False  False
+3   True     True  False    False  False  False
+4  False    False   True     True   True   True
+5  False    False   True    False   True   True
+6  False    False   True    False   True  False
+7   True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minimum support of the itemsets returned.
+The support is computed as the fraction
+transactions_where_item(s)_occur / total_transactions.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If true, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Maximum length of the itemsets generated. If <cite>None</cite> (default) all
+possible itemsets lengths are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the stages of conditional tree generation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all itemsets</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.frequent_patterns.</span></span><span class="sig-name descname"><span class="pre">fpmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_support</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/frequent_patterns/fpmax.html#fpmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.frequent_patterns.fpmax" title="Permalink to this definition"></a></dt>
+<dd><p>Get maximal frequent itemsets from a one-hot DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – <p>pandas DataFrame the encoded format. Also supports
+DataFrames with sparse data; for more info, please
+see (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a></p>
+<blockquote>
+<div><p>user_guide/sparse.html#sparse-data-structures)</p>
+</div></blockquote>
+<p>Please note that the old pandas SparseDataFrame format
+is no longer supported in mlxtend &gt;= 0.17.2.</p>
+<p>The allowed values are either 0/1 or True/False.
+For example,</p>
+</p></li>
+<li><p><strong>```</strong> – <p>Apple  Bananas   Beer  Chicken   Milk   Rice
+0   True    False   True     True  False   True
+1   True    False   True    False  False   True
+2   True    False   True    False  False  False
+3   True     True  False    False  False  False
+4  False    False   True     True   True   True
+5  False    False   True    False   True   True
+6  False    False   True    False   True  False
+7   True     True  False    False  False  False</p>
+</p></li>
+<li><p><strong>```</strong> – </p></li>
+<li><p><strong>min_support</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – A float between 0 and 1 for minimum support of the itemsets returned.
+The support is computed as the fraction
+transactions_where_item(s)_occur / total_transactions.</p></li>
+<li><p><strong>use_colnames</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If true, uses the DataFrames’ column names in the returned DataFrame
+instead of column indices.</p></li>
+<li><p><strong>max_len</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Given the set of all maximal itemsets,
+return those that are less than <cite>max_len</cite>. If <cite>None</cite> (default) all
+possible itemsets lengths are evaluated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Shows the stages of conditional tree generation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>itemsets that are &gt;= <cite>min_support</cite> and &lt; than <cite>max_len</cite>
+(if <cite>max_len</cite> is not None).
+Each itemset in the ‘itemsets’ column is of type <cite>frozenset</cite>,
+which is a Python built-in type that behaves similarly to
+sets except that it is immutable
+(For more info, see
+<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#frozenset">https://docs.python.org/3.6/library/stdtypes.html#frozenset</a>).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame with columns [‘support’, ‘itemsets’] of all maximal</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpmax/">http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpmax/</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.mlxtend.file_io.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.mlxtend.file_io package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.image.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend.image package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

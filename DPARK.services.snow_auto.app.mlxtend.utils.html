@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.app.mlxtend.utils package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend package" href="DPARK.services.snow_auto.mlxtend.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.app.mlxtend.text package" href="DPARK.services.snow_auto.app.mlxtend.text.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.app.mlxtend.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.base_compostion">DPARK.services.snow_auto.app.mlxtend.utils.base_compostion module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.checking">DPARK.services.snow_auto.app.mlxtend.utils.checking module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.checking.check_Xy"><code class="docutils literal notranslate"><span class="pre">check_Xy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.checking.format_kwarg_dictionaries"><code class="docutils literal notranslate"><span class="pre">format_kwarg_dictionaries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.counter">DPARK.services.snow_auto.app.mlxtend.utils.counter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter"><code class="docutils literal notranslate"><span class="pre">Counter</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.testing">DPARK.services.snow_auto.app.mlxtend.utils.testing module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.testing.assert_raises"><code class="docutils literal notranslate"><span class="pre">assert_raises()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.utils">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter"><code class="docutils literal notranslate"><span class="pre">Counter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.assert_raises"><code class="docutils literal notranslate"><span class="pre">assert_raises()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.check_Xy"><code class="docutils literal notranslate"><span class="pre">check_Xy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.utils.format_kwarg_dictionaries"><code class="docutils literal notranslate"><span class="pre">format_kwarg_dictionaries()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.app.mlxtend.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.app.mlxtend.utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-app-mlxtend-utils-package">
+<h1>DPARK.services.snow_auto.app.mlxtend.utils package<a class="headerlink" href="#dpark-services-snow-auto-app-mlxtend-utils-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.utils.base_compostion">
+<span id="dpark-services-snow-auto-app-mlxtend-utils-base-compostion-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.utils.base_compostion module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.base_compostion" title="Permalink to this heading"></a></h2>
+<p>Utilties to handle estimator list</p>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.utils.checking">
+<span id="dpark-services-snow-auto-app-mlxtend-utils-checking-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.utils.checking module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.checking" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.checking.check_Xy">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.checking.</span></span><span class="sig-name descname"><span class="pre">check_Xy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/checking.html#check_Xy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.checking.check_Xy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.checking.format_kwarg_dictionaries">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.checking.</span></span><span class="sig-name descname"><span class="pre">format_kwarg_dictionaries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protected_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/checking.html#format_kwarg_dictionaries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.checking.format_kwarg_dictionaries" title="Permalink to this definition"></a></dt>
+<dd><p>Function to combine default and user specified kwargs dictionaries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – Default kwargs (default is None).</p></li>
+<li><p><strong>user_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – User specified kwargs (default is None).</p></li>
+<li><p><strong>protected_keys</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Sequence of keys to be removed from the returned dictionary
+(default is None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>formatted_kwargs</strong> – Formatted kwargs dictionary.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.utils.counter">
+<span id="dpark-services-snow-auto-app-mlxtend-utils-counter-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.utils.counter module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.counter" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.counter.</span></span><span class="sig-name descname"><span class="pre">Counter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/counter.html#Counter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to display the progress of for-loop iterators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stderr</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prints output to sys.stderr if True; uses sys.stdout otherwise.</p></li>
+<li><p><strong>start_newline</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prepends a new line to the counter, which prevents overwriting counters
+if multiple counters are printed in succession.</p></li>
+<li><p><strong>precision</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Sets the number of decimal places when displaying the time elapsed in
+seconds.</p></li>
+<li><p><strong>name</strong> (<em>string</em><em> (</em><em>default: None</em><em>)</em>) – Prepends the specified name before the counter to allow distinguishing
+between multiple counters.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.curr_iter">
+<span class="sig-name descname"><span class="pre">curr_iter</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.curr_iter" title="Permalink to this definition"></a></dt>
+<dd><p>The current iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.start_time" title="Permalink to this definition"></a></dt>
+<dd><p>The system’s time in seconds when the Counter was initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.end_time">
+<span class="sig-name descname"><span class="pre">end_time</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.end_time" title="Permalink to this definition"></a></dt>
+<dd><p>The system’s time in seconds when the Counter was last updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="c1"># do some computation</span>
+<span class="gp">... </span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">cnt</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="go">20 iter | 2 sec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The counter was initialized.&#39;</span>
+<span class="go">          &#39; %d seconds ago.&#39; % (time.time() - cnt.start_time))</span>
+<span class="go">The counter was initialized 2 seconds ago</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The counter was last updated&#39;</span>
+<span class="go">          &#39; %d seconds ago.&#39; % (time.time() - cnt.end_time))</span>
+<span class="go">The counter was last updated 0 seconds ago.</span>
+</pre></div>
+</div>
+<p>For more usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/utils/Counter/">http://rasbt.github.io/mlxtend/user_guide/utils/Counter/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/counter.html#Counter.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.counter.Counter.update" title="Permalink to this definition"></a></dt>
+<dd><p>Print current iteration and time elapsed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.utils.testing">
+<span id="dpark-services-snow-auto-app-mlxtend-utils-testing-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.utils.testing module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.utils.testing" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.testing.assert_raises">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.testing.</span></span><span class="sig-name descname"><span class="pre">assert_raises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exception_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/testing.html#assert_raises"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.testing.assert_raises" title="Permalink to this definition"></a></dt>
+<dd><p>Check that an exception is raised with a specific message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exception_type</strong> (<em>exception</em>) – The exception that should be raised</p></li>
+<li><p><strong>message</strong> (<em>str</em><em> (</em><em>default: None</em><em>)</em>) – The error message that should be raised. Ignored if False or None.</p></li>
+<li><p><strong>func</strong> (<em>callable</em>) – The function that raises the exception</p></li>
+<li><p><strong>*args</strong> (positional arguments to <cite>func</cite>.) – </p></li>
+<li><p><strong>**kwargs</strong> (keyword arguments to <cite>func</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.utils" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.Counter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.</span></span><span class="sig-name descname"><span class="pre">Counter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/counter.html#Counter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to display the progress of for-loop iterators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stderr</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prints output to sys.stderr if True; uses sys.stdout otherwise.</p></li>
+<li><p><strong>start_newline</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Prepends a new line to the counter, which prevents overwriting counters
+if multiple counters are printed in succession.</p></li>
+<li><p><strong>precision</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Sets the number of decimal places when displaying the time elapsed in
+seconds.</p></li>
+<li><p><strong>name</strong> (<em>string</em><em> (</em><em>default: None</em><em>)</em>) – Prepends the specified name before the counter to allow distinguishing
+between multiple counters.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.Counter.curr_iter">
+<span class="sig-name descname"><span class="pre">curr_iter</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter.curr_iter" title="Permalink to this definition"></a></dt>
+<dd><p>The current iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.Counter.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter.start_time" title="Permalink to this definition"></a></dt>
+<dd><p>The system’s time in seconds when the Counter was initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.Counter.end_time">
+<span class="sig-name descname"><span class="pre">end_time</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter.end_time" title="Permalink to this definition"></a></dt>
+<dd><p>The system’s time in seconds when the Counter was last updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="c1"># do some computation</span>
+<span class="gp">... </span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">cnt</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<span class="go">20 iter | 2 sec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The counter was initialized.&#39;</span>
+<span class="go">          &#39; %d seconds ago.&#39; % (time.time() - cnt.start_time))</span>
+<span class="go">The counter was initialized 2 seconds ago</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The counter was last updated&#39;</span>
+<span class="go">          &#39; %d seconds ago.&#39; % (time.time() - cnt.end_time))</span>
+<span class="go">The counter was last updated 0 seconds ago.</span>
+</pre></div>
+</div>
+<p>For more usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/utils/Counter/">http://rasbt.github.io/mlxtend/user_guide/utils/Counter/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.Counter.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/counter.html#Counter.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.Counter.update" title="Permalink to this definition"></a></dt>
+<dd><p>Print current iteration and time elapsed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.assert_raises">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.</span></span><span class="sig-name descname"><span class="pre">assert_raises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exception_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/testing.html#assert_raises"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.assert_raises" title="Permalink to this definition"></a></dt>
+<dd><p>Check that an exception is raised with a specific message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exception_type</strong> (<em>exception</em>) – The exception that should be raised</p></li>
+<li><p><strong>message</strong> (<em>str</em><em> (</em><em>default: None</em><em>)</em>) – The error message that should be raised. Ignored if False or None.</p></li>
+<li><p><strong>func</strong> (<em>callable</em>) – The function that raises the exception</p></li>
+<li><p><strong>*args</strong> (positional arguments to <cite>func</cite>.) – </p></li>
+<li><p><strong>**kwargs</strong> (keyword arguments to <cite>func</cite>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.check_Xy">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.</span></span><span class="sig-name descname"><span class="pre">check_Xy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/checking.html#check_Xy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.check_Xy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.utils.format_kwarg_dictionaries">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.utils.</span></span><span class="sig-name descname"><span class="pre">format_kwarg_dictionaries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protected_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/utils/checking.html#format_kwarg_dictionaries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.utils.format_kwarg_dictionaries" title="Permalink to this definition"></a></dt>
+<dd><p>Function to combine default and user specified kwargs dictionaries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>default_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – Default kwargs (default is None).</p></li>
+<li><p><strong>user_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – User specified kwargs (default is None).</p></li>
+<li><p><strong>protected_keys</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Sequence of keys to be removed from the returned dictionary
+(default is None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>formatted_kwargs</strong> – Formatted kwargs dictionary.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.app.mlxtend.text.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.app.mlxtend.text package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

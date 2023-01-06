@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.app package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.app.mlxtend package" href="DPARK.services.snow_auto.app.mlxtend.html" />
+    <link rel="prev" title="DPARK.services.snow_auto package" href="DPARK.services.snow_auto.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.app package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.helper_functions">DPARK.services.snow_auto.app.helper_functions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.helper_functions.on_error_response"><code class="docutils literal notranslate"><span class="pre">on_error_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.helper_functions.on_success_response"><code class="docutils literal notranslate"><span class="pre">on_success_response()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-snow-auto-app-main-module">DPARK.services.snow_auto.app.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.test">DPARK.services.snow_auto.app.test module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.test.InputModel"><code class="docutils literal notranslate"><span class="pre">InputModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.test.OutputModel"><code class="docutils literal notranslate"><span class="pre">OutputModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.test.user"><code class="docutils literal notranslate"><span class="pre">user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.app package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.app.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-app-package">
+<h1>DPARK.services.snow_auto.app package<a class="headerlink" href="#dpark-services-snow-auto-app-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.adaline">DPARK.services.snow_auto.app.mlxtend.classifier.adaline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.ensemble_vote">DPARK.services.snow_auto.app.mlxtend.classifier.ensemble_vote module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.logistic_regression">DPARK.services.snow_auto.app.mlxtend.classifier.logistic_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.multilayerperceptron">DPARK.services.snow_auto.app.mlxtend.classifier.multilayerperceptron module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.oner">DPARK.services.snow_auto.app.mlxtend.classifier.oner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.perceptron">DPARK.services.snow_auto.app.mlxtend.classifier.perceptron module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.softmax_regression">DPARK.services.snow_auto.app.mlxtend.classifier.softmax_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.stacking_classification">DPARK.services.snow_auto.app.mlxtend.classifier.stacking_classification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier.stacking_cv_classification">DPARK.services.snow_auto.app.mlxtend.classifier.stacking_cv_classification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html#module-DPARK.services.snow_auto.app.mlxtend.classifier">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html#module-DPARK.services.snow_auto.app.mlxtend.cluster.kmeans">DPARK.services.snow_auto.app.mlxtend.cluster.kmeans module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html#module-DPARK.services.snow_auto.app.mlxtend.cluster">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.autompg">DPARK.services.snow_auto.app.mlxtend.data.autompg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.boston_housing">DPARK.services.snow_auto.app.mlxtend.data.boston_housing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.iris">DPARK.services.snow_auto.app.mlxtend.data.iris module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.local_mnist">DPARK.services.snow_auto.app.mlxtend.data.local_mnist module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.mnist">DPARK.services.snow_auto.app.mlxtend.data.mnist module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.multiplexer">DPARK.services.snow_auto.app.mlxtend.data.multiplexer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.three_blobs">DPARK.services.snow_auto.app.mlxtend.data.three_blobs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data.wine">DPARK.services.snow_auto.app.mlxtend.data.wine module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html#module-DPARK.services.snow_auto.app.mlxtend.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#dpark-services-snow-auto-app-mlxtend-evaluate-accuracy-module">DPARK.services.snow_auto.app.mlxtend.evaluate.accuracy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.bias_variance_decomp">DPARK.services.snow_auto.app.mlxtend.evaluate.bias_variance_decomp module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap">DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap_outofbag">DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap_outofbag module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap_point632">DPARK.services.snow_auto.app.mlxtend.evaluate.bootstrap_point632 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.cochrans_q">DPARK.services.snow_auto.app.mlxtend.evaluate.cochrans_q module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.confusion_matrix">DPARK.services.snow_auto.app.mlxtend.evaluate.confusion_matrix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.counterfactual">DPARK.services.snow_auto.app.mlxtend.evaluate.counterfactual module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.f_test">DPARK.services.snow_auto.app.mlxtend.evaluate.f_test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.feature_importance">DPARK.services.snow_auto.app.mlxtend.evaluate.feature_importance module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.holdout">DPARK.services.snow_auto.app.mlxtend.evaluate.holdout module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.lift_score">DPARK.services.snow_auto.app.mlxtend.evaluate.lift_score module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.mcnemar">DPARK.services.snow_auto.app.mlxtend.evaluate.mcnemar module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.permutation">DPARK.services.snow_auto.app.mlxtend.evaluate.permutation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-DPARK.services.snow_auto.app.mlxtend.evaluate.proportion_difference">DPARK.services.snow_auto.app.mlxtend.evaluate.proportion_difference module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#dpark-services-snow-auto-app-mlxtend-evaluate-scoring-module">DPARK.services.snow_auto.app.mlxtend.evaluate.scoring module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#dpark-services-snow-auto-app-mlxtend-evaluate-time-series-module">DPARK.services.snow_auto.app.mlxtend.evaluate.time_series module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#dpark-services-snow-auto-app-mlxtend-evaluate-ttest-module">DPARK.services.snow_auto.app.mlxtend.evaluate.ttest module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#module-DPARK.services.snow_auto.app.mlxtend.externals.adjust_text">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#module-DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks">DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#module-DPARK.services.snow_auto.app.mlxtend.externals.name_estimators">DPARK.services.snow_auto.app.mlxtend.externals.name_estimators module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#module-DPARK.services.snow_auto.app.mlxtend.externals.signature_py27">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html#module-DPARK.services.snow_auto.app.mlxtend.externals">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.base">DPARK.services.snow_auto.app.mlxtend.feature_extraction.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis">DPARK.services.snow_auto.app.mlxtend.feature_extraction.linear_discriminant_analysis module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis">DPARK.services.snow_auto.app.mlxtend.feature_extraction.principal_component_analysis module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca">DPARK.services.snow_auto.app.mlxtend.feature_extraction.rbf_kernel_pca module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html#module-DPARK.services.snow_auto.app.mlxtend.feature_extraction">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.column_selector module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.exhaustive_feature_selector module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html#module-DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector">DPARK.services.snow_auto.app.mlxtend.feature_selection.sequential_feature_selector module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html#module-DPARK.services.snow_auto.app.mlxtend.feature_selection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html#module-DPARK.services.snow_auto.app.mlxtend.file_io.find_filegroups">DPARK.services.snow_auto.app.mlxtend.file_io.find_filegroups module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html#module-DPARK.services.snow_auto.app.mlxtend.file_io.find_files">DPARK.services.snow_auto.app.mlxtend.file_io.find_files module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html#module-DPARK.services.snow_auto.app.mlxtend.file_io">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns.apriori">DPARK.services.snow_auto.app.mlxtend.frequent_patterns.apriori module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns.association_rules">DPARK.services.snow_auto.app.mlxtend.frequent_patterns.association_rules module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpcommon">DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpcommon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpgrowth">DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpgrowth module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpmax">DPARK.services.snow_auto.app.mlxtend.frequent_patterns.fpmax module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html#module-DPARK.services.snow_auto.app.mlxtend.frequent_patterns">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html#dpark-services-snow-auto-app-mlxtend-image-extract-face-landmarks-module">DPARK.services.snow_auto.app.mlxtend.image.extract_face_landmarks module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html#dpark-services-snow-auto-app-mlxtend-image-eyepad-align-module">DPARK.services.snow_auto.app.mlxtend.image.eyepad_align module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html#dpark-services-snow-auto-app-mlxtend-image-utils-module">DPARK.services.snow_auto.app.mlxtend.image.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html#module-DPARK.services.snow_auto.app.mlxtend.math.counting">DPARK.services.snow_auto.app.mlxtend.math.counting module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html#module-DPARK.services.snow_auto.app.mlxtend.math.linalg">DPARK.services.snow_auto.app.mlxtend.math.linalg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html#module-DPARK.services.snow_auto.app.mlxtend.math">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-checkerboard-module">DPARK.services.snow_auto.app.mlxtend.plotting.checkerboard module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-decision-regions-module">DPARK.services.snow_auto.app.mlxtend.plotting.decision_regions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-ecdf-module">DPARK.services.snow_auto.app.mlxtend.plotting.ecdf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-enrichment-plot-module">DPARK.services.snow_auto.app.mlxtend.plotting.enrichment_plot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-heatmap-module">DPARK.services.snow_auto.app.mlxtend.plotting.heatmap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-learning-curves-module">DPARK.services.snow_auto.app.mlxtend.plotting.learning_curves module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-pca-correlation-graph-module">DPARK.services.snow_auto.app.mlxtend.plotting.pca_correlation_graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-plot-confusion-matrix-module">DPARK.services.snow_auto.app.mlxtend.plotting.plot_confusion_matrix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-plot-linear-regression-module">DPARK.services.snow_auto.app.mlxtend.plotting.plot_linear_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-plot-sequential-feature-selection-module">DPARK.services.snow_auto.app.mlxtend.plotting.plot_sequential_feature_selection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-remove-chartjunk-module">DPARK.services.snow_auto.app.mlxtend.plotting.remove_chartjunk module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-scatter-module">DPARK.services.snow_auto.app.mlxtend.plotting.scatter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-scatter-hist-module">DPARK.services.snow_auto.app.mlxtend.plotting.scatter_hist module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-scatterplotmatrix-module">DPARK.services.snow_auto.app.mlxtend.plotting.scatterplotmatrix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#dpark-services-snow-auto-app-mlxtend-plotting-stacked-barplot-module">DPARK.services.snow_auto.app.mlxtend.plotting.stacked_barplot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#dpark-services-snow-auto-app-mlxtend-preprocessing-copy-transformer-module">DPARK.services.snow_auto.app.mlxtend.preprocessing.copy_transformer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#module-DPARK.services.snow_auto.app.mlxtend.preprocessing.dense_transformer">DPARK.services.snow_auto.app.mlxtend.preprocessing.dense_transformer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#module-DPARK.services.snow_auto.app.mlxtend.preprocessing.mean_centering">DPARK.services.snow_auto.app.mlxtend.preprocessing.mean_centering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#module-DPARK.services.snow_auto.app.mlxtend.preprocessing.onehot">DPARK.services.snow_auto.app.mlxtend.preprocessing.onehot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#module-DPARK.services.snow_auto.app.mlxtend.preprocessing.scaling">DPARK.services.snow_auto.app.mlxtend.preprocessing.scaling module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#dpark-services-snow-auto-app-mlxtend-preprocessing-shuffle-module">DPARK.services.snow_auto.app.mlxtend.preprocessing.shuffle module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#dpark-services-snow-auto-app-mlxtend-preprocessing-transactionencoder-module">DPARK.services.snow_auto.app.mlxtend.preprocessing.transactionencoder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html#module-DPARK.services.snow_auto.app.mlxtend.regressor.linear_regression">DPARK.services.snow_auto.app.mlxtend.regressor.linear_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html#module-DPARK.services.snow_auto.app.mlxtend.regressor.stacking_cv_regression">DPARK.services.snow_auto.app.mlxtend.regressor.stacking_cv_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html#module-DPARK.services.snow_auto.app.mlxtend.regressor.stacking_regression">DPARK.services.snow_auto.app.mlxtend.regressor.stacking_regression module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html#module-DPARK.services.snow_auto.app.mlxtend.regressor">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html#module-DPARK.services.snow_auto.app.mlxtend.text.names">DPARK.services.snow_auto.app.mlxtend.text.names module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html#module-DPARK.services.snow_auto.app.mlxtend.text.tokenizer">DPARK.services.snow_auto.app.mlxtend.text.tokenizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html#module-DPARK.services.snow_auto.app.mlxtend.text">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#module-DPARK.services.snow_auto.app.mlxtend.utils.base_compostion">DPARK.services.snow_auto.app.mlxtend.utils.base_compostion module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#module-DPARK.services.snow_auto.app.mlxtend.utils.checking">DPARK.services.snow_auto.app.mlxtend.utils.checking module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#module-DPARK.services.snow_auto.app.mlxtend.utils.counter">DPARK.services.snow_auto.app.mlxtend.utils.counter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#module-DPARK.services.snow_auto.app.mlxtend.utils.testing">DPARK.services.snow_auto.app.mlxtend.utils.testing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html#module-DPARK.services.snow_auto.app.mlxtend.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html#module-DPARK.services.snow_auto.app.mlxtend">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.helper_functions">
+<span id="dpark-services-snow-auto-app-helper-functions-module"></span><h2>DPARK.services.snow_auto.app.helper_functions module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.helper_functions" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.helper_functions.on_error_response">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.helper_functions.</span></span><span class="sig-name descname"><span class="pre">on_error_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success_message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/helper_functions.html#on_error_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.helper_functions.on_error_response" title="Permalink to this definition"></a></dt>
+<dd><p>for sending standard way of return response on failuer</p>
+<p>return response (Json):</p>
+<p>message :(string) # message to be passed on success/error
+“success”: (boolean) # To know response success or failure
+“statusCode”: (int) # status code for each individual api
+“data”: (list)  # list with set of payload/return response in it</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.helper_functions.on_success_response">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.helper_functions.</span></span><span class="sig-name descname"><span class="pre">on_success_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success_message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/helper_functions.html#on_success_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.helper_functions.on_success_response" title="Permalink to this definition"></a></dt>
+<dd><p>for sending standard way of return response on success</p>
+<p>return response (Json):</p>
+<p>message :(string) # message to be passed on success/error
+“success”: (boolean) # To know response success or failure
+“statusCode”: (int) # status code for each individual api
+“data”: (list)  # list with set of payload/return response in it</p>
+</dd></dl>
+
+</section>
+<section id="dpark-services-snow-auto-app-main-module">
+<h2>DPARK.services.snow_auto.app.main module<a class="headerlink" href="#dpark-services-snow-auto-app-main-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.test">
+<span id="dpark-services-snow-auto-app-test-module"></span><h2>DPARK.services.snow_auto.app.test module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.test" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.InputModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.test.</span></span><span class="sig-name descname"><span class="pre">InputModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/test.html#InputModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.test.InputModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.InputModel.email">
+<span class="sig-name descname"><span class="pre">email</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.InputModel.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.InputModel.password">
+<span class="sig-name descname"><span class="pre">password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.InputModel.password" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.InputModel.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.InputModel.user" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.OutputModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.test.</span></span><span class="sig-name descname"><span class="pre">OutputModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/test.html#OutputModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.test.OutputModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.OutputModel.body">
+<span class="sig-name descname"><span class="pre">body</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.OutputModel.body" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.OutputModel.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.OutputModel.message" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.OutputModel.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.test.OutputModel.status_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.test.user">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.test.</span></span><span class="sig-name descname"><span class="pre">user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#DPARK.services.snow_auto.app.test.InputModel" title="DPARK.services.snow_auto.app.test.InputModel"><span class="pre">InputModel</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/test.html#user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.test.user" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.app" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.app.mlxtend.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.app.mlxtend package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

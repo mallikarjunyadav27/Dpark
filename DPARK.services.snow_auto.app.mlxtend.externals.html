@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.app.mlxtend.externals package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.app.mlxtend.externals.pyprind package" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.app.mlxtend.evaluate package" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.app.mlxtend.externals package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.adjust_text">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.adjust_text"><code class="docutils literal notranslate"><span class="pre">adjust_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.float_to_tuple"><code class="docutils literal notranslate"><span class="pre">float_to_tuple()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes"><code class="docutils literal notranslate"><span class="pre">get_bboxes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes_pathcollection"><code class="docutils literal notranslate"><span class="pre">get_bboxes_pathcollection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_midpoint"><code class="docutils literal notranslate"><span class="pre">get_midpoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_points_inside_bbox"><code class="docutils literal notranslate"><span class="pre">get_points_inside_bbox()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_renderer"><code class="docutils literal notranslate"><span class="pre">get_renderer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_text_position"><code class="docutils literal notranslate"><span class="pre">get_text_position()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.move_texts"><code class="docutils literal notranslate"><span class="pre">move_texts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.optimally_align_text"><code class="docutils literal notranslate"><span class="pre">optimally_align_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.overlap_bbox_and_point"><code class="docutils literal notranslate"><span class="pre">overlap_bbox_and_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text"><code class="docutils literal notranslate"><span class="pre">repel_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_axes"><code class="docutils literal notranslate"><span class="pre">repel_text_from_axes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_bboxes"><code class="docutils literal notranslate"><span class="pre">repel_text_from_bboxes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_points"><code class="docutils literal notranslate"><span class="pre">repel_text_from_points()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks">DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.NotFittedError"><code class="docutils literal notranslate"><span class="pre">NotFittedError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.check_is_fitted"><code class="docutils literal notranslate"><span class="pre">check_is_fitted()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.name_estimators">DPARK.services.snow_auto.app.mlxtend.externals.name_estimators module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.signature_py27">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27 module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments"><code class="docutils literal notranslate"><span class="pre">BoundArguments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter"><code class="docutils literal notranslate"><span class="pre">Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature"><code class="docutils literal notranslate"><span class="pre">Signature</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.signature"><code class="docutils literal notranslate"><span class="pre">signature()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.app.mlxtend.externals">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.app.mlxtend.externals package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.app.mlxtend.externals.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-app-mlxtend-externals-package">
+<h1>DPARK.services.snow_auto.app.mlxtend.externals package<a class="headerlink" href="#dpark-services-snow-auto-app-mlxtend-externals-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#module-DPARK.services.snow_auto.app.mlxtend.externals.pyprind.generator_factory">DPARK.services.snow_auto.app.mlxtend.externals.pyprind.generator_factory module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.generator_factory.generator_factory"><code class="docutils literal notranslate"><span class="pre">generator_factory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.generator_factory.prog_bar"><code class="docutils literal notranslate"><span class="pre">prog_bar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.generator_factory.prog_percent"><code class="docutils literal notranslate"><span class="pre">prog_percent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#module-DPARK.services.snow_auto.app.mlxtend.externals.pyprind.prog_class">DPARK.services.snow_auto.app.mlxtend.externals.pyprind.prog_class module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.prog_class.Prog"><code class="docutils literal notranslate"><span class="pre">Prog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.prog_class.Prog.stop"><code class="docutils literal notranslate"><span class="pre">Prog.stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.prog_class.Prog.update"><code class="docutils literal notranslate"><span class="pre">Prog.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#module-DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progbar">DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progbar module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progbar.ProgBar"><code class="docutils literal notranslate"><span class="pre">ProgBar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#module-DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progpercent">DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progpercent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#DPARK.services.snow_auto.app.mlxtend.externals.pyprind.progpercent.ProgPercent"><code class="docutils literal notranslate"><span class="pre">ProgPercent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html#module-DPARK.services.snow_auto.app.mlxtend.externals.pyprind">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.externals.adjust_text">
+<span id="dpark-services-snow-auto-app-mlxtend-externals-adjust-text-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.externals.adjust_text module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.adjust_text" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.adjust_text">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">adjust_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.05,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.05,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.05,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand_align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.05,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoalign</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'xy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">va</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'center'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'center'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.1,</span> <span class="pre">0.25)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.2,</span> <span class="pre">0.5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.1,</span> <span class="pre">0.25)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'objects':</span> <span class="pre">'xy',</span> <span class="pre">'points':</span> <span class="pre">'xy',</span> <span class="pre">'text':</span> <span class="pre">'xy'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_step_numbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_basemap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#adjust_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.adjust_text" title="Permalink to this definition"></a></dt>
+<dd><p>Iteratively adjusts the locations of texts.</p>
+<p>Call adjust_text the very last, after all plotting (especially
+anything that can change the axes limits) has been done. This is
+because to move texts the function needs to use the dimensions of
+the axes, and without knowing the final size of the plots the
+results will be completely nonsensical, or suboptimal.</p>
+<p>First moves all texts that are outside the axes limits
+inside. Then in each iteration moves all texts away from each
+other and from points. In the end hides texts and substitutes them
+with annotations to link them to the respective points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texts</strong> (<em>list</em>) – A list of <code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.text.Text</span></code> objects to adjust.</p></li>
+<li><p><strong>x</strong> (<em>array_like</em>) – x-coordinates of points to repel from; if not provided only uses text
+coordinates.</p></li>
+<li><p><strong>y</strong> (<em>array_like</em>) – y-coordinates of points to repel from; if not provided only uses text
+coordinates</p></li>
+<li><p><strong>add_objects</strong> (<em>list</em><em> or </em><em>PathCollection</em>) – a list of additional matplotlib objects to avoid; they must have a
+<cite>.get_window_extent()</cite> method; alternatively, a PathCollection or a
+list of Bbox objects.</p></li>
+<li><p><strong>ax</strong> (<em>matplotlib axe</em><em>, </em><em>default is current axe</em><em> (</em><em>plt.gca</em><em>(</em><em>)</em><em>)</em>) – axe object with the plot</p></li>
+<li><p><strong>expand_text</strong> (<em>array_like</em><em>, </em><em>default</em><em> (</em><em>1.05</em><em>, </em><em>1.2</em><em>)</em>) – a tuple/list/… with 2 multipliers (x, y) by which to expand the
+bounding box of texts when repelling them from each other.</p></li>
+<li><p><strong>expand_points</strong> (<em>array_like</em><em>, </em><em>default</em><em> (</em><em>1.05</em><em>, </em><em>1.2</em><em>)</em>) – a tuple/list/… with 2 multipliers (x, y) by which to expand the
+bounding box of texts when repelling them from points.</p></li>
+<li><p><strong>expand_objects</strong> (<em>array_like</em><em>, </em><em>default</em><em> (</em><em>1.05</em><em>, </em><em>1.2</em><em>)</em>) – a tuple/list/… with 2 multipliers (x, y) by which to expand the
+bounding box of texts when repelling them from other objects.</p></li>
+<li><p><strong>expand_align</strong> (<em>array_like</em><em>, </em><em>default</em><em> (</em><em>1.05</em><em>, </em><em>1.2</em><em>)</em>) – a tuple/list/… with 2 multipliers (x, y) by which to expand the
+bounding box of texts when autoaligning texts.</p></li>
+<li><p><strong>autoalign</strong> (<em>str</em><em> or </em><em>boolean {'xy'</em><em>, </em><em>'x'</em><em>, </em><em>'y'</em><em>, </em><em>True</em><em>, </em><em>False}</em><em>, </em><em>default 'xy'</em>) – <p>Direction in wich the best alignement will be determined</p>
+<ul>
+<li><p>’xy’ or True, best alignment of all texts determined in all
+directions automatically before running the iterative adjustment
+(overriding va and ha),</p></li>
+<li><p>’x’, will only align horizontally,</p></li>
+<li><p>’y’, will only align vertically,</p></li>
+<li><p>False, do nothing (i.e. preserve va and ha)</p></li>
+</ul>
+</p></li>
+<li><p><strong>va</strong> (<em>str</em><em>, </em><em>default 'center'</em>) – vertical alignment of texts</p></li>
+<li><p><strong>ha</strong> (<em>str</em><em>, </em><em>default 'center'</em>) – horizontal alignment of texts,</p></li>
+<li><p><strong>force_text</strong> (<em>tuple</em><em>, </em><em>default</em><em> (</em><em>0.1</em><em>, </em><em>0.25</em><em>)</em>) – the repel force from texts is multiplied by this value</p></li>
+<li><p><strong>force_points</strong> (<em>tuple</em><em>, </em><em>default</em><em> (</em><em>0.2</em><em>, </em><em>0.5</em><em>)</em>) – the repel force from points is multiplied by this value</p></li>
+<li><p><strong>force_objects</strong> (<em>float</em><em>, </em><em>default</em><em> (</em><em>0.1</em><em>, </em><em>0.25</em><em>)</em>) – same as other forces, but for repelling additional objects</p></li>
+<li><p><strong>lim</strong> (<em>int</em><em>, </em><em>default 500</em>) – limit of number of iterations</p></li>
+<li><p><strong>precision</strong> (<em>float</em><em>, </em><em>default 0.01</em>) – iterate until the sum of all overlaps along both x and y are less than
+this amount, as a fraction of the total widths and heights,
+respectively. May need to increase for complicated situations.</p></li>
+<li><p><strong>only_move</strong> (<em>dict</em><em>, </em><em>default {'points':'xy'</em><em>, </em><em>'text':'xy'</em><em>, </em><em>'objects':'xy'}</em>) – a dict to restrict movement of texts to only certain axes for certain
+types of overlaps.
+Valid keys are ‘points’, ‘text’, and ‘objects’.
+Valid values are ‘’, ‘x’, ‘y’, and ‘xy’.
+For example, only_move={‘points’:’y’, ‘text’:’xy’, ‘objects’:’xy’}
+forbids moving texts along the x axis due to overlaps with points.</p></li>
+<li><p><strong>avoid_text</strong> (<em>bool</em><em>, </em><em>default True</em>) – whether to repel texts from each other.</p></li>
+<li><p><strong>avoid_points</strong> (<em>bool</em><em>, </em><em>default True</em>) – whether to repel texts from points. Can be helpful to switch off in
+extremely crowded plots.</p></li>
+<li><p><strong>avoid_self</strong> (<em>bool</em><em>, </em><em>default True</em>) – whether to repel texts from its original positions.</p></li>
+<li><p><strong>save_steps</strong> (<em>bool</em><em>, </em><em>default False</em>) – whether to save intermediate steps as images.</p></li>
+<li><p><strong>save_prefix</strong> (<em>str</em><em>, </em><em>default ''</em>) – if <cite>save_steps</cite> is True, a path and/or prefix to the saved steps.</p></li>
+<li><p><strong>save_format</strong> (<em>str</em><em>, </em><em>default 'png'</em>) – if <cite>save_steps</cite> is True, a format to save the steps into.</p></li>
+<li><p><strong>add_step_numbers</strong> (<em>bool</em><em>, </em><em>default True</em>) – if <cite>save_steps</cite> is True, whether to add step numbers as titles to the
+images of saving steps.</p></li>
+<li><p><strong>on_basemap</strong> (<em>bool</em><em>, </em><em>default False</em>) – whether your plot uses the basemap library, stops labels going over the
+edge of the map.</p></li>
+<li><p><strong>kwargs</strong> (<em>args and</em>) – any arguments will be fed into obj:<cite>ax.annotate</cite> after all the
+optimization is done just for plotting the connecting arrows if
+required.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of iteration</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.float_to_tuple">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">float_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#float_to_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.float_to_tuple" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_bboxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_bboxes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes_pathcollection">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_bboxes_pathcollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_bboxes_pathcollection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_bboxes_pathcollection" title="Permalink to this definition"></a></dt>
+<dd><p>Function to return a list of bounding boxes in data coordinates
+for a scatter plot
+Thank you to ImportanceOfBeingErnest
+<a class="reference external" href="https://stackoverflow.com/a/55007838/1304161">https://stackoverflow.com/a/55007838/1304161</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_midpoint">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_midpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_midpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_midpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_points_inside_bbox">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_points_inside_bbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bbox</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_points_inside_bbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_points_inside_bbox" title="Permalink to this definition"></a></dt>
+<dd><p>Return the indices of points inside the given bbox.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_renderer">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_renderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_renderer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_renderer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_text_position">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">get_text_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#get_text_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.get_text_position" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.move_texts">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">move_texts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bboxes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#move_texts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.move_texts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.optimally_align_text">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">optimally_align_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.0,</span> <span class="pre">1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_bboxes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'xy'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#optimally_align_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.optimally_align_text" title="Permalink to this definition"></a></dt>
+<dd><p>For all text objects find alignment that causes the least overlap with
+points and other texts and apply it</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.overlap_bbox_and_point">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">overlap_bbox_and_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#overlap_bbox_and_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.overlap_bbox_and_point" title="Permalink to this definition"></a></dt>
+<dd><p>Given a bbox that contains a given point, return the (x, y) displacement
+necessary to make the bbox not overlap the point.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">repel_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.2,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_use_max_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#repel_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text" title="Permalink to this definition"></a></dt>
+<dd><p>Repel texts from each other while expanding their bounding boxes by expand
+(x, y), e.g. (1.2, 1.2) would multiply width and height by 1.2.
+Requires a renderer to get the actual sizes of the text, and to that end
+either one needs to be directly provided, or the axes have to be specified,
+and the renderer is then got from the axes object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_axes">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">repel_text_from_axes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bboxes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#repel_text_from_axes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_axes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_bboxes">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">repel_text_from_bboxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_bboxes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.2,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_use_max_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#repel_text_from_bboxes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_bboxes" title="Permalink to this definition"></a></dt>
+<dd><p>Repel texts from other objects’ bboxes while expanding their (texts’)
+bounding boxes by expand (x, y), e.g. (1.2, 1.2) would multiply width and
+height by 1.2.
+Requires a renderer to get the actual sizes of the text, and to that end
+either one needs to be directly provided, or the axes have to be specified,
+and the renderer is then got from the axes object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_points">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.</span></span><span class="sig-name descname"><span class="pre">repel_text_from_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.2,</span> <span class="pre">1.2)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/adjust_text.html#repel_text_from_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.adjust_text.repel_text_from_points" title="Permalink to this definition"></a></dt>
+<dd><p>Repel texts from all points specified by x and y while expanding their
+(texts’!) bounding boxes by expandby  (x, y), e.g. (1.2, 1.2)
+would multiply both width and height by 1.2.
+Requires a renderer to get the actual sizes of the text, and to that end
+either one needs to be directly provided, or the axes have to be specified,
+and the renderer is then got from the axes object.</p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks">
+<span id="dpark-services-snow-auto-app-mlxtend-externals-estimator-checks-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks" title="Permalink to this heading"></a></h2>
+<p>Utilities for input validation</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.NotFittedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.</span></span><span class="sig-name descname"><span class="pre">NotFittedError</span></span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/estimator_checks.html#NotFittedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.NotFittedError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">AttributeError</span></code></p>
+<p>Exception class to raise if estimator is used before fitting.
+This class inherits from both ValueError and AttributeError to help with
+exception handling and backward compatibility.
+.. rubric:: Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.exceptions</span> <span class="kn">import</span> <span class="n">NotFittedError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">LinearSVC</span><span class="p">()</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="gp">... </span><span class="k">except</span> <span class="n">NotFittedError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+<span class="gp">... </span>                       
+<span class="go">NotFittedError(&#39;This LinearSVC instance is not fitted yet&#39;,)</span>
+<span class="go">.. versionchanged:: 0.18</span>
+<span class="go">   Moved from sklearn.utils.validation.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.check_is_fitted">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.</span></span><span class="sig-name descname"><span class="pre">check_is_fitted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_or_any=&lt;built-in</span> <span class="pre">function</span> <span class="pre">all&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/estimator_checks.html#check_is_fitted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.check_is_fitted" title="Permalink to this definition"></a></dt>
+<dd><p>Perform is_fitted validation for estimator.
+Checks if the estimator is fitted by verifying the presence of
+“all_or_any” of the passed attributes and raises a NotFittedError with the
+given message.
+:param estimator: estimator instance for which the check is performed.
+:type estimator: estimator instance.
+:param attributes:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Eg.:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">[&quot;coef_&quot;,</span> <span class="pre">&quot;estimator_&quot;,</span> <span class="pre">...],</span> <span class="pre">&quot;coef_&quot;</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>string</em>) – The default error message is, “This %(name)s instance is not fitted
+yet. Call ‘fit’ with appropriate arguments before using this method.”
+For custom messages if “%(name)s” is present in the message string,
+it is substituted for the estimator name.
+Eg. : “Estimator, %(name)s, must be fitted before sparsifying”.</p></li>
+<li><p><strong>all_or_any</strong> (<em>callable</em><em>, </em><em>{all</em><em>, </em><em>any}</em><em>, </em><em>default all</em>) – Specify whether all or any of the given attributes must exist.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.NotFittedError" title="DPARK.services.snow_auto.app.mlxtend.externals.estimator_checks.NotFittedError"><strong>NotFittedError</strong></a> – If the attributes are not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.externals.name_estimators">
+<span id="dpark-services-snow-auto-app-mlxtend-externals-name-estimators-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.externals.name_estimators module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.name_estimators" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.externals.signature_py27">
+<span id="dpark-services-snow-auto-app-mlxtend-externals-signature-py27-module"></span><h2>DPARK.services.snow_auto.app.mlxtend.externals.signature_py27 module<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.externals.signature_py27" title="Permalink to this heading"></a></h2>
+<p>Function signature objects for callables</p>
+<p>Back port of Python 3.3’s function signature tools from the inspect module,
+modified to be compatible with Python 2.7 and 3.2+.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.</span></span><span class="sig-name descname"><span class="pre">BoundArguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arguments</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#BoundArguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of <cite>Signature.bind</cite> call.  Holds the mapping of arguments
+to the function’s parameters.</p>
+<p>Has the following public attributes:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>arguments<span class="classifier">OrderedDict</span></dt><dd><p>An ordered mutable mapping of parameters’ names to arguments’ values.
+Does not contain arguments’ default values.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>signature<span class="classifier">Signature</span></dt><dd><p>The Signature object that created this instance.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>args<span class="classifier">tuple</span></dt><dd><p>Tuple of positional arguments values.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>kwargs<span class="classifier">dict</span></dt><dd><p>Dict of keyword arguments values.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.args">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.args" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.kwargs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kwargs</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.kwargs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.signature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.BoundArguments.signature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.</span></span><span class="sig-name descname"><span class="pre">Parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._empty'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._empty'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_partial_kwarg=False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Parameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a parameter in a function signature.</p>
+<p>Has the following public attributes:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>The name of the parameter as a string.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>default<span class="classifier">object</span></dt><dd><p>The default value for the parameter if specified.  If the
+parameter has no default value, this attribute is not set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>annotation</dt><dd><p>The annotation for the parameter if specified.  If the
+parameter has no annotation, this attribute is not set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>kind<span class="classifier">str</span></dt><dd><p>Describes how argument values are bound to the parameter.
+Possible values: <cite>Parameter.POSITIONAL_ONLY</cite>,
+<cite>Parameter.POSITIONAL_OR_KEYWORD</cite>, <cite>Parameter.VAR_POSITIONAL</cite>,
+<cite>Parameter.KEYWORD_ONLY</cite>, <cite>Parameter.VAR_KEYWORD</cite>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.KEYWORD_ONLY">
+<span class="sig-name descname"><span class="pre">KEYWORD_ONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_ParameterKind:</span> <span class="pre">'KEYWORD_ONLY'&gt;</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.KEYWORD_ONLY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.POSITIONAL_ONLY">
+<span class="sig-name descname"><span class="pre">POSITIONAL_ONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_ParameterKind:</span> <span class="pre">'POSITIONAL_ONLY'&gt;</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.POSITIONAL_ONLY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.POSITIONAL_OR_KEYWORD">
+<span class="sig-name descname"><span class="pre">POSITIONAL_OR_KEYWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_ParameterKind:</span> <span class="pre">'POSITIONAL_OR_KEYWORD'&gt;</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.POSITIONAL_OR_KEYWORD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.VAR_KEYWORD">
+<span class="sig-name descname"><span class="pre">VAR_KEYWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_ParameterKind:</span> <span class="pre">'VAR_KEYWORD'&gt;</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.VAR_KEYWORD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.VAR_POSITIONAL">
+<span class="sig-name descname"><span class="pre">VAR_POSITIONAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_ParameterKind:</span> <span class="pre">'VAR_POSITIONAL'&gt;</span></em><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.VAR_POSITIONAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.annotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">annotation</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.annotation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.default">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.default" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.empty">
+<span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.empty" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">_empty</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.kind">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kind</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.kind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_partial_kwarg=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Parameter.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Parameter.replace" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a customized copy of the Parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.</span></span><span class="sig-name descname"><span class="pre">Signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_annotation=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._empty'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">__validate_parameters__=True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Signature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A Signature object represents the overall signature of a function.
+It stores a Parameter object for each parameter accepted by the
+function, as well as information specific to the function itself.</p>
+<p>A Signature object has the following public attributes and methods:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>parameters<span class="classifier">OrderedDict</span></dt><dd><p>An ordered mapping of parameters’ names to the corresponding
+Parameter objects (keyword-only arguments are in the same order
+as listed in <cite>code.co_varnames</cite>).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>return_annotation<span class="classifier">object</span></dt><dd><p>The annotation for the return type of the function if specified.
+If the function has no annotation for its return type, this
+attribute is not set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>bind(<a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs) -&gt; BoundArguments</dt><dd><p>Creates a mapping from positional and keyword arguments to
+parameters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>bind_partial(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs) -&gt; BoundArguments</dt><dd><p>Creates a partial mapping from positional and keyword arguments
+to parameters (simulating ‘functools.partial’ behavior.)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.bind">
+<span class="sig-name descname"><span class="pre">bind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Signature.bind"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.bind" title="Permalink to this definition"></a></dt>
+<dd><p>Get a BoundArguments object, that maps the passed <cite>args</cite>
+and <cite>kwargs</cite> to the function’s signature.  Raises <cite>TypeError</cite>
+if the passed arguments can not be bound.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.bind_partial">
+<span class="sig-name descname"><span class="pre">bind_partial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Signature.bind_partial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.bind_partial" title="Permalink to this definition"></a></dt>
+<dd><p>Get a BoundArguments object, that partially maps the
+passed <cite>args</cite> and <cite>kwargs</cite> to the function’s signature.
+Raises <cite>TypeError</cite> if the passed arguments can not be bound.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.empty">
+<span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.empty" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">_empty</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.from_function">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Signature.from_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.from_function" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs Signature for the given python function</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.parameters">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameters</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_annotation=&lt;class</span> <span class="pre">'DPARK.services.snow_auto.app.mlxtend.externals.signature_py27._void'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#Signature.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.replace" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a customized copy of the Signature.
+Pass ‘parameters’ and/or ‘return_annotation’ arguments
+to override them in the new copy.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.return_annotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">return_annotation</span></span><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.Signature.return_annotation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.signature">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.</span></span><span class="sig-name descname"><span class="pre">signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/app/mlxtend/externals/signature_py27.html#signature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.app.mlxtend.externals.signature_py27.signature" title="Permalink to this definition"></a></dt>
+<dd><p>Get a signature object for the passed callable.</p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.app.mlxtend.externals">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.app.mlxtend.externals" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.app.mlxtend.evaluate.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.app.mlxtend.evaluate package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.app.mlxtend.externals.pyprind package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

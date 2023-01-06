@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.mlxtend.evaluate package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend.externals package" href="DPARK.services.snow_auto.mlxtend.externals.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.mlxtend.data package" href="DPARK.services.snow_auto.mlxtend.data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.data.html">DPARK.services.snow_auto.mlxtend.data package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.mlxtend.evaluate package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-snow-auto-mlxtend-evaluate-accuracy-module">DPARK.services.snow_auto.mlxtend.evaluate.accuracy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp">DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp.bias_variance_decomp"><code class="docutils literal notranslate"><span class="pre">bias_variance_decomp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag"><code class="docutils literal notranslate"><span class="pre">BootstrapOutOfBag</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632 module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.accuracy"><code class="docutils literal notranslate"><span class="pre">accuracy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.bootstrap_point632_score"><code class="docutils literal notranslate"><span class="pre">bootstrap_point632_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.no_information_rate"><code class="docutils literal notranslate"><span class="pre">no_information_rate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q">DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q.cochrans_q"><code class="docutils literal notranslate"><span class="pre">cochrans_q()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix">DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix.confusion_matrix"><code class="docutils literal notranslate"><span class="pre">confusion_matrix()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.counterfactual">DPARK.services.snow_auto.mlxtend.evaluate.counterfactual module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.counterfactual.create_counterfactual"><code class="docutils literal notranslate"><span class="pre">create_counterfactual()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.f_test">DPARK.services.snow_auto.mlxtend.evaluate.f_test module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.f_test.combined_ftest_5x2cv"><code class="docutils literal notranslate"><span class="pre">combined_ftest_5x2cv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.f_test.ftest"><code class="docutils literal notranslate"><span class="pre">ftest()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.feature_importance">DPARK.services.snow_auto.mlxtend.evaluate.feature_importance module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.feature_importance.feature_importance_permutation"><code class="docutils literal notranslate"><span class="pre">feature_importance_permutation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.holdout">DPARK.services.snow_auto.mlxtend.evaluate.holdout module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit"><code class="docutils literal notranslate"><span class="pre">PredefinedHoldoutSplit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit"><code class="docutils literal notranslate"><span class="pre">RandomHoldoutSplit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.lift_score">DPARK.services.snow_auto.mlxtend.evaluate.lift_score module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.lift_score.lift_score"><code class="docutils literal notranslate"><span class="pre">lift_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.lift_score.support"><code class="docutils literal notranslate"><span class="pre">support()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.mcnemar">DPARK.services.snow_auto.mlxtend.evaluate.mcnemar module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar"><code class="docutils literal notranslate"><span class="pre">mcnemar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_table"><code class="docutils literal notranslate"><span class="pre">mcnemar_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_tables"><code class="docutils literal notranslate"><span class="pre">mcnemar_tables()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.permutation">DPARK.services.snow_auto.mlxtend.evaluate.permutation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.permutation.nottest"><code class="docutils literal notranslate"><span class="pre">nottest()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.permutation.permutation_test"><code class="docutils literal notranslate"><span class="pre">permutation_test()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference">DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference.proportion_difference"><code class="docutils literal notranslate"><span class="pre">proportion_difference()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-snow-auto-mlxtend-evaluate-scoring-module">DPARK.services.snow_auto.mlxtend.evaluate.scoring module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-snow-auto-mlxtend-evaluate-time-series-module">DPARK.services.snow_auto.mlxtend.evaluate.time_series module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dpark-services-snow-auto-mlxtend-evaluate-ttest-module">DPARK.services.snow_auto.mlxtend.evaluate.ttest module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.mlxtend.evaluate package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.mlxtend.evaluate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-mlxtend-evaluate-package">
+<h1>DPARK.services.snow_auto.mlxtend.evaluate package<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-evaluate-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-snow-auto-mlxtend-evaluate-accuracy-module">
+<h2>DPARK.services.snow_auto.mlxtend.evaluate.accuracy module<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-evaluate-accuracy-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-bias-variance-decomp-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp.bias_variance_decomp">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp.</span></span><span class="sig-name descname"><span class="pre">bias_variance_decomp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0-1_loss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bias_variance_decomp.html#bias_variance_decomp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bias_variance_decomp.bias_variance_decomp" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>estimator<span class="classifier">object</span></dt><dd><p>A classifier or regressor object or class implementing both a
+<cite>fit</cite> and <cite>predict</cite> method similar to the scikit-learn API.</p>
+</dd>
+<dt>X_train<span class="classifier">array-like, shape=(num_examples, num_features)</span></dt><dd><p>A training dataset for drawing the bootstrap samples to carry
+out the bias-variance decomposition.</p>
+</dd>
+<dt>y_train<span class="classifier">array-like, shape=(num_examples)</span></dt><dd><p>Targets (class labels, continuous values in case of regression)
+associated with the <cite>X_train</cite> examples.</p>
+</dd>
+<dt>X_test<span class="classifier">array-like, shape=(num_examples, num_features)</span></dt><dd><p>The test dataset for computing the average loss, bias,
+and variance.</p>
+</dd>
+<dt>y_test<span class="classifier">array-like, shape=(num_examples)</span></dt><dd><p>Targets (class labels, continuous values in case of regression)
+associated with the <cite>X_test</cite> examples.</p>
+</dd>
+<dt>loss<span class="classifier">str (default=’0-1_loss’)</span></dt><dd><p>Loss function for performing the bias-variance decomposition.
+Currently allowed values are ‘0-1_loss’ and ‘mse’.</p>
+</dd>
+<dt>num_rounds<span class="classifier">int (default=200)</span></dt><dd><p>Number of bootstrap rounds (sampling from the training set)
+for performing the bias-variance decomposition. Each bootstrap
+sample has the same size as the original training set.</p>
+</dd>
+<dt>random_seed<span class="classifier">int (default=None)</span></dt><dd><p>Random seed for the bootstrap sampling used for the
+bias-variance decomposition.</p>
+</dd>
+<dt>fit_params<span class="classifier">additional parameters</span></dt><dd><p>Additional parameters to be passed to the .fit() function of the
+estimator when it is fit to the bootstrap samples.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>avg_expected_loss, avg_bias, avg_var</strong> – average bias, and average bias (all floats), where the average
+is computed over the data points in the test set.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>returns the average expected</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/bias_variance_decomp/">http://rasbt.github.io/mlxtend/user_guide/evaluate/bias_variance_decomp/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-bootstrap-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.bootstrap module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap.bootstrap">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap.</span></span><span class="sig-name descname"><span class="pre">bootstrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ddof</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap.html#bootstrap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap.bootstrap" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the ordinary nonparametric bootstrap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>NumPy array</em><em>, </em><em>shape=</em><em>(</em><em>n_samples</em><em>, </em><em>[</em><em>n_columns</em><em>]</em><em>)</em>) – An one or multidimensional array of data records</p></li>
+<li><p><strong>func</strong> (<em>&lt;func&gt;</em>) – A function which computes a statistic that is used
+to compute the bootstrap replicates (the statistic computed
+from the bootstrap samples). This function must return a
+scalar value. For example, <cite>np.mean</cite> or <cite>np.median</cite> would be
+an acceptable argument for <cite>func</cite> if <cite>x</cite> is a 1-dimensional array
+or vector.</p></li>
+<li><p><strong>num_rounds</strong> (<em>int</em><em> (</em><em>default=1000</em><em>)</em>) – The number of bootstrap samples to draw where each
+bootstrap sample has the same number of records as the
+original dataset.</p></li>
+<li><p><strong>ci</strong> (<em>int</em><em> (</em><em>default=0.95</em><em>)</em>) – An integer in the range (0, 1) that represents the
+confidence level for computing the confidence interval.
+For example, <cite>ci=0.95</cite> (default)
+will compute the 95% confidence
+interval from the bootstrap replicates.</p></li>
+<li><p><strong>ddof</strong> (<em>int</em>) – The delta degrees of freedom used when computing the
+standard error.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default=None</em><em>)</em>) – Random seed for generating bootstrap samples.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>original, standard_error, (lower_ci, upper_ci)</strong> – Returns the statistic of the original sample (<cite>original</cite>),
+the standard error of the estimate, and the
+respective confidence interval bounds.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mlxtend.evaluate</span> <span class="kn">import</span> <span class="n">bootstrap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">original</span><span class="p">,</span> <span class="n">std_err</span><span class="p">,</span> <span class="n">ci_bounds</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>
+<span class="gp">... </span>                                         <span class="n">num_rounds</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+<span class="gp">... </span>                                         <span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span>
+<span class="gp">... </span>                                         <span class="n">ci</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span>
+<span class="gp">... </span>                                         <span class="n">seed</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean: </span><span class="si">%.2f</span><span class="s1">, SE: +/- </span><span class="si">%.2f</span><span class="s1">, CI95: [</span><span class="si">%.2f</span><span class="s1">, </span><span class="si">%.2f</span><span class="s1">]&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">original</span><span class="p">,</span>
+<span class="gp">... </span>                                                        <span class="n">std_err</span><span class="p">,</span>
+<span class="gp">... </span>                                                        <span class="n">ci_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                                                        <span class="n">ci_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="go">Mean: 5.03, SE: +/- 0.11, CI95: [4.80, 5.26]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>For more usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/bootstrap/">http://rasbt.github.io/mlxtend/user_guide/evaluate/bootstrap/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-bootstrap-outofbag-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.</span></span><span class="sig-name descname"><span class="pre">BootstrapOutOfBag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_splits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_outofbag.html#BootstrapOutOfBag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_splits</strong> (<em>int</em><em> (</em><em>default=200</em><em>)</em>) – Number of bootstrap iterations.
+Must be larger than 1.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default=None</em><em>)</em>) – If int, random_seed is the seed used by
+the random number generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>train_idx</strong> (<em>ndarray</em>) – The training set indices for that split.</p></li>
+<li><p><strong>test_idx</strong> (<em>ndarray</em>) – The testing set indices for that split.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/BootstrapOutOfBag/">http://rasbt.github.io/mlxtend/user_guide/evaluate/BootstrapOutOfBag/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag.get_n_splits">
+<span class="sig-name descname"><span class="pre">get_n_splits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_outofbag.html#BootstrapOutOfBag.get_n_splits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag.get_n_splits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of splitting iterations in the cross-validator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>object</em>) – Always ignored, exists for compatibility with scikit-learn.</p></li>
+<li><p><strong>y</strong> (<em>object</em>) – Always ignored, exists for compatibility with scikit-learn.</p></li>
+<li><p><strong>groups</strong> (<em>object</em>) – Always ignored, exists for compatibility with scikit-learn.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>n_splits</strong> – Returns the number of splitting iterations in the cross-validator.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_outofbag.html#BootstrapOutOfBag.split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_outofbag.BootstrapOutOfBag.split" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>y<span class="classifier">array-like or None (default: None)</span></dt><dd><p>Argument is not used and only included as parameter
+for compatibility, similar to <cite>KFold</cite> in scikit-learn.</p>
+</dd>
+<dt>groups<span class="classifier">array-like or None (default: None)</span></dt><dd><p>Argument is not used and only included as parameter
+for compatibility, similar to <cite>KFold</cite> in scikit-learn.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-bootstrap-point632-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632 module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.accuracy">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.</span></span><span class="sig-name descname"><span class="pre">accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_point632.html#accuracy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.accuracy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.bootstrap_point632_score">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.</span></span><span class="sig-name descname"><span class="pre">bootstrap_point632_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_splits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.632'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_proba</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clone_estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fit_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_point632.html#bootstrap_point632_score"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.bootstrap_point632_score" title="Permalink to this definition"></a></dt>
+<dd><p>Implementation of the .632 [1] and .632+ [2] bootstrap
+for supervised learning</p>
+<p>References:</p>
+<ul class="simple">
+<li><p>[1] Efron, Bradley. 1983. “Estimating the Error Rate
+of a Prediction Rule: Improvement on Cross-Validation.”
+Journal of the American Statistical Association
+78 (382): 316. doi:10.2307/2288636.</p></li>
+<li><p>[2] Efron, Bradley, and Robert Tibshirani. 1997.
+“Improvements on Cross-Validation: The .632+ Bootstrap Method.”
+Journal of the American Statistical Association
+92 (438): 548. doi:10.2307/2965703.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator</strong> (<em>object</em>) – An estimator for classification or regression that
+follows the scikit-learn API and implements “fit” and “predict”
+methods.</p></li>
+<li><p><strong>X</strong> (<em>array-like</em>) – The data to fit. Can be, for example a list, or an array at least 2d.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>optional</em><em>, </em><em>default: None</em>) – The target variable to try to predict in the case of
+supervised learning.</p></li>
+<li><p><strong>n_splits</strong> (<em>int</em><em> (</em><em>default=200</em><em>)</em>) – Number of bootstrap iterations.
+Must be larger than 1.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em> (</em><em>default='.632'</em><em>)</em>) – The bootstrap method, which can be either
+- 1) ‘.632’ bootstrap (default)
+- 2) ‘.632+’ bootstrap
+- 3) ‘oob’ (regular out-of-bag, no weighting)
+for comparison studies.</p></li>
+<li><p><strong>scoring_func</strong> (<em>callable</em><em>,</em>) – Score function (or loss function) with signature
+<code class="docutils literal notranslate"><span class="pre">scoring_func(y,</span> <span class="pre">y_pred,</span> <span class="pre">**kwargs)</span></code>.
+If none, uses classification accuracy if the
+estimator is a classifier and mean squared error
+if the estimator is a regressor.</p></li>
+<li><p><strong>predict_proba</strong> (<em>bool</em>) – Whether to use the <cite>predict_proba</cite> function for the
+<cite>estimator</cite> argument. This is to be used in conjunction
+with <cite>scoring_func</cite> which takes in probability values
+instead of actual predictions.
+For example, if the scoring_func is
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">sklearn.metrics.roc_auc_score()</span></code>, then use
+<cite>predict_proba=True</cite>.
+Note that this requires <cite>estimator</cite> to have
+<cite>predict_proba</cite> method implemented.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default=None</em><em>)</em>) – If int, random_seed is the seed used by
+the random number generator.</p></li>
+<li><p><strong>clone_estimator</strong> (<em>bool</em><em> (</em><em>default=True</em><em>)</em>) – Clones the estimator if true, otherwise fits
+the original.</p></li>
+<li><p><strong>fit_params</strong> (<em>additional parameters</em>) – Additional parameters to be passed to the .fit() function of the
+estimator when it is fit to the bootstrap samples.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>scores</strong> – Array of scores of the estimator for each bootstrap
+replicate.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of float, shape=(len(list(n_splits)),)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mlxtend.evaluate</span> <span class="kn">import</span> <span class="n">bootstrap_point632_score</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span> <span class="o">=</span> <span class="n">bootstrap_point632_score</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">acc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy:&#39;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
+<span class="go">0.953023146884</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lower</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">upper</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;95</span><span class="si">%%</span><span class="s1"> Confidence interval: [</span><span class="si">%.2f</span><span class="s1">, </span><span class="si">%.2f</span><span class="s1">]&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">))</span>
+<span class="go">95% Confidence interval: [0.90, 0.98]</span>
+</pre></div>
+</div>
+<p>For more usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/bootstrap_point632_score/">http://rasbt.github.io/mlxtend/user_guide/evaluate/bootstrap_point632_score/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.mse">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.</span></span><span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_point632.html#mse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.mse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.no_information_rate">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.</span></span><span class="sig-name descname"><span class="pre">no_information_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_fn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/bootstrap_point632.html#no_information_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.bootstrap_point632.no_information_rate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-cochrans-q-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q.cochrans_q">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q.</span></span><span class="sig-name descname"><span class="pre">cochrans_q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">y_model_predictions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/cochrans_q.html#cochrans_q"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.cochrans_q.cochrans_q" title="Permalink to this definition"></a></dt>
+<dd><p>Cochran’s Q test to compare 2 or more models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels as 1D NumPy array.</p></li>
+<li><p><strong>*y_model_predictions</strong> (<em>array-likes</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Variable number of 2 or more arrays that
+contain the predicted class labels
+from models as 1D NumPy array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q, p</strong> – Returns the Q (chi-squared) value and the p-value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or None, float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/cochrans_q/">http://rasbt.github.io/mlxtend/user_guide/evaluate/cochrans_q/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-confusion-matrix-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix.confusion_matrix">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix.</span></span><span class="sig-name descname"><span class="pre">confusion_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_predicted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/confusion_matrix.html#confusion_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.confusion_matrix.confusion_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Compute a confusion matrix/contingency table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels.</p></li>
+<li><p><strong>y_predicted</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – Maps a multi-class problem onto a
+binary confusion matrix, where
+the positive class is 1 and
+all other classes are 0.</p></li>
+<li><p><strong>positive_label</strong> (<em>int</em><em> (</em><em>default: 1</em><em>)</em>) – Class label of the positive class.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mat</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape=[n_classes, n_classes]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/confusion_matrix/">http://rasbt.github.io/mlxtend/user_guide/evaluate/confusion_matrix/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.counterfactual">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-counterfactual-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.counterfactual module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.counterfactual" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.counterfactual.create_counterfactual">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.counterfactual.</span></span><span class="sig-name descname"><span class="pre">create_counterfactual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_desired_proba</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lammbda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/counterfactual.html#create_counterfactual"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.counterfactual.create_counterfactual" title="Permalink to this definition"></a></dt>
+<dd><p>Implementation of the counterfactual method by Wachter et al. 2017</p>
+<p>References:</p>
+<ul class="simple">
+<li><p>Wachter, S., Mittelstadt, B., &amp; Russell, C. (2017).</p></li>
+</ul>
+<dl class="simple">
+<dt>Counterfactual explanations without opening the black box:</dt><dd><p>Automated decisions and the GDPR. Harv. JL &amp; Tech., 31, 841.,
+<a class="reference external" href="https://arxiv.org/abs/1711.00399">https://arxiv.org/abs/1711.00399</a></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_reference</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>m_features</em><em>]</em>) – The data instance (training example) to be explained.</p></li>
+<li><p><strong>y_desired</strong> (<em>int</em>) – The desired class label for <cite>x_reference</cite>.</p></li>
+<li><p><strong>model</strong> (<em>estimator</em>) – A (scikit-learn) estimator implementing <cite>.predict()</cite> and/or
+<cite>predict_proba()</cite>.
+- If <cite>model</cite> supports <cite>predict_proba()</cite>, then this is used by
+default for the first loss term,
+<cite>(lambda * model.predict[_proba](x_counterfact) - y_desired[_proba])^2</cite>
+- Otherwise, method will fall back to <cite>predict</cite>.</p></li>
+<li><p><strong>X_dataset</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_examples</em><em>, </em><em>m_features</em><em>]</em>) – A (training) dataset for picking the initial counterfactual
+as initial value for starting the optimization procedure.</p></li>
+<li><p><strong>y_desired_proba</strong> (<em>float</em><em> (</em><em>default: None</em><em>)</em>) – A float within the range [0, 1] designating the desired
+class probability for <cite>y_desired</cite>.
+- If <cite>y_desired_proba=None</cite> (default), the first loss term
+is <cite>(lambda * model(x_counterfact) - y_desired)^2</cite> where <cite>y_desired</cite>
+is a class label
+- If <cite>y_desired_proba</cite> is not None, the first loss term
+is <cite>(lambda * model(x_counterfact) - y_desired_proba)^2</cite></p></li>
+<li><p><strong>lammbda</strong> (<em>Weighting parameter for the first loss term</em><em>,</em>) – <cite>(lambda * model(x_counterfact) - y_desired[_proba])^2</cite></p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default=None</em><em>)</em>) – If int, random_seed is the seed used by
+the random number generator for selecting the inital counterfactual
+from <cite>X_dataset</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.f_test">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-f-test-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.f_test module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.f_test" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.f_test.combined_ftest_5x2cv">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.f_test.</span></span><span class="sig-name descname"><span class="pre">combined_ftest_5x2cv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimator2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/f_test.html#combined_ftest_5x2cv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.f_test.combined_ftest_5x2cv" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the 5x2cv combined F test proposed
+by Alpaydin 1999,
+to compare the performance of two models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>estimator1</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>estimator2</strong> (<em>scikit-learn classifier</em><em> or </em><em>regressor</em>) – </p></li>
+<li><p><strong>X</strong> (<em>{array-like</em><em>, </em><em>sparse matrix}</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Training vectors, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>scoring</strong> (<em>str</em><em>, </em><em>callable</em><em>, or </em><em>None</em><em> (</em><em>default: None</em><em>)</em>) – If None (default), uses ‘accuracy’ for sklearn classifiers
+and ‘r2’ for sklearn regressors.
+If str, uses a sklearn scoring metric string identifier, for example
+{accuracy, f1, precision, recall, roc_auc} for classifiers,
+{‘mean_absolute_error’, ‘mean_squared_error’/’neg_mean_squared_error’,
+‘median_absolute_error’, ‘r2’} for regressors.
+If a callable object or function is provided, it has to be conform with
+sklearn’s signature <code class="docutils literal notranslate"><span class="pre">scorer(estimator,</span> <span class="pre">X,</span> <span class="pre">y)</span></code>; see
+<a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html">http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html</a>
+for more information.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default: None</em><em>)</em>) – Random seed for creating the test/train splits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>f</strong> (<em>float</em>) – The F-statistic</p></li>
+<li><p><strong>pvalue</strong> (<em>float</em>) – Two-tailed p-value.
+If the chosen significance level is larger
+than the p-value, we reject the null hypothesis
+and accept that there are significant differences
+in the two compared models.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/combined_ftest_5x2cv/">http://rasbt.github.io/mlxtend/user_guide/evaluate/combined_ftest_5x2cv/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.f_test.ftest">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.f_test.</span></span><span class="sig-name descname"><span class="pre">ftest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">y_model_predictions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/f_test.html#ftest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.f_test.ftest" title="Permalink to this definition"></a></dt>
+<dd><p>F-Test test to compare 2 or more models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels as 1D NumPy array.</p></li>
+<li><p><strong>*y_model_predictions</strong> (<em>array-likes</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Variable number of 2 or more arrays that
+contain the predicted class labels
+from models as 1D NumPy array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>f, p</strong> – Returns the F-value and the p-value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or None, float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/ftest/">http://rasbt.github.io/mlxtend/user_guide/evaluate/ftest/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.feature_importance">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-feature-importance-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.feature_importance module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.feature_importance" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.feature_importance.feature_importance_permutation">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.feature_importance.</span></span><span class="sig-name descname"><span class="pre">feature_importance_permutation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predict_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/feature_importance.html#feature_importance_permutation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.feature_importance.feature_importance_permutation" title="Permalink to this definition"></a></dt>
+<dd><p>Feature importance imputation via permutation importance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>NumPy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Dataset, where n_samples is the number of samples and
+n_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>NumPy array</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>]</em>) – Target values.</p></li>
+<li><p><strong>predict_method</strong> (<em>prediction function</em>) – A callable function that predicts the target values
+from X.</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>callable</em>) – The metric for evaluating the feature importance through
+permutation. By default, the strings ‘accuracy’ is
+recommended for classifiers and the string ‘r2’ is
+recommended for regressors. Optionally, a custom
+scoring function (e.g., <cite>metric=scoring_func</cite>) that
+accepts two arguments, y_true and y_pred, which have
+similar shape to the <cite>y</cite> array.</p></li>
+<li><p><strong>num_rounds</strong> (<em>int</em><em> (</em><em>default=1</em><em>)</em>) – Number of rounds the feature columns are permuted to
+compute the permutation importance.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default=None</em><em>)</em>) – Random seed for permuting the feature columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mean_importance_vals, all_importance_vals</strong> – The first array, mean_importance_vals has shape [n_features, ] and
+contains the importance values for all features.
+The shape of the second array is [n_features, num_rounds] and contains
+the feature importance for each repetition. If num_rounds=1,
+it contains the same values as the first array, mean_importance_vals.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>NumPy arrays.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/feature_importance_permutation/">http://rasbt.github.io/mlxtend/user_guide/evaluate/feature_importance_permutation/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.holdout">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-holdout-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.holdout module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.holdout" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.holdout.</span></span><span class="sig-name descname"><span class="pre">PredefinedHoldoutSplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">valid_indices</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#PredefinedHoldoutSplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Train/Validation set splitter for sklearn’s GridSearchCV etc.</p>
+<p>Uses user-specified train/validation set indices to split a dataset
+into train/validation sets using user-defined or random
+indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>valid_indices</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>num_examples</em><em>,</em><em>)</em>) – Indices of the training examples in the training set
+to be used for validation. All other indices in the
+training set are used to for a training subset
+for model fitting.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/PredefinedHoldoutSplit/">http://rasbt.github.io/mlxtend/user_guide/evaluate/PredefinedHoldoutSplit/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit.get_n_splits">
+<span class="sig-name descname"><span class="pre">get_n_splits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#PredefinedHoldoutSplit.get_n_splits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit.get_n_splits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of splitting iterations in the cross-validator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+<li><p><strong>y</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+<li><p><strong>groups</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>n_splits</strong> – Returns the number of splitting iterations in the cross-validator.
+Always returns 1.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#PredefinedHoldoutSplit.split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.PredefinedHoldoutSplit.split" title="Permalink to this definition"></a></dt>
+<dd><p>Generate indices to split data into training and test set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>num_examples</em><em>, </em><em>num_features</em><em>)</em>) – Training data, where num_examples is the number of examples
+and num_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>num_examples</em><em>,</em><em>)</em>) – The target variable for supervised learning problems.
+Stratification is done based on the y labels.</p></li>
+<li><p><strong>groups</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>train_index</strong> (<em>ndarray</em>) – The training set indices for that split.</p></li>
+<li><p><strong>valid_index</strong> (<em>ndarray</em>) – The validation set indices for that split.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.holdout.</span></span><span class="sig-name descname"><span class="pre">RandomHoldoutSplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">valid_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stratify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#RandomHoldoutSplit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Train/Validation set splitter for sklearn’s GridSearchCV etc.</p>
+<p>Provides train/validation set indices to split a dataset
+into train/validation sets using random indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>valid_size</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – Proportion of examples that being assigned as
+validation examples. 1-<cite>valid_size</cite> will then automatically
+be assigned as training set examples.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – The random seed for splitting the data
+into training and validation set partitions.</p></li>
+<li><p><strong>stratify</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – True or False, whether to perform a stratified
+split or not</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/RandomHoldoutSplit/">http://rasbt.github.io/mlxtend/user_guide/evaluate/RandomHoldoutSplit/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit.get_n_splits">
+<span class="sig-name descname"><span class="pre">get_n_splits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#RandomHoldoutSplit.get_n_splits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit.get_n_splits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of splitting iterations in the cross-validator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+<li><p><strong>y</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+<li><p><strong>groups</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>n_splits</strong> – Returns the number of splitting iterations in the cross-validator.
+Always returns 1.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/holdout.html#RandomHoldoutSplit.split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.holdout.RandomHoldoutSplit.split" title="Permalink to this definition"></a></dt>
+<dd><p>Generate indices to split data into training and test set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>num_examples</em><em>, </em><em>num_features</em><em>)</em>) – Training data, where num_examples is the number of
+training examples and num_features is the number of features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>num_examples</em><em>,</em><em>)</em>) – The target variable for supervised learning problems.
+Stratification is done based on the y labels.</p></li>
+<li><p><strong>groups</strong> (<em>object</em>) – Always ignored, exists for compatibility.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>train_index</strong> (<em>ndarray</em>) – The training set indices for that split.</p></li>
+<li><p><strong>valid_index</strong> (<em>ndarray</em>) – The validation set indices for that split.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.lift_score">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-lift-score-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.lift_score module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.lift_score" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.lift_score.lift_score">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.lift_score.</span></span><span class="sig-name descname"><span class="pre">lift_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_predicted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/lift_score.html#lift_score"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.lift_score.lift_score" title="Permalink to this definition"></a></dt>
+<dd><p>Lift measures the degree to which the predictions of a
+classification model are better than randomly-generated predictions.</p>
+<p>The in terms of True Positives (TP), True Negatives (TN),
+False Positives (FP), and False Negatives (FN), the lift score is
+computed as:
+[ TP / (TP+FP) ] / [ (TP+FN) / (TP+TN+FP+FN) ]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels.</p></li>
+<li><p><strong>y_predicted</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em> (</em><em>default: True</em><em>)</em>) – Maps a multi-class problem onto a
+binary, where
+the positive class is 1 and
+all other classes are 0.</p></li>
+<li><p><strong>positive_label</strong> (<em>int</em><em> (</em><em>default: 0</em><em>)</em>) – Class label of the positive class.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>score</strong> – Lift score in the range [0, $infty$]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/lift_score/">http://rasbt.github.io/mlxtend/user_guide/evaluate/lift_score/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.lift_score.support">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.lift_score.</span></span><span class="sig-name descname"><span class="pre">support</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_predicted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/lift_score.html#support"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.lift_score.support" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Support is the fraction of the true value</dt><dd><p>in predictions and target values.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels.</p></li>
+<li><p><strong>y_predicted</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>score</strong> – Support score in the range [0, 1]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.mcnemar">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-mcnemar-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.mcnemar module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.mcnemar" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.</span></span><span class="sig-name descname"><span class="pre">mcnemar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/mcnemar.html#mcnemar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar" title="Permalink to this definition"></a></dt>
+<dd><p>McNemar test for paired nominal data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ary</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>2</em><em>, </em><em>2</em><em>]</em>) – 2 x 2 contigency table (as returned by evaluate.mcnemar_table),
+where
+a: ary[0, 0]: # of samples that both models predicted correctly
+b: ary[0, 1]: # of samples that model 1 got right and model 2 got wrong
+c: ary[1, 0]: # of samples that model 2 got right and model 1 got wrong
+d: aryCell [1, 1]: # of samples that both models predicted incorrectly</p></li>
+<li><p><strong>corrected</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>] </em><em>(</em><em>default: True</em><em>)</em>) – Uses Edward’s continuity correction for chi-squared if <cite>True</cite></p></li>
+<li><p><strong>exact</strong> (<em>bool</em><em>, </em><em>(</em><em>default: False</em><em>)</em>) – If <cite>True</cite>, uses an exact binomial test comparing b to
+a binomial distribution with n = b + c and p = 0.5.
+It is highly recommended to use <cite>exact=True</cite> for sample sizes &lt; 25
+since chi-squared is not well-approximated
+by the chi-squared distribution!</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>chi2, p</strong> – Returns the chi-squared value and the p-value;
+if <cite>exact=True</cite> (default: <cite>False</cite>), <cite>chi2</cite> is <cite>None</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or None, float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar/">http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_table">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.</span></span><span class="sig-name descname"><span class="pre">mcnemar_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_model1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_model2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/mcnemar.html#mcnemar_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_table" title="Permalink to this definition"></a></dt>
+<dd><p>Compute a 2x2 contigency table for McNemar’s test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels as 1D NumPy array.</p></li>
+<li><p><strong>y_model1</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels from model as 1D NumPy array.</p></li>
+<li><p><strong>y_model2</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels from model 2 as 1D NumPy array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tb</strong> – 2x2 contingency table with the following contents:
+a: tb[0, 0]: # of samples that both models predicted correctly
+b: tb[0, 1]: # of samples that model 1 got right and model 2 got wrong
+c: tb[1, 0]: # of samples that model 2 got right and model 1 got wrong
+d: tb[1, 1]: # of samples that both models predicted incorrectly</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array-like, shape=[2, 2]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar_table/">http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar_table/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_tables">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.</span></span><span class="sig-name descname"><span class="pre">mcnemar_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">y_model_predictions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/mcnemar.html#mcnemar_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.mcnemar.mcnemar_tables" title="Permalink to this definition"></a></dt>
+<dd><p>Compute multiple 2x2 contigency tables for McNemar’s
+test or Cochran’s Q test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_target</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – True class labels as 1D NumPy array.</p></li>
+<li><p><strong>y_model_predictions</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>[</em><em>n_samples</em><em>]</em>) – Predicted class labels for a model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>tables</strong> – Dictionary of NumPy arrays with shape=[2, 2]. Each dictionary
+key names the two models to be compared based on the order the
+models were passed as <cite>*y_model_predictions</cite>. The number of
+dictionary entries is equal to the number of pairwise combinations
+between the m models, i.e., “m choose 2.”</p>
+<p>For example the following target array (containing the true labels)
+and 3 models</p>
+<ul class="simple">
+<li><p>y_true = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])</p></li>
+<li><p>y_mod0 = np.array([0, 1, 0, 0, 0, 1, 1, 0, 0, 0])</p></li>
+<li><p>y_mod0 = np.array([0, 0, 1, 1, 0, 1, 1, 0, 0, 0])</p></li>
+<li><p>y_mod0 = np.array([0, 1, 1, 1, 0, 1, 0, 0, 0, 0])</p></li>
+</ul>
+<p>would result in the following dictionary:</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><p>dict</p>
+<dl>
+<dt>{‘model_0 vs model_1’: array([[ 4.,  1.],</dt><dd><blockquote>
+<div><p>[ 2.,  3.]]),</p>
+</div></blockquote>
+<dl class="simple">
+<dt>’model_0 vs model_2’: array([[ 3.,  0.],</dt><dd><p>[ 3.,  4.]]),</p>
+</dd>
+<dt>’model_1 vs model_2’: array([[ 3.,  0.],</dt><dd><p>[ 2.,  5.]])}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Each array is structured in the following way:</p>
+<ul class="simple">
+<li><p>tb[0, 0]: # of samples that both models predicted correctly</p></li>
+<li><p>tb[0, 1]: # of samples that model a got right and model b got wrong</p></li>
+<li><p>tb[1, 0]: # of samples that model b got right and model a got wrong</p></li>
+<li><p>tb[1, 1]: # of samples that both models predicted incorrectly</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar_tables/">http://rasbt.github.io/mlxtend/user_guide/evaluate/mcnemar_tables/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.permutation">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-permutation-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.permutation module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.permutation" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.permutation.nottest">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.permutation.</span></span><span class="sig-name descname"><span class="pre">nottest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/permutation.html#nottest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.permutation.nottest" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.permutation.permutation_test">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.permutation.</span></span><span class="sig-name descname"><span class="pre">permutation_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x_mean</span> <span class="pre">!=</span> <span class="pre">y_mean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'exact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paired</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/permutation.html#permutation_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.permutation.permutation_test" title="Permalink to this definition"></a></dt>
+<dd><p>Nonparametric permutation test</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em><em> or </em><em>numpy array with shape</em><em> (</em><em>n_datapoints</em><em>,</em><em>)</em>) – A list or 1D numpy array of the first sample
+(e.g., the treatment group).</p></li>
+<li><p><strong>y</strong> (<em>list</em><em> or </em><em>numpy array with shape</em><em> (</em><em>n_datapoints</em><em>,</em><em>)</em>) – A list or 1D numpy array of the second sample
+(e.g., the control group).</p></li>
+<li><p><strong>func</strong> (<em>custom function</em><em> or </em><em>str</em><em> (</em><em>default: 'x_mean != y_mean'</em><em>)</em>) – <p>function to compute the statistic for the permutation test.
+- If ‘x_mean != y_mean’, uses</p>
+<blockquote>
+<div><dl class="simple">
+<dt><cite>func=lambda x, y: np.abs(np.mean(x) - np.mean(y)))</cite></dt><dd><p>for a two-sided test.</p>
+</dd>
+</dl>
+</div></blockquote>
+<ul>
+<li><p>If ‘x_mean &gt; y_mean’, uses
+<cite>func=lambda x, y: np.mean(x) - np.mean(y))</cite></p>
+<blockquote>
+<div><p>for a one-sided test.</p>
+</div></blockquote>
+</li>
+<li><p>If ‘x_mean &lt; y_mean’, uses
+<cite>func=lambda x, y: np.mean(y) - np.mean(x))</cite></p>
+<blockquote>
+<div><p>for a one-sided test.</p>
+</div></blockquote>
+</li>
+</ul>
+</p></li>
+<li><p><strong>method</strong> (<em>'approximate'</em><em> or </em><em>'exact'</em><em> (</em><em>default: 'exact'</em><em>)</em>) – If ‘exact’ (default), all possible permutations are considered.
+If ‘approximate’ the number of drawn samples is
+given by <cite>num_rounds</cite>.
+Note that ‘exact’ is typically not feasible unless the dataset
+size is relatively small.</p></li>
+<li><p><strong>paired</strong> (<em>bool</em>) – If True, a paired test is performed by only exchanging each
+datapoint with its associate.</p></li>
+<li><p><strong>num_rounds</strong> (<em>int</em><em> (</em><em>default: 1000</em><em>)</em>) – The number of permutation samples if <cite>method=’approximate’</cite>.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default: None</em><em>)</em>) – The random seed for generating permutation samples if
+<cite>method=’approximate’</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>p-value under the null hypothesis</em></p></li>
+<li><p><em>Examples</em></p></li>
+<li><p><em>———–</em></p></li>
+<li><p><em>For usage examples, please see</em></p></li>
+<li><p><strong>http</strong> (<em>//rasbt.github.io/mlxtend/user_guide/evaluate/permutation_test/</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference">
+<span id="dpark-services-snow-auto-mlxtend-evaluate-proportion-difference-module"></span><h2>DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference.proportion_difference">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference.</span></span><span class="sig-name descname"><span class="pre">proportion_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proportion_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proportion_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/evaluate/proportion_difference.html#proportion_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.evaluate.proportion_difference.proportion_difference" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the test statistic and p-value for a difference of
+proportions test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proportion_1</strong> (<em>float</em>) – The first proportion</p></li>
+<li><p><strong>proportion_2</strong> (<em>float</em>) – The second proportion</p></li>
+<li><p><strong>n_1</strong> (<em>int</em>) – The sample size of the first test sample</p></li>
+<li><p><strong>n_2</strong> (<em>int</em><em> or </em><em>None</em><em> (</em><em>default=None</em><em>)</em>) – The sample size of the second test sample.
+If <cite>None</cite>, <cite>n_1`=`n_2</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>z, p</strong> – Returns the z-score and the p-value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or None, float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/evaluate/proportion_difference/">http://rasbt.github.io/mlxtend/user_guide/evaluate/proportion_difference/</a></p>
+</dd></dl>
+
+</section>
+<section id="dpark-services-snow-auto-mlxtend-evaluate-scoring-module">
+<h2>DPARK.services.snow_auto.mlxtend.evaluate.scoring module<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-evaluate-scoring-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-snow-auto-mlxtend-evaluate-time-series-module">
+<h2>DPARK.services.snow_auto.mlxtend.evaluate.time_series module<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-evaluate-time-series-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="dpark-services-snow-auto-mlxtend-evaluate-ttest-module">
+<h2>DPARK.services.snow_auto.mlxtend.evaluate.ttest module<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-evaluate-ttest-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.mlxtend.data.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.mlxtend.data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.externals.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend.externals package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

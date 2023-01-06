@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPARK.services.snow_auto.mlxtend.data package &mdash; DPark 1.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DPARK.services.snow_auto.mlxtend.evaluate package" href="DPARK.services.snow_auto.mlxtend.evaluate.html" />
+    <link rel="prev" title="DPARK.services.snow_auto.mlxtend.cluster package" href="DPARK.services.snow_auto.mlxtend.cluster.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DPark
+            <img src="_static/dpark_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_quality.html">Data Quality</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_profiler.html">Data data_profiler</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feature_engineering.html">Feature Engineering</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_references.html">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DPARK.alembic.html">DPARK.alembic package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.databases.html">DPARK.config.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.config.html">DPARK.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.frontend.html">DPARK.frontend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.html">DPARK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.compute.html">DPARK.services.compute package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.api.html">DPARK.services.connectors.app.api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.connector_utils.html">DPARK.services.connectors.app.connector_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.app.html">DPARK.services.connectors.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.connectors.html">DPARK.services.connectors package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.databases.html">DPARK.services.core_API.app.databases package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.models.html">DPARK.services.core_API.app.models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.postgres_utils.html">DPARK.services.core_API.app.postgres_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.html">DPARK.services.core_API.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.dataverse.html">DPARK.services.core_API.app.schemas.dataverse package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.app.schemas.html">DPARK.services.core_API.app.schemas package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.core_API.html">DPARK.services.core_API package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.costing.html">DPARK.services.costing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.endpoint_generation.html">DPARK.services.endpoint_generation package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.Feature_engeering.html">DPARK.services.Feature_engeering package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.ingestion_utils.html">DPARK.services.ingestion_service.app.ingestion_utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.app.html">DPARK.services.ingestion_service.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.ingestion_service.html">DPARK.services.ingestion_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.app.html">DPARK.services.mode_registry.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.mode_registry.html">DPARK.services.mode_registry package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.html">DPARK.services package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.classifier.html">DPARK.services.snow_auto.app.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.cluster.html">DPARK.services.snow_auto.app.mlxtend.cluster package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.data.html">DPARK.services.snow_auto.app.mlxtend.data package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.evaluate.html">DPARK.services.snow_auto.app.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.app.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.externals.html">DPARK.services.snow_auto.app.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_extraction.html">DPARK.services.snow_auto.app.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.feature_selection.html">DPARK.services.snow_auto.app.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.file_io.html">DPARK.services.snow_auto.app.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.app.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.image.html">DPARK.services.snow_auto.app.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.math.html">DPARK.services.snow_auto.app.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.plotting.html">DPARK.services.snow_auto.app.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.preprocessing.html">DPARK.services.snow_auto.app.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.regressor.html">DPARK.services.snow_auto.app.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.html">DPARK.services.snow_auto.app.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.text.html">DPARK.services.snow_auto.app.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.mlxtend.utils.html">DPARK.services.snow_auto.app.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.app.html">DPARK.services.snow_auto.app package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.classifier.html">DPARK.services.snow_auto.mlxtend.classifier package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.cluster.html">DPARK.services.snow_auto.mlxtend.cluster package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DPARK.services.snow_auto.mlxtend.data package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.autompg">DPARK.services.snow_auto.mlxtend.data.autompg module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.autompg.autompg_data"><code class="docutils literal notranslate"><span class="pre">autompg_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.boston_housing">DPARK.services.snow_auto.mlxtend.data.boston_housing module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.boston_housing.boston_housing_data"><code class="docutils literal notranslate"><span class="pre">boston_housing_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.iris">DPARK.services.snow_auto.mlxtend.data.iris module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.iris.iris_data"><code class="docutils literal notranslate"><span class="pre">iris_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.local_mnist">DPARK.services.snow_auto.mlxtend.data.local_mnist module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.local_mnist.loadlocal_mnist"><code class="docutils literal notranslate"><span class="pre">loadlocal_mnist()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.mnist">DPARK.services.snow_auto.mlxtend.data.mnist module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.mnist.mnist_data"><code class="docutils literal notranslate"><span class="pre">mnist_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.multiplexer">DPARK.services.snow_auto.mlxtend.data.multiplexer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.multiplexer.make_multiplexer_dataset"><code class="docutils literal notranslate"><span class="pre">make_multiplexer_dataset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.three_blobs">DPARK.services.snow_auto.mlxtend.data.three_blobs module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.three_blobs.three_blobs_data"><code class="docutils literal notranslate"><span class="pre">three_blobs_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data.wine">DPARK.services.snow_auto.mlxtend.data.wine module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.wine.wine_data"><code class="docutils literal notranslate"><span class="pre">wine_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DPARK.services.snow_auto.mlxtend.data">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.autompg_data"><code class="docutils literal notranslate"><span class="pre">autompg_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.boston_housing_data"><code class="docutils literal notranslate"><span class="pre">boston_housing_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.iris_data"><code class="docutils literal notranslate"><span class="pre">iris_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.loadlocal_mnist"><code class="docutils literal notranslate"><span class="pre">loadlocal_mnist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.make_multiplexer_dataset"><code class="docutils literal notranslate"><span class="pre">make_multiplexer_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.mnist_data"><code class="docutils literal notranslate"><span class="pre">mnist_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.three_blobs_data"><code class="docutils literal notranslate"><span class="pre">three_blobs_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#DPARK.services.snow_auto.mlxtend.data.wine_data"><code class="docutils literal notranslate"><span class="pre">wine_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.evaluate.html">DPARK.services.snow_auto.mlxtend.evaluate package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.pyprind.html">DPARK.services.snow_auto.mlxtend.externals.pyprind package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.externals.html">DPARK.services.snow_auto.mlxtend.externals package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_extraction.html">DPARK.services.snow_auto.mlxtend.feature_extraction package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.feature_selection.html">DPARK.services.snow_auto.mlxtend.feature_selection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.file_io.html">DPARK.services.snow_auto.mlxtend.file_io package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.frequent_patterns.html">DPARK.services.snow_auto.mlxtend.frequent_patterns package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.image.html">DPARK.services.snow_auto.mlxtend.image package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.math.html">DPARK.services.snow_auto.mlxtend.math package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.plotting.html">DPARK.services.snow_auto.mlxtend.plotting package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.preprocessing.html">DPARK.services.snow_auto.mlxtend.preprocessing package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.regressor.html">DPARK.services.snow_auto.mlxtend.regressor package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.text.html">DPARK.services.snow_auto.mlxtend.text package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.mlxtend.utils.html">DPARK.services.snow_auto.mlxtend.utils package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DPARK.utils.html">DPARK.utils package</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">DPark_documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DPark</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="api_references.html">API References</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.html">DPARK package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.html">DPARK.services package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.html">DPARK.services.snow_auto package</a></li>
+          <li class="breadcrumb-item"><a href="DPARK.services.snow_auto.mlxtend.html">DPARK.services.snow_auto.mlxtend package</a></li>
+      <li class="breadcrumb-item active">DPARK.services.snow_auto.mlxtend.data package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/DPARK.services.snow_auto.mlxtend.data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dpark-services-snow-auto-mlxtend-data-package">
+<h1>DPARK.services.snow_auto.mlxtend.data package<a class="headerlink" href="#dpark-services-snow-auto-mlxtend-data-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.autompg">
+<span id="dpark-services-snow-auto-mlxtend-data-autompg-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.autompg module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.autompg" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.autompg.autompg_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.autompg.</span></span><span class="sig-name descname"><span class="pre">autompg_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/autompg.html#autompg_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.autompg.autompg_data" title="Permalink to this definition"></a></dt>
+<dd><p>Auto MPG dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Auto+MPG">https://archive.ics.uci.edu/ml/datasets/Auto+MPG</a>
+Number of samples : 392
+Continuous target variable : mpg</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>cylinders:  multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>displacement: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>horsepower: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>weight: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>acceleration: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>model year: multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>origin: multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>car name: string (unique for each instance)</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 392 auto samples as rows
+and 8 feature columns (6 rows with NaNs removed).
+y is a 1-dimensional array of the target MPG values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_targets]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/autompg_data/">http://rasbt.github.io/mlxtend/user_guide/data/autompg_data/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.boston_housing">
+<span id="dpark-services-snow-auto-mlxtend-data-boston-housing-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.boston_housing module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.boston_housing" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.boston_housing.boston_housing_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.boston_housing.</span></span><span class="sig-name descname"><span class="pre">boston_housing_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/boston_housing.html#boston_housing_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.boston_housing.boston_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Boston Housing dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Housing">https://archive.ics.uci.edu/ml/datasets/Housing</a>
+Number of samples : 506</p>
+<p>Continuous target variable : MEDV
+MEDV = Median value of owner-occupied homes in $1000’s</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>CRIM      per capita crime rate by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><dl class="simple">
+<dt>ZN        proportion of residential land zoned for lots over</dt><dd><p>25,000 sq.ft.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>INDUS     proportion of non-retail business acres per town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><dl class="simple">
+<dt>CHAS      Charles River dummy variable (= 1 if tract bounds</dt><dd><p>river; 0 otherwise)</p>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>NOX       nitric oxides concentration (parts per 10 million)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>RM        average number of rooms per dwelling</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>AGE       proportion of owner-occupied units built prior to 1940</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>DIS       weighted distances to five Boston employment centres</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>RAD       index of accessibility to radial highways</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>TAX      full-value property-tax rate per $10,000</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p>PTRATIO  pupil-teacher ratio by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p>B        1000(Bk - 0.63)^2 where Bk is the prop. of b. by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p>LSTAT    % lower status of the population</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 506 housing samples as rows
+and 13 feature columns.
+y is a 1-dimensional array of the continuous target variable MEDV</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/boston_housing_data/">http://rasbt.github.io/mlxtend/user_guide/data/boston_housing_data/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.iris">
+<span id="dpark-services-snow-auto-mlxtend-data-iris-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.iris module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.iris" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.iris.iris_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.iris.</span></span><span class="sig-name descname"><span class="pre">iris_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'uci'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/iris.html#iris_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.iris.iris_data" title="Permalink to this definition"></a></dt>
+<dd><p>Iris flower dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Iris">https://archive.ics.uci.edu/ml/datasets/Iris</a>
+Number of samples : 150
+Class labels : {0, 1, 2}, distribution: [50, 50, 50]</p>
+<blockquote>
+<div><p>0 = setosa, 1 = versicolor, 2 = virginica.</p>
+</div></blockquote>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>sepal length [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>sepal width [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>petal length [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>petal width [cm]</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>version</strong> (<em>string</em><em>, </em><em>optional</em><em> (</em><em>default: 'uci'</em><em>)</em><em>.</em>) – Version to use {‘uci’, ‘corrected’}. ‘uci’ loads the dataset
+as deposited on the UCI machine learning repository, and
+‘corrected’ provides the version that is consistent with
+Fisher’s original paper. See Note for details.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X, y</strong> – X is the feature matrix with 150 flower samples as rows,
+and 4 feature columns sepal length, sepal width,
+petal length, and petal width.
+y is a 1-dimensional array of the class labels {0, 1, 2}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Iris dataset (originally collected by Edgar Anderson) and
+available in UCI’s machine learning repository is different from
+the Iris dataset described in the original paper by  R.A. Fisher [1]).
+Precisely, there are two data points (row number
+34 and 37) in UCI’s Machine Learning repository are different from the
+origianlly published Iris dataset. Also, the original version of the Iris
+Dataset, which can be loaded via <cite>version=’corrected’</cite> is the same
+as the one in R.</p>
+<p>[1] . A. Fisher (1936). “The use of multiple measurements in taxonomic
+problems”. Annals of Eugenics. 7 (2): 179–188</p>
+</div>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/iris_data/">http://rasbt.github.io/mlxtend/user_guide/data/iris_data/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.local_mnist">
+<span id="dpark-services-snow-auto-mlxtend-data-local-mnist-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.local_mnist module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.local_mnist" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.local_mnist.loadlocal_mnist">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.local_mnist.</span></span><span class="sig-name descname"><span class="pre">loadlocal_mnist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/local_mnist.html#loadlocal_mnist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.local_mnist.loadlocal_mnist" title="Permalink to this definition"></a></dt>
+<dd><p>Read MNIST from ubyte files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images_path</strong> (<em>str</em>) – path to the test or train MNIST ubyte file</p></li>
+<li><p><strong>labels_path</strong> (<em>str</em>) – path to the test or train MNIST class labels file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>images</strong> (<em>[n_samples, n_pixels] numpy.array</em>) – Pixel values of the images.</p></li>
+<li><p><strong>labels</strong> (<em>[n_samples] numpy array</em>) – Target class labels</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/loadlocal_mnist/">http://rasbt.github.io/mlxtend/user_guide/data/loadlocal_mnist/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.mnist">
+<span id="dpark-services-snow-auto-mlxtend-data-mnist-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.mnist module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.mnist" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.mnist.mnist_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.mnist.</span></span><span class="sig-name descname"><span class="pre">mnist_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/mnist.html#mnist_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.mnist.mnist_data" title="Permalink to this definition"></a></dt>
+<dd><p>5000 samples from the MNIST handwritten digits dataset.</p>
+<p>Data Source : <a class="reference external" href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 5000 image samples as rows,
+each row consists of 28x28 pixels that were unrolled into
+784 pixel feature vectors.
+y contains the 10 unique class labels 0-9.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/mnist_data/">http://rasbt.github.io/mlxtend/user_guide/data/mnist_data/</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.multiplexer">
+<span id="dpark-services-snow-auto-mlxtend-data-multiplexer-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.multiplexer module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.multiplexer" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.multiplexer.make_multiplexer_dataset">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.multiplexer.</span></span><span class="sig-name descname"><span class="pre">make_multiplexer_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address_bits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_class_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/multiplexer.html#make_multiplexer_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.multiplexer.make_multiplexer_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to create a binary n-bit multiplexer dataset.</p>
+<p>New in mlxtend v0.9</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address_bits</strong> (<em>int</em><em> (</em><em>default: 2</em><em>)</em>) – A positive integer that determines the number of address
+bits in the multiplexer, which in turn determine the
+n-bit capacity of the multiplexer and therefore the
+number of features. The number of features is determined by
+the number of address bits. For example, 2 address bits
+will result in a 6 bit multiplexer and consequently
+6 features (2 + 2^2 = 6). If <cite>address_bits=3</cite>, then
+this results in an 11-bit multiplexer as (2 + 2^3 = 11)
+with 11 features.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> (</em><em>default: 100</em><em>)</em>) – The total number of samples generated.</p></li>
+<li><p><strong>positive_class_ratio</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – The fraction (a float between 0 and 1)
+of samples in the <cite>sample_size`d dataset
+that have class label 1.
+If `positive_class_ratio=0.5</cite> (default), then
+the ratio of class 0 and class 1 samples is perfectly balanced.</p></li>
+<li><p><strong>shuffle</strong> (<em>Bool</em><em> (</em><em>default: False</em><em>)</em>) – Whether or not to shuffle the features and labels.
+If <cite>False</cite> (default), the samples are returned in sorted
+order starting with <cite>sample_size</cite>/2 samples with class label 0
+and followed by <cite>sample_size</cite>/2 samples with class label 1.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Random seed used for generating the multiplexer samples and shuffling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X, y</strong> – X is the feature matrix with the number of samples equal
+to <cite>sample_size</cite>. The number of features is determined by
+the number of address bits. For instance, 2 address bits
+will result in a 6 bit multiplexer and consequently
+6 features (2 + 2^2 = 6).
+All features are binary (values in {0, 1}).
+y is a 1-dimensional array of class labels in {0, 1}.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/make_multiplexer_dataset">http://rasbt.github.io/mlxtend/user_guide/data/make_multiplexer_dataset</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.three_blobs">
+<span id="dpark-services-snow-auto-mlxtend-data-three-blobs-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.three_blobs module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.three_blobs" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.three_blobs.three_blobs_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.three_blobs.</span></span><span class="sig-name descname"><span class="pre">three_blobs_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/three_blobs.html#three_blobs_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.three_blobs.three_blobs_data" title="Permalink to this definition"></a></dt>
+<dd><p>A random dataset of 3 2D blobs for clustering.</p>
+<p>Number of samples : 150
+Suggested labels : {0, 1, 2}, distribution: [50, 50, 50]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 159 samples as rows
+and 2 feature columns.
+y is a 1-dimensional array of the 3 suggested cluster labels 0, 1, 2</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_cluster_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/three_blobs_data">http://rasbt.github.io/mlxtend/user_guide/data/three_blobs_data</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data.wine">
+<span id="dpark-services-snow-auto-mlxtend-data-wine-module"></span><h2>DPARK.services.snow_auto.mlxtend.data.wine module<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data.wine" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.wine.wine_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.wine.</span></span><span class="sig-name descname"><span class="pre">wine_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/wine.html#wine_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.wine.wine_data" title="Permalink to this definition"></a></dt>
+<dd><p>Wine dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Wine">https://archive.ics.uci.edu/ml/datasets/Wine</a>
+Number of samples : 178
+Class labels : {0, 1, 2}, distribution: [59, 71, 48]</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Alcohol</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Malic acid</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Ash</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Alcalinity of ash</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Magnesium</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Total phenols</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>Flavanoids</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>Nonflavanoid phenols</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>Proanthocyanins</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>Color intensity</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p>Hue</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p>OD280/OD315 of diluted wines</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p>Proline</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 178 wine samples as rows
+and 13 feature columns.
+y is a 1-dimensional array of the 3 class labels 0, 1, 2</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/wine_data">http://rasbt.github.io/mlxtend/user_guide/data/wine_data</a></p>
+</dd></dl>
+
+</section>
+<section id="module-DPARK.services.snow_auto.mlxtend.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DPARK.services.snow_auto.mlxtend.data" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.autompg_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">autompg_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/autompg.html#autompg_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.autompg_data" title="Permalink to this definition"></a></dt>
+<dd><p>Auto MPG dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Auto+MPG">https://archive.ics.uci.edu/ml/datasets/Auto+MPG</a>
+Number of samples : 392
+Continuous target variable : mpg</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>cylinders:  multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>displacement: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>horsepower: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>weight: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>acceleration: continuous</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>model year: multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>origin: multi-valued discrete</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>car name: string (unique for each instance)</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 392 auto samples as rows
+and 8 feature columns (6 rows with NaNs removed).
+y is a 1-dimensional array of the target MPG values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_targets]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/autompg_data/">http://rasbt.github.io/mlxtend/user_guide/data/autompg_data/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.boston_housing_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">boston_housing_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/boston_housing.html#boston_housing_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.boston_housing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Boston Housing dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Housing">https://archive.ics.uci.edu/ml/datasets/Housing</a>
+Number of samples : 506</p>
+<p>Continuous target variable : MEDV
+MEDV = Median value of owner-occupied homes in $1000’s</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>CRIM      per capita crime rate by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><dl class="simple">
+<dt>ZN        proportion of residential land zoned for lots over</dt><dd><p>25,000 sq.ft.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>INDUS     proportion of non-retail business acres per town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><dl class="simple">
+<dt>CHAS      Charles River dummy variable (= 1 if tract bounds</dt><dd><p>river; 0 otherwise)</p>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>NOX       nitric oxides concentration (parts per 10 million)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>RM        average number of rooms per dwelling</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>AGE       proportion of owner-occupied units built prior to 1940</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>DIS       weighted distances to five Boston employment centres</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>RAD       index of accessibility to radial highways</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>TAX      full-value property-tax rate per $10,000</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p>PTRATIO  pupil-teacher ratio by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p>B        1000(Bk - 0.63)^2 where Bk is the prop. of b. by town</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p>LSTAT    % lower status of the population</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 506 housing samples as rows
+and 13 feature columns.
+y is a 1-dimensional array of the continuous target variable MEDV</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/boston_housing_data/">http://rasbt.github.io/mlxtend/user_guide/data/boston_housing_data/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.iris_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">iris_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'uci'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/iris.html#iris_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.iris_data" title="Permalink to this definition"></a></dt>
+<dd><p>Iris flower dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Iris">https://archive.ics.uci.edu/ml/datasets/Iris</a>
+Number of samples : 150
+Class labels : {0, 1, 2}, distribution: [50, 50, 50]</p>
+<blockquote>
+<div><p>0 = setosa, 1 = versicolor, 2 = virginica.</p>
+</div></blockquote>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>sepal length [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>sepal width [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>petal length [cm]</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>petal width [cm]</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>version</strong> (<em>string</em><em>, </em><em>optional</em><em> (</em><em>default: 'uci'</em><em>)</em><em>.</em>) – Version to use {‘uci’, ‘corrected’}. ‘uci’ loads the dataset
+as deposited on the UCI machine learning repository, and
+‘corrected’ provides the version that is consistent with
+Fisher’s original paper. See Note for details.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X, y</strong> – X is the feature matrix with 150 flower samples as rows,
+and 4 feature columns sepal length, sepal width,
+petal length, and petal width.
+y is a 1-dimensional array of the class labels {0, 1, 2}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Iris dataset (originally collected by Edgar Anderson) and
+available in UCI’s machine learning repository is different from
+the Iris dataset described in the original paper by  R.A. Fisher [1]).
+Precisely, there are two data points (row number
+34 and 37) in UCI’s Machine Learning repository are different from the
+origianlly published Iris dataset. Also, the original version of the Iris
+Dataset, which can be loaded via <cite>version=’corrected’</cite> is the same
+as the one in R.</p>
+<p>[1] . A. Fisher (1936). “The use of multiple measurements in taxonomic
+problems”. Annals of Eugenics. 7 (2): 179–188</p>
+</div>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/iris_data/">http://rasbt.github.io/mlxtend/user_guide/data/iris_data/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.loadlocal_mnist">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">loadlocal_mnist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/local_mnist.html#loadlocal_mnist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.loadlocal_mnist" title="Permalink to this definition"></a></dt>
+<dd><p>Read MNIST from ubyte files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images_path</strong> (<em>str</em>) – path to the test or train MNIST ubyte file</p></li>
+<li><p><strong>labels_path</strong> (<em>str</em>) – path to the test or train MNIST class labels file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>images</strong> (<em>[n_samples, n_pixels] numpy.array</em>) – Pixel values of the images.</p></li>
+<li><p><strong>labels</strong> (<em>[n_samples] numpy array</em>) – Target class labels</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/loadlocal_mnist/">http://rasbt.github.io/mlxtend/user_guide/data/loadlocal_mnist/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.make_multiplexer_dataset">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">make_multiplexer_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address_bits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_class_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/multiplexer.html#make_multiplexer_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.make_multiplexer_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Function to create a binary n-bit multiplexer dataset.</p>
+<p>New in mlxtend v0.9</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address_bits</strong> (<em>int</em><em> (</em><em>default: 2</em><em>)</em>) – A positive integer that determines the number of address
+bits in the multiplexer, which in turn determine the
+n-bit capacity of the multiplexer and therefore the
+number of features. The number of features is determined by
+the number of address bits. For example, 2 address bits
+will result in a 6 bit multiplexer and consequently
+6 features (2 + 2^2 = 6). If <cite>address_bits=3</cite>, then
+this results in an 11-bit multiplexer as (2 + 2^3 = 11)
+with 11 features.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> (</em><em>default: 100</em><em>)</em>) – The total number of samples generated.</p></li>
+<li><p><strong>positive_class_ratio</strong> (<em>float</em><em> (</em><em>default: 0.5</em><em>)</em>) – The fraction (a float between 0 and 1)
+of samples in the <cite>sample_size`d dataset
+that have class label 1.
+If `positive_class_ratio=0.5</cite> (default), then
+the ratio of class 0 and class 1 samples is perfectly balanced.</p></li>
+<li><p><strong>shuffle</strong> (<em>Bool</em><em> (</em><em>default: False</em><em>)</em>) – Whether or not to shuffle the features and labels.
+If <cite>False</cite> (default), the samples are returned in sorted
+order starting with <cite>sample_size</cite>/2 samples with class label 0
+and followed by <cite>sample_size</cite>/2 samples with class label 1.</p></li>
+<li><p><strong>random_seed</strong> (<em>int</em><em> (</em><em>default: None</em><em>)</em>) – Random seed used for generating the multiplexer samples and shuffling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X, y</strong> – X is the feature matrix with the number of samples equal
+to <cite>sample_size</cite>. The number of features is determined by
+the number of address bits. For instance, 2 address bits
+will result in a 6 bit multiplexer and consequently
+6 features (2 + 2^2 = 6).
+All features are binary (values in {0, 1}).
+y is a 1-dimensional array of class labels in {0, 1}.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/make_multiplexer_dataset">http://rasbt.github.io/mlxtend/user_guide/data/make_multiplexer_dataset</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.mnist_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">mnist_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/mnist.html#mnist_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.mnist_data" title="Permalink to this definition"></a></dt>
+<dd><p>5000 samples from the MNIST handwritten digits dataset.</p>
+<p>Data Source : <a class="reference external" href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 5000 image samples as rows,
+each row consists of 28x28 pixels that were unrolled into
+784 pixel feature vectors.
+y contains the 10 unique class labels 0-9.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/mnist_data/">http://rasbt.github.io/mlxtend/user_guide/data/mnist_data/</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.three_blobs_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">three_blobs_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/three_blobs.html#three_blobs_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.three_blobs_data" title="Permalink to this definition"></a></dt>
+<dd><p>A random dataset of 3 2D blobs for clustering.</p>
+<p>Number of samples : 150
+Suggested labels : {0, 1, 2}, distribution: [50, 50, 50]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 159 samples as rows
+and 2 feature columns.
+y is a 1-dimensional array of the 3 suggested cluster labels 0, 1, 2</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_cluster_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/three_blobs_data">http://rasbt.github.io/mlxtend/user_guide/data/three_blobs_data</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DPARK.services.snow_auto.mlxtend.data.wine_data">
+<span class="sig-prename descclassname"><span class="pre">DPARK.services.snow_auto.mlxtend.data.</span></span><span class="sig-name descname"><span class="pre">wine_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/DPARK/services/snow_auto/mlxtend/data/wine.html#wine_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#DPARK.services.snow_auto.mlxtend.data.wine_data" title="Permalink to this definition"></a></dt>
+<dd><p>Wine dataset.</p>
+<p>Source : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Wine">https://archive.ics.uci.edu/ml/datasets/Wine</a>
+Number of samples : 178
+Class labels : {0, 1, 2}, distribution: [59, 71, 48]</p>
+<p>Dataset Attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Alcohol</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Malic acid</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Ash</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Alcalinity of ash</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Magnesium</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Total phenols</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>Flavanoids</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>Nonflavanoid phenols</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>Proanthocyanins</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>Color intensity</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p>Hue</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p>OD280/OD315 of diluted wines</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p>Proline</p></li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>X, y</strong> – X is the feature matrix with 178 wine samples as rows
+and 13 feature columns.
+y is a 1-dimensional array of the 3 class labels 0, 1, 2</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[n_samples, n_features], [n_class_labels]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For usage examples, please see
+<a class="reference external" href="http://rasbt.github.io/mlxtend/user_guide/data/wine_data">http://rasbt.github.io/mlxtend/user_guide/data/wine_data</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DPARK.services.snow_auto.mlxtend.cluster.html" class="btn btn-neutral float-left" title="DPARK.services.snow_auto.mlxtend.cluster package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DPARK.services.snow_auto.mlxtend.evaluate.html" class="btn btn-neutral float-right" title="DPARK.services.snow_auto.mlxtend.evaluate package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mallikarjun.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
